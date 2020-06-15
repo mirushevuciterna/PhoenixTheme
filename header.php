@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 
+<<<<<<< HEAD
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
@@ -16,3 +17,36 @@
 </head>
 
 <body>
+=======
+    <body>
+
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekko Charity</title>
+    <?php wp_head(); ?>
+</head>
+<body>
+    <!-- <?php wp_nav_menu(array('theme_location'=>'primarymenu')); ?> -->
+
+    <nav class="navbar navbar-expand-lg = navbar-dark bg-light p-0">
+        <a class="navbar-brand p-lg-5" href="http://localhost/testsite/wordpress/">EkkoCharity</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+        </button>
+
+         <div class="collapse navbar-collapse navbar-light bg-light" id="navbarSupportedContent">
+            <?php wp_nav_menu( array (
+            'theme_location' => 'primarymenu',
+            'container' => false,
+            'menu_class' => 'navbar-nav m-auto ' 
+            ) ); ?>  
+         </div>
+         </div>
+            <div class="butonitest d-none d-lg-inline">
+             <button id="butoniNav" type="button" class="btn btn-primary">Get Involved </button>
+         </div>
+
+    </nav>
+>>>>>>> 2b6dfce05513ac1a7ee02760eb6a33a8d26fd4e0
