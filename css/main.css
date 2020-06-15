@@ -38,3 +38,22 @@ html, body {
 }
 
 
+/* FOOTER */
+
+.footer-navbar ul li{
+    padding: 0  15px 0 0;
+}
+.footer-navbar a{
+    color: #6C757D;
+}
+
+.footer-navbar a:hover {
+    color: #FF724D;
+}
+.footer-links div ul li a:hover{
+    color:#FF724D !important;
+}
+
+/* FOOTER */
+
+
