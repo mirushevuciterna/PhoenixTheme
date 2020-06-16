@@ -1,8 +1,4 @@
 <?php get_header(); ?>
-<h1>This is my index!</h1>
-<h1>This is my index!</h1>
-<h1>This is my index!</h1>
-
-<h1>This is my index!</h1>
+<?php get_template_part('parts/TextOnImage');?>
 
 <?php get_footer(); ?>
