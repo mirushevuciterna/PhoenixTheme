@@ -66,7 +66,7 @@
             <p class="text-sm-center text-muted">@ Phoenix Charity</p>
 
         </footer>
-      <?php //wp_footer() ?>
+      <?php wp_footer() ?>
 
     </body>
 </html>
