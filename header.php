@@ -11,7 +11,7 @@
 
 <body>
     
-        <?php wp_nav_menu(array('theme_location'=>'primarymenu')); ?> 
+        <!-- <?php wp_nav_menu(array('theme_location'=>'primarymenu')); ?> -->
 
         <nav class="navbar navbar-expand-lg = navbar-dark bg-light p-0">
             <a class="navbar-brand p-lg-5" href="http://localhost/testsite/wordpress/">EkkoCharity</a>
