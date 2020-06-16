@@ -1,26 +1,27 @@
-        <footer class="footer mt-auto py-3">
+        
+        <footer class="footer mt-auto p-5">
             <div class="row">
-                <div class="d-flex col-sm-12 ">
+                <div class="d-lg-flex col-sm-12 ">
                     <div class="footer-navbar">
                         <?php
                     wp_nav_menu( array(
                     'theme_location'    => 'secondary',
                     'container'         => 'false',
-                    'menu_class'        => 'navbar-nav flex-md-column flex-lg-row'
+                    'menu_class'        => 'navbar-nav flex-sm-column flex-md-row'
                     ) );
                 ?>
                     </div>
-                    <div class="ml-auto px-3 text-right">
-                        <span class="mx-3"><i class="fa fa-google"></i></span>
-                        <span class="mx-3"><i class="fa fa-instagram"></i></span>
-                        <span class="mx-3"><i class="fa fa-twitter"></i></span>
+                    <div class="ml-lg-auto mt-4 mt-lg-0 px-lg-3 text-lg-right">
+                        <span class="mr-3"><a href=""><i class="fa fa-google"></i></a></span>
+                        <span class="mx-3"><a href=""><i class="fa fa-instagram"></i></a></span>
+                        <span class="mx-3"><a href=""><i class="fa fa-twitter"></i></a></span>
                     </div>
                 </div>
             </div>
 
-            <div class="pt-4 mb-md-5 mt-4 pt-md-5 border-top border-bottom pb-4">
+            <div class="py-4 mb-md-5 mt-lg-4 pt-md-5 border-footer">
                 <div class="row footer-links">
-                    <div class="col-6 col-md footer-links">
+                    <div class="col-12 col-md">
                         <h5>About</h5>
                         <ul class="list-unstyled text-small">
                             <li><a class="text-muted" href="#">Cool stuff</a></li>
@@ -31,7 +32,7 @@
                             <li><a class="text-muted orange" href="#">Last time</a></li>
                         </ul>
                     </div>
-                    <div class="col-6 col-md">
+                    <div class="col-12 col-md">
                         <h5>Additional Links</h5>
                         <ul class="list-unstyled text-small">
                             <li><a class="text-muted" href="#">Cool stuff</a></li>
@@ -42,7 +43,7 @@
                             <li><a class="text-muted" href="#">Last time</a></li>
                         </ul>
                     </div>
-                    <div class="col-6 col-md">
+                    <div class="col-12 col-md">
                         <h5>Categories</h5>
                         <ul class="list-unstyled text-small">
                             <li><a class="text-muted" href="#">Resource</a></li>
@@ -51,23 +52,22 @@
                             <li><a class="text-muted" href="#">Final resource</a></li>
                         </ul>
                     </div>
-                    <div class="col-6 col-md">
+                    <div class="col-12 col-md">
                         <h5>Ekko</h5>
-                        <ul class="list-unstyled text-small">
-                            <li><a class="text-muted" href="#">Team</a></li>
-                            <li><a class="text-muted" href="#">Locations</a></li>
-                            <li><a class="text-muted" href="#">Privacy</a></li>
-                            <li><a class="text-muted" href="#">Terms</a></li>
-                        </ul>
+                        <p class="text-small">
+                            Making a positive first impression is essential to developing a strong customer relationship. 
+                            Ekko is powerful enough to assist any small businesses or corporate companies in quickly build 
+                            an effective online presence.
+                        </p>
                     </div>
                 </div>
             </div>
 
-            <p class="text-sm-center text-muted">@ Phoenix Charity</p>
+            <p class="text-sm-center text-muted">@ Ekko Charity</p>
 
         </footer>
+        <a href="#top" class="back-to-top active"><i class="fa fa-angle-up"></i></a>
       <?php //wp_footer() ?>
 
-        </div>
     </body>
 </html>
