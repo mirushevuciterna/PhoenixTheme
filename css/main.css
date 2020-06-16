@@ -6,8 +6,8 @@ body {
 .containeri {
     background: url("../images/charity13.png") fixed;
     background-repeat: no-repeat;
-    /* background-size: 2000px; */
-    background-size: cover;
+    background-size: 2000px;
+    /* background-size: cover; */
     margin-left: 0 !important;
     margin-right: 0 !important;
     position: relative;
