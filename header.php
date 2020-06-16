@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="container">
+
         <!-- <?php wp_nav_menu(array('theme_location'=>'primarymenu')); ?> -->
 
         <nav class="navbar navbar-expand-lg = navbar-dark bg-light p-0">

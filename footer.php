@@ -1,4 +1,4 @@
-        <footer class="footer mt-auto py-3">
+        <footer class="footer mt-auto p-5">
             <div class="row">
                 <div class="d-flex col-sm-12 ">
                     <div class="footer-navbar">
@@ -68,6 +68,5 @@
         </footer>
       <?php //wp_footer() ?>
 
-        </div>
     </body>
 </html>
