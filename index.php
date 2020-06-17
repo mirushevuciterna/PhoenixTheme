@@ -1,3 +1,6 @@
 <?php get_header(); ?>
-<h1>This is my index!</h1>
+<?php get_template_part('parts/TextOnImage');
+      get_template_part('parts/logosComponent');
+?>
+
 <?php get_footer(); ?>

@@ -10,11 +10,11 @@
 </head>
 
 <body>
-    
+
         <!-- <?php wp_nav_menu(array('theme_location'=>'primarymenu')); ?> -->
 
         <nav class="navbar navbar-expand-lg = navbar-dark bg-light p-0">
-            <a class="navbar-brand p-lg-5" href="http://localhost/testsite/wordpress/">EkkoCharity</a>
+            <a class="navbar-brand p-lg-5" href="#">EkkoCharity</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
