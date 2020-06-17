@@ -3,6 +3,7 @@ html, body {
 }
 .navbar{
     height: 70px;
+    z-index: 1;
 }
 .navbar a {
     color: #322D53!important;
@@ -14,14 +15,23 @@ html, body {
     color: #FF704D !important;
     text-decoration: none;
 }
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+outline: none;
+box-shadow: none;
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 1.1rem 0 0.9rem 0.5rem;
 
-
-
+}
 
 .navbar .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(0, 0, 0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-
   }
+
 .navbar li {
     padding: 10px !important;
 }
@@ -52,7 +62,6 @@ body{
     margin: 0 auto;
     padding-top: 50px;
     padding-bottom: 50px;
-    
 }
 .foto{
     width: 130px;
@@ -100,6 +109,7 @@ body{
     text-transform: uppercase;
     font-weight: bolder;
     height: 50px;
+    
 }
 
 .content button:hover {
@@ -136,3 +146,4 @@ body{
 /* FOOTER */
 
 
+  
