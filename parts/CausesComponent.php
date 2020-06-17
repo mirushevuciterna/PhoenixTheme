@@ -18,7 +18,7 @@
                                         <p>This is a longer card with supporting your text below as a natural lead-in to additional content</p>
                                     </small>
                                     <div class="butonitest d-none d-lg-inline">
-                                        <button id="butoniNav" type="button" class="btn btn-primary">Get Involved </button>
+                                        <button id="butoniCard" type="button" class="btn btn-primary">Get Involved </button>
                                     </div>
                                 </div>
                             </div>
@@ -32,7 +32,7 @@
                                     <p>This is a longer card with supporting and helping text below as a natural lead-in to additional content</p>
                                 </small>
                                 <div class="butonitest d-none d-lg-inline">
-                                    <button id="butoniNav" type="button" class="btn btn-primary">Get Involved </button>
+                                    <button id="butoniCard" type="button" class="btn btn-primary">Get Involved </button>
                                 </div>
                             </div>
                             </div>
@@ -46,7 +46,7 @@
                                     <p>This is a longer card with supporting text below as a natural lead-in to additional content</p>
                                 </small>
                                 <div class="butonitest d-none d-lg-inline">
-                                    <button id="butoniNav" type="button" class="btn btn-primary">Get Involved </button>
+                                    <button id="butoniCard" type="button" class="btn btn-primary">Get Involved </button>
                                 </div>
                             </div>
                             </div>
