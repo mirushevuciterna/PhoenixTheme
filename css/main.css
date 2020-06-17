@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     margin: 0;
 }
 .navbar{
@@ -18,6 +19,11 @@ html, body {
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
+outline: none;
+box-shadow: none;
+}
+#butoniNav:focus,
+#butoniNav:active {
 outline: none;
 box-shadow: none;
 }
@@ -78,8 +84,8 @@ body{
 .containeri {
     background: url("../images/charity13.png");
     background-repeat: no-repeat;
-    background-size: 2000px;
-    /* background-size: cover; */
+    /* background-size: 2000px; */
+    background-size: cover;
     margin-left: 0 !important;
     margin-right: 0 !important;
     position: relative;
@@ -104,16 +110,24 @@ body{
     width: 220px;
     vertical-align: center;
     text-align: center;
-    border: 2px solid #ff704d;
     font-size: 12px;
     text-transform: uppercase;
     font-weight: bolder;
     height: 50px;
+    color: white;
     
 }
 
 .content button:hover {
-    background-color: #23527c !important;
+    background-color: #322D53 !important;
+    border-style: none;
+    color: white;
+
+}
+.content button:focus,
+.content button:active {
+outline: none;
+box-shadow: none;
 }
 
 .content h1 {
@@ -144,6 +158,9 @@ footer{
     line-height: 1.8;
     font-weight: 400;
 }
+footer p{
+    margin-bottom: 0;
+}
 .footer-navbar a, .footer-links a{
     position: relative;
 }
@@ -169,6 +186,7 @@ footer{
 }
 a .fa{
     color: #322D53 !important;
+    font-size: 20px;
 }
 .footer-links h5{
     color: #322d53;

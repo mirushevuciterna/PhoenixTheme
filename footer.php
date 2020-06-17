@@ -11,10 +11,10 @@
                     ) );
                 ?>
                     </div>
-                    <div class="ml-lg-auto mt-4 mt-lg-0 px-lg-3 text-lg-right">
+                    <div class="ml-lg-auto mt-4 mt-lg-0 pl-lg-3 text-lg-right">
                         <span class="mr-3"><a href=""><i class="fa fa-google"></i></a></span>
                         <span class="mx-3"><a href=""><i class="fa fa-instagram"></i></a></span>
-                        <span class="mx-3"><a href=""><i class="fa fa-twitter"></i></a></span>
+                        <span class="ml-3"><a href=""><i class="fa fa-twitter"></i></a></span>
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                 </div>
             </div>
 
-            <p class="text-sm-center text-muted">@ Ekko Charity</p>
+            <p class="text-center text-muted">@ Ekko Charity</p>
 
         </footer>
 
