@@ -24,7 +24,19 @@
         </div>
 
         <div class="col-md-4">
-
+            <div class="pricing-card" style="width: 18rem;">
+                <h5 class="pricing-title">Payroll giving</h5>
+                <div class="pricing-body">
+                    <div class="price-row border-bottom">
+                        <span>50&euro;</span>
+                        <div>billed monthly</div>
+                    </div>
+                    <div class="card-row"><span>Mattis Vulputate</span> <i class="fa fa-check"></i></div>
+                    <div class="card-row"><span>Mattis Vulputate</span> <i class="fa fa-check"></i></div>
+                    <div class="card-row"><span>Mattis Vulputate</span> <i class="fa fa-check"></i></div>
+                    <a href="#" target="_self" class="donate-button text-center"><span class="prim_text">Donate now</span></a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
