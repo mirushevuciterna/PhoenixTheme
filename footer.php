@@ -63,11 +63,11 @@
                 </div>
             </div>
 
-            <p class="text-sm-center text-muted">@ Ekko Charity</p>
+            <p class="text-center text-muted">@ Ekko Charity</p>
 
         </footer>
         <a href="#top" class="back-to-top active"><i class="fa fa-angle-up"></i></a>
-      <?php //wp_footer() ?>
+      <?php wp_footer() ?>
 
     </body>
 </html>
