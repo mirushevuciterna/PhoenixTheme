@@ -238,13 +238,12 @@ a .fa{
     padding: 0;
 }
 .containercontent1{
-    width: 60%;
+    width: 80vw;
     margin: 0 auto;
     padding-top: 50px;
     padding-bottom: 50px;
 }
 .foto1{
-    width: 330px;
     height: auto;    
 }
 .foto1:hover{
@@ -257,7 +256,29 @@ a .fa{
     border-radius: 3%;
 }
 
-
-/* Causes Component */
+.owl-item {
+font-family: sans-serif;
+font-weight: bold;
+display: flex;
+justify-content: center;
+padding: 1rem;
+}
+#butoniCard{
+background-color: #FF704D;
+color: white;
+border-radius: 25px;
+border-style: none;
+width: 10rem;
+}
+#butoniCard:hover {
+background-color: white;
+color: #FF704D;
+border: 1px solid #FF704D;
+}
+#butoniCard:focus,
+#butoniCard:active {
+outline: none;
+box-shadow: none;
+}
 
   
