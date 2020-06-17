@@ -5,7 +5,7 @@
         <h2>A better way to give</h2>
     </div>
 
-    <div class="row">
+    <div class="row mb-5">
         <div class="col-md-4">
             <div class="donateInfo hideMe">
                 <i class="fa fa-paypal" id="ikonat"></i>
@@ -35,7 +35,7 @@
         </div>
 
         <div class="col-md-4">
-            <div class="pricing-card hideMe" style="width: 18rem;">
+            <div class="pricing-card hideMe">
                 <h5 class="pricing-title">Payroll giving</h5>
                 <div class="pricing-body">
                     <div class="price-row border-bottom">
@@ -50,13 +50,13 @@
                         <span>Mattis Vulputate</span>
                         <i class="fa fa-check"></i>
                     </div>
-                    <div class="card-row">
+                    <div class="card-row mb-5">
                         <span>Mattis Vulputate</span>
                         <i class="fa fa-check"></i>
                     </div>
-                    <a href="#" target="_self" class="donate-button text-center">
-                        <span class="prim_text">Donate now</span>
-                    </a>
+                    <button href="#" class="donate-button text-center">
+                        Donate now
+                    </button>
                 </div>
             </div>
         </div>
