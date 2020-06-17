@@ -101,6 +101,9 @@ body {
     color: #949494;
     padding-top: 10px;
 }
+.hideMe{
+    opacity: 0;
+}
 
 /*  DONATE FEATURE */
 

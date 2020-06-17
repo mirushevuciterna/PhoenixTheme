@@ -7,7 +7,7 @@
 
     <div class="row">
         <div class="col-md-4">
-            <div class="donateInfo">
+            <div class="donateInfo hideMe">
                 <i class="fa fa-paypal" id="ikonat"></i>
                 <h4>Easy and simple payments</h4>
                 <p class="donateText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur</p>
