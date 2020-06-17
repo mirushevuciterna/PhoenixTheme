@@ -53,6 +53,32 @@ box-shadow: none;
     background-color: #322D53;
 }
 
+/*  DONATE FEATURE */
+
+.pg_row{
+    margin-bottom: 50px;
+}
+.pg_row h6{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #949494;
+    /* font-family: Montserrat; */
+}
+.pg_row span{
+    color: #FF704D;
+    font-weight: 500;
+}
+.pg_row h2{
+    color: #322d53;
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 400;
+    font-family: Prata;
+}
+
+/*  DONATE FEATURE */
+
 /* Logos Parts - Owl Carousel */
 body{
     margin: 0;
