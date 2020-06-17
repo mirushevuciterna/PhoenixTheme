@@ -1,4 +1,4 @@
-<div class="p-5">
+<div class="p-5 donate-section">
     <div class="pg_row text-center">
         <h6>
             <span>Learn More</span> about Ekko's unique features.</h6>
@@ -38,23 +38,46 @@
             <div class="pricing-card hideMe">
                 <h5 class="pricing-title">Payroll giving</h5>
                 <div class="pricing-body">
+
                     <div class="price-row border-bottom">
                         <span>50&euro;</span>
                         <div>billed monthly</div>
                     </div>
+
                     <div class="card-row">
-                        <span>Mattis Vulputate</span>
-                        <i class="fa fa-check"></i>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span>Mattis Vulputate</span>
+                            </div>
+                            <div class="col-md-6 check-icon">
+                                <i class="fa fa-check "></i>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="card-row">
-                        <span>Mattis Vulputate</span>
-                        <i class="fa fa-check"></i>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span>Mattis Vulputate</span>
+                            </div>
+                            <div class="col-md-6 check-icon">
+                                <i class="fa fa-check "></i>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="card-row mb-5">
-                        <span>Mattis Vulputate</span>
-                        <i class="fa fa-check"></i>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span>Mattis Vulputate</span>
+                            </div>
+                            <div class="col-md-6 check-icon">
+                                <i class="fa fa-check"></i>
+                            </div>
+                        </div>
                     </div>
-                    <button href="#" class="donate-button text-center">
+
+                    <button class="donate-button text-center">
                         Donate now
                     </button>
                 </div>
