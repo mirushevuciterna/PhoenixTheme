@@ -82,7 +82,7 @@ body{
 
 /* Text on Image Component */
 .containeri {
-    background: url("../images/charity13.png") fixed;
+    background: url("../images/charity13.png");
     background-repeat: no-repeat;
     /* background-size: 2000px; */
     background-size: cover;
@@ -229,5 +229,35 @@ a .fa{
 
 /* FOOTER */
 
+
+/* Causes Component */
+
+.bgcolor1{
+    background-color: #fafafa;
+    margin: 0;
+    padding: 0;
+}
+.containercontent1{
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.foto1{
+    width: 330px;
+    height: auto;    
+}
+.foto1:hover{
+    opacity: 1;
+}
+.fotoinside{
+    border-radius: 3%;
+}
+.cardthyrje{
+    border-radius: 3%;
+}
+
+
+/* Causes Component */
 
   
