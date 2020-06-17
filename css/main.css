@@ -83,7 +83,7 @@ body{
     margin-left: 0 !important;
     margin-right: 0 !important;
     position: relative;
-    width: 1310px !important;
+    width: 100%;
 }
 
 .container-fluid {
