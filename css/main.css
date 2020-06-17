@@ -229,5 +229,18 @@ a .fa{
 
 /* FOOTER */
 
-
+/* causescomponent */
+.containercontent1 {
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.row {
+    margin:0;
+    padding:0;
+}
+.causes {
+  
+   margin: 0 auto;
+}
   
