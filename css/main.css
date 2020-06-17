@@ -1,10 +1,11 @@
 html,
 body {
-    margin: 0;
+    margin: 70px 0 0;
 }
 .navbar{
     height: 70px;
-    z-index: 1;
+    z-index: 10;
+    background-color: #fafafa !important;
 }
 .navbar a {
     color: #322D53!important;
