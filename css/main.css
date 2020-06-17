@@ -157,6 +157,9 @@ footer{
     line-height: 1.8;
     font-weight: 400;
 }
+footer p{
+    margin-bottom: 0;
+}
 .footer-navbar a, .footer-links a{
     position: relative;
 }
@@ -182,6 +185,7 @@ footer{
 }
 a .fa{
     color: #322D53 !important;
+    font-size: 20px;
 }
 .footer-links h5{
     color: #322d53;
