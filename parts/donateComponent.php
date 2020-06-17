@@ -50,7 +50,7 @@
                                 <span>Mattis Vulputate</span>
                             </div>
                             <div class="col-md-6 check-icon">
-                                <i class="fa fa-check "></i>
+                                <i class="fa fa-check"></i>
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@
                                 <span>Mattis Vulputate</span>
                             </div>
                             <div class="col-md-6 check-icon">
-                                <i class="fa fa-check "></i>
+                                <i class="fa fa-check"></i>
                             </div>
                         </div>
                     </div>
