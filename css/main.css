@@ -77,7 +77,7 @@ body{
 
 /* Text on Image Component */
 .containeri {
-    background: url("../images/charity13.png") ;
+    background: url("../images/charity13.png") fixed;
     background-repeat: no-repeat;
     /* background-size: 2000px; */
     background-size: cover;
