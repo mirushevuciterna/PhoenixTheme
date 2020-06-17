@@ -68,7 +68,7 @@
         </footer>
 
         <a href="#top" class="back-to-top active"><i class="fa fa-angle-up"></i></a>
-      <?php //wp_footer() ?>
+      <?php wp_footer() ?>
 
     </body>
 </html>
