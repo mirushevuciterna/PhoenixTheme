@@ -1,29 +1,31 @@
-var owl = $('.owl-carousel');
-owl.owlCarousel({
-    loop:true,
-    nav:false,  
-    dots: false,
-    margin:10,
+$('.owl-carousel').owlCarousel({
+    item:6,
+    singleItem: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    loop: true,
+    nav: false,
+    responsiveClass: true,
     responsive:{
         0:{
-            items:2
+            items: 2,
+            nav: false,
+            dots: false
         },
         600:{
-            items:2
-        },            
+            items: 3,
+            nav: false,
+            dots: false
+        },
         960:{
-            items:5
+            items:5,
+            nav: false,
+            dots: false
         },
         1200:{
-            items:6
+            items: 6,
+            nav: false,
+            dots: false
         }
     }
-});
-owl.on('mousewheel', '.owl-stage', function (e) {
-    if (e.deltaY>0) {
-        owl.trigger('next.owl');
-    } else {
-        owl.trigger('prev.owl');
-    }
-    e.preventDefault();
 });
