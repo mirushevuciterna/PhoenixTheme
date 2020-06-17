@@ -129,18 +129,84 @@ body{
 
 /* FOOTER */
 
+footer{
+    background-color: #F8F7F6;
+}
 .footer-navbar ul li{
     padding: 0  15px 0 0;
 }
 .footer-navbar a{
-    color: #6C757D;
+    color: #949494;
+    line-height: 1.8;
+}
+.footer-links p, .footer-links ul li a{
+    color: #949494!important;
+    line-height: 1.8;
+    font-weight: 400;
+}
+.footer-navbar a, .footer-links a{
+    position: relative;
+}
+.footer-navbar a:after, .footer-links a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: -5px;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #FF704D;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.footer-navbar a:hover:after, .footer-links a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+.footer-navbar a:hover, a:hover .fa, .footer-links a:hover {
+    color: #FF704D !important;
+    text-decoration: none;
+}
+a .fa{
+    color: #322D53 !important;
+}
+.footer-links h5{
+    color: #322d53;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+@media only screen and (min-width: 992px) {
+    .border-footer {
+        border-top: 1px solid  rgba(132,132,132,.17);
+        border-bottom: 1px solid  rgba(132,132,132,.17);
+    }
 }
 
-.footer-navbar a:hover {
-    color: #FF724D;
+.back-to-top.active {
+    right: 25px;
+    border-radius: 25px;   
 }
-.footer-links div ul li a:hover{
-    color:#FF724D !important;
+.back-to-top {
+    position: fixed;
+    z-index: 100;
+    bottom: 40px;
+    text-decoration: none;
+    background-color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    color: #949494;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 51px;
+    /* transition: all 250ms ease-in-out; */
+    box-shadow: 0 0 27px 0 rgba(0,0,0,.045);
+}
+.back-to-top:hover{
+    bottom: 46px;
 }
 
 /* FOOTER */
