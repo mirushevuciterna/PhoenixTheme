@@ -1,5 +1,3 @@
-<?php get_header(); ?>
-<<<<<<< HEAD
 <div class="containeri">
     <div class="container-fluid">
         <div class="content">
@@ -10,10 +8,3 @@
         </div>
     </div>
 </div>
-=======
-<?php get_template_part('parts/TextOnImage');
-      get_template_part('parts/logosComponent');
-?>
-
->>>>>>> 7dabfd46e8467ead6eec5af2fa93640b766fe038
-<?php get_footer(); ?>
