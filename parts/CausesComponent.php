@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center align-items-center flex-column" style="background-color: #fafafa;">
             <h1 > Causes We Support </h1> 
             <p ">We’re here for people like you who want to make a difference. Choose how and when 
-            you support the causes you care about.</p>
+            you support the causes you care about here.</p>
         </div>
         
         
@@ -15,7 +15,7 @@
                                 <div class="card-body">
                                     <h4 class="card-title">Animal welfare</h4>
                                     <small>
-                                        <p>This is a longer card with supporting text below as a natural lead-in to additional content</p>
+                                        <p>This is a longer card with supporting your text below as a natural lead-in to additional content</p>
                                     </small>
                                     <div class="butonitest d-none d-lg-inline">
                                         <button id="butoniNav" type="button" class="btn btn-primary">Get Involved </button>
@@ -29,7 +29,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Child assistance</h4>
                                 <small>
-                                    <p>This is a longer card with supporting text below as a natural lead-in to additional content</p>
+                                    <p>This is a longer card with supporting and helping text below as a natural lead-in to additional content</p>
                                 </small>
                                 <div class="butonitest d-none d-lg-inline">
                                     <button id="butoniNav" type="button" class="btn btn-primary">Get Involved </button>
