@@ -83,7 +83,60 @@ body {
     font-size: 36px;
     line-height: 48px;
     font-weight: 400;
-    font-family: Prata;
+    /* font-family: Prata; */
+}
+.pricing-card{
+    padding: 40px;
+    box-shadow: 0 25px 98px 0 rgba(0,0,0,0.1);
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-top-color: #FF704D;
+    border-radius: 7px;
+    color: #949494;
+    font-weight: 400;
+    font-family: Montserrat;
+    text-align: center;
+}
+.price-row{
+    padding-bottom: 38px;
+    margin-bottom: 32px;
+}
+.price-row span{
+    color: #FF704D;
+    font-size: 52px;
+    font-weight: 100;
+    width: 100%;
+    line-height: 1;
+    margin-bottom: 0;
+    letter-spacing: -0.03em;
+}
+.card-row{
+    padding: 10px 0;
+    padding-left: 0;
+    text-align: left;
+    padding-right: 0;
+    width: 100%;
+    line-height: 1.4;
+}
+.donate-button{
+    background-color: #FF704D;
+    color: white;
+    border-radius: 25px;
+    border-style: none;
+    width: 10rem;
+}
+@media only screen and (min-width: 992px) {
+    .pricing-card{
+        position: absolute;
+        top: -30px;
+    }
+}
+.pricing-title {
+    color: #322d53;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.6;
+    padding-top: 15px;
 }
 
 .donateInfo {
