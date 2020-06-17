@@ -22,6 +22,11 @@ body {
 outline: none;
 box-shadow: none;
 }
+#butoniNav:focus,
+#butoniNav:active {
+outline: none;
+box-shadow: none;
+}
 .navbar-brand {
     font-size: 1.5rem;
     margin: 0;
@@ -105,16 +110,24 @@ body{
     width: 220px;
     vertical-align: center;
     text-align: center;
-    border: 2px solid #ff704d;
     font-size: 12px;
     text-transform: uppercase;
     font-weight: bolder;
     height: 50px;
+    color: white;
     
 }
 
 .content button:hover {
-    background-color: #23527c !important;
+    background-color: #322D53 !important;
+    border-style: none;
+    color: white;
+
+}
+.content button:focus,
+.content button:active {
+outline: none;
+box-shadow: none;
 }
 
 .content h1 {
