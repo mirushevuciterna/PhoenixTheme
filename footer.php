@@ -1,4 +1,4 @@
-        
+
         <footer class="footer mt-auto p-5">
             <div class="row">
                 <div class="d-lg-flex col-sm-12 ">
@@ -66,6 +66,7 @@
             <p class="text-center text-muted">@ Ekko Charity</p>
 
         </footer>
+
         <a href="#top" class="back-to-top active"><i class="fa fa-angle-up"></i></a>
       <?php wp_footer() ?>
 
