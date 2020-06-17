@@ -18,6 +18,7 @@ function wpb_adding_scripts() {
     wp_enqueue_script('owlcarouselminjs');
     wp_register_script('jquerjs', get_template_directory_uri() . '/js/jquer.js', array('jquery'),'1.1', true);
     wp_enqueue_script('jquerjs');
+    wp_enqueue_script('fadeInFeature', get_template_directory_uri() . '/js/fadeInFeature.js', array('jquery'), '1.1', true);
 } 
 
 add_action( 'wp_enqueue_scripts', 'wpb_adding_scripts'); 

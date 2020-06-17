@@ -13,7 +13,7 @@
                 <p class="donateText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur</p>
             </div>
 
-            <div class="donateInfo">
+            <div class="donateInfo hideMe">
                 <i class="fa fa-gift" id="ikonat"></i>
                 <h4>Effective giving options</h4>
                 <p class="donateText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur</p>
@@ -21,13 +21,13 @@
         </div>
 
         <div class="col-md-4">
-            <div class="donateInfo">
+            <div class="donateInfo hideMe">
                 <i class="fa fa-globe" id="ikonat"></i>
                 <h4>Donate worldwide</h4>
                 <p class="donateText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur</p>
             </div>
 
-            <div class="donateInfo">
+            <div class="donateInfo hideMe">
                 <i class="fa fa-envelope" id="ikonat"></i>
                 <h4>Charitable service</h4>
                 <p class="donateText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur</p>
@@ -35,17 +35,28 @@
         </div>
 
         <div class="col-md-4">
-            <div class="pricing-card" style="width: 18rem;">
+            <div class="pricing-card hideMe" style="width: 18rem;">
                 <h5 class="pricing-title">Payroll giving</h5>
                 <div class="pricing-body">
                     <div class="price-row border-bottom">
                         <span>50&euro;</span>
                         <div>billed monthly</div>
                     </div>
-                    <div class="card-row"><span>Mattis Vulputate</span> <i class="fa fa-check"></i></div>
-                    <div class="card-row"><span>Mattis Vulputate</span> <i class="fa fa-check"></i></div>
-                    <div class="card-row"><span>Mattis Vulputate</span> <i class="fa fa-check"></i></div>
-                    <a href="#" target="_self" class="donate-button text-center"><span class="prim_text">Donate now</span></a>
+                    <div class="card-row">
+                        <span>Mattis Vulputate</span>
+                        <i class="fa fa-check"></i>
+                    </div>
+                    <div class="card-row">
+                        <span>Mattis Vulputate</span>
+                        <i class="fa fa-check"></i>
+                    </div>
+                    <div class="card-row">
+                        <span>Mattis Vulputate</span>
+                        <i class="fa fa-check"></i>
+                    </div>
+                    <a href="#" target="_self" class="donate-button text-center">
+                        <span class="prim_text">Donate now</span>
+                    </a>
                 </div>
             </div>
         </div>

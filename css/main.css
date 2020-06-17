@@ -85,9 +85,10 @@ body {
     font-weight: 400;
     /* font-family: Prata; */
 }
-.pricing-card{
+
+.pricing-card {
     padding: 40px;
-    box-shadow: 0 25px 98px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 25px 98px 0 rgba(0, 0, 0, 0.1);
     border-top-width: 2px;
     border-top-style: solid;
     border-top-color: #FF704D;
@@ -96,12 +97,15 @@ body {
     font-weight: 400;
     font-family: Montserrat;
     text-align: center;
+    width: 100% !important;
 }
-.price-row{
+
+.price-row {
     padding-bottom: 38px;
     margin-bottom: 32px;
 }
-.price-row span{
+
+.price-row span {
     color: #FF704D;
     font-size: 52px;
     font-weight: 100;
@@ -110,7 +114,8 @@ body {
     margin-bottom: 0;
     letter-spacing: -0.03em;
 }
-.card-row{
+
+.card-row {
     padding: 10px 0;
     padding-left: 0;
     text-align: left;
@@ -118,19 +123,22 @@ body {
     width: 100%;
     line-height: 1.4;
 }
-.donate-button{
+
+.donate-button {
     background-color: #FF704D;
     color: white;
     border-radius: 25px;
     border-style: none;
     width: 10rem;
 }
+
 @media only screen and (min-width: 992px) {
-    .pricing-card{
+    .pricing-card {
         position: absolute;
         top: -30px;
     }
 }
+
 .pricing-title {
     color: #322d53;
     font-size: 18px;
@@ -154,9 +162,10 @@ body {
     color: #949494;
     padding-top: 10px;
 }
-.hideMe{
+
+/* .hideMe{
     opacity: 0;
-}
+} */
 
 /*  DONATE FEATURE */
 
