@@ -245,7 +245,6 @@ body {
 
 #charity-content h4 {
     font-size: 20px;
-    color: #322d53;
 }
 
 #charity-content p {
@@ -271,6 +270,41 @@ body {
 
 .event-paragraph {
     text-align: center;
+    color: #949494;
+}
+
+.inpire-quote {
+    width: 75%;
+}
+
+.donate-buttoni {
+    width: 25%;
+}
+
+.donateBTN {
+    border-radius: 25px;
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: #ff704d !important;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    min-height: 48px;
+    width: 200px;
+    font-weight: 700;
+}
+
+.donateBTN:hover {
+    border: 2px solid #ff704d;
+    background-color: #fff !important;
+    color: #ff704d;
+}
+.inpire-quote h2{
+    color:#322d53;
+    font-weight: bolder;
+    padding-bottom: 15px;
+}
+.inpire-quote p{
     color: #949494;
 }
 

@@ -28,5 +28,15 @@ query_posts( $args ); ?>
             <?php endwhile;  ?>
         </div>
     <?php endif; ?>
+    <div class="p-5 d-flex flex-row justify-content-beetween">
+        <div class="inpire-quote p-2">
+            <h2>Give and change the world</h2>
+            <p>Tristique senectus et netus et malesuada fames ac turpis.<br>
+            Pharetra sit amet aliquam id diam maecenas ultricies.<br> Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="p-2 donate-buttoni">
+            <button type="button" class="btn btn-lg donateBTN">Donate Now</button>
+        </div>
+    </div>
 </div>
 
