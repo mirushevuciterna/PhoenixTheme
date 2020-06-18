@@ -45,34 +45,28 @@
                     </div>
 
                     <div class="card-row">
-                        <div class="row">
-                            <div class="col-md-6">
+                        <div class="row">                           
+                            <div class="d-flex col-12">
                                 <span>Mattis Vulputate</span>
-                            </div>
-                            <div class="col-md-6 check-icon">
-                                <i class="fa fa-check"></i>
+                                <div class="ml-auto text-right"><i class="fa fa-check"></i></div>                            
                             </div>
                         </div>
                     </div>
 
                     <div class="card-row">
-                        <div class="row">
-                            <div class="col-md-6">
+                        <div class="row">                           
+                            <div class="d-flex col-12">
                                 <span>Mattis Vulputate</span>
-                            </div>
-                            <div class="col-md-6 check-icon">
-                                <i class="fa fa-check"></i>
+                                <div class="ml-auto text-right"><i class="fa fa-check"></i></div>                            
                             </div>
                         </div>
                     </div>
 
                     <div class="card-row mb-5">
-                        <div class="row">
-                            <div class="col-md-6">
+                        <div class="row">                           
+                            <div class="d-flex col-12">
                                 <span>Mattis Vulputate</span>
-                            </div>
-                            <div class="col-md-6 check-icon">
-                                <i class="fa fa-check"></i>
+                                <div class="ml-auto text-right"><i class="fa fa-check"></i></div>                            
                             </div>
                         </div>
                     </div>

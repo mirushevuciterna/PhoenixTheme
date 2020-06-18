@@ -181,6 +181,9 @@ body {
     .pricing-card {
         width: 90%;
     }
+    .card-row{
+        font-size: 12px;
+    }
 }
 
 .pricing-title {
