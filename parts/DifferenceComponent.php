@@ -16,20 +16,20 @@
                 <div class="asistance">
                     <h2 class="mb-4 px-5">Child assistance charity</h2>
                     <div class="row text-center">
-                    <div class="col-3 d-flex flex-column justify-content-center align-content-center" >
-                        <h1 id="demo1"></h1>
+                    <div class="timeri col-3 d-flex flex-column justify-content-center align-content-center" >
+                        <h1 id="demo1">DD</h1>
                         <h5> Days</h5>
                     </div>
-                    <div class="col-3 d-flex flex-column justify-content-center align-content-center" >
-                        <h1 id="demo2"></h1>
+                    <div class="timeri col-3 d-flex flex-column justify-content-center align-content-center" >
+                        <h1 id="demo2">HH</h1>
                         <h5> Hours</h5>
                     </div>
-                    <div class="col-3 d-flex flex-column justify-content-center align-content-center" >
-                        <h1 id="demo3"></h1>
+                    <div class="timeri col-3 d-flex flex-column justify-content-center align-content-center" >
+                        <h1 id="demo3">M</h1>
                         <h5> Minutes</h5>
                     </div>
-                    <div class="col-3 d-flex flex-column justify-content-center align-content-center" >
-                        <h1 id="demo4"></h1>
+                    <div class="timeri col-3 d-flex flex-column justify-content-center align-content-center" >
+                        <h1 id="demo4">S</h1>
                         <h5> Seconds</h5>
                     </div>
                         
