@@ -1,5 +1,5 @@
-<div class="d-flex justify-content-center align-items-center flex-column" style="background-color: #fafafa;">
-            <h1 > Causes We Support </h1> 
+<div class="causeAll d-flex justify-content-center align-items-center flex-column" style="background-color: #fafafa;">
+            <h1 id="causeTitull"> Causes We Support </h1> 
             <p ">We’re here for people like you who want to make a difference. Choose how and when 
             you support the causes you care about here.</p>
         </div>

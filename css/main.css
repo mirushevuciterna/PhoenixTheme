@@ -5,7 +5,6 @@ body {
 .navbar{
     height: 70px;
     z-index: 10;
-    background-color: #fafafa !important;
 }
 .navbar a {
     color: #322D53!important;
@@ -250,13 +249,9 @@ a .fa{
 .foto1:hover{
     opacity: 1;
 }
-.fotoinside{
+.fotoinside, .cardthyrje{
     border-radius: 3%;
 }
-.cardthyrje{
-    border-radius: 3%;
-}
-
 .owl-item {
 font-family: sans-serif;
 font-weight: bold;
@@ -281,5 +276,12 @@ border: 1px solid #FF704D;
 outline: none;
 box-shadow: none;
 }
+#causeTitull, .card-title{
+    color: #322D53;
+}
+.causeAll p, .foto1{
+    color: #949494;
+}
+
 
   
