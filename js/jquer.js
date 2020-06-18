@@ -2,9 +2,9 @@
 
 $('.owl-carous').owlCarousel({
     item:6,
-    singleItem: true,
-    autoplay: true,
-    autoplayTimeout: 3000,
+    singleItem: false,
+    // autoplay: true,
+    // autoplayTimeout: 3000,
     loop: true,
     nav: false,
     responsiveClass: true,

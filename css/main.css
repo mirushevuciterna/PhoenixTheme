@@ -68,6 +68,12 @@ body{
     padding-top: 50px;
     padding-bottom: 50px;
 }
+.owl-stage{
+    display: flex;
+    align-items: center;
+}
+
+
 .foto{
     width: 130px;
     height: auto;
@@ -267,7 +273,7 @@ padding: 1rem;
 background-color: #FF704D;
 color: white;
 border-radius: 25px;
-border-style: none;
+border-style: none;font-family: 'Prata', serif;
 width: 10rem;
 }
 #butoniCard:hover {
@@ -283,60 +289,41 @@ box-shadow: none;
 #causeTitull, .card-title{
     color: #322D53;
     padding-bottom: 20px;
+    font-family: 'Prata', serif;
 }
 .causeAll{
     background-color: #fafafa;
 }
 .causeTop p, .foto1{
     color: #949494;
+    font-family: 'Prata', serif;
 }
-/* .active {
+.causeTop {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+.active {
 margin:0;
 padding: 0;
-} */
+}
 .owl-prev {
-    width: 70px;
-    height: 70px;
+    width: 40px;
     position: absolute;
     top: 40%;
     left: -50px;
     display: block !important;
-    background-color: red;
-}
-.owl-prev:active,
-.owl-prev:hover
-{
-    background-color: red;
 }
 
 .owl-next {
-    width: 70px;
+    width: 40px;
     position: absolute;
-    margin: 0px;
-    padding: 0px;
-    border-radius: 70%;
     top: 40%;
     right: -50px;
-    background-color: red;
     display: block !important;
 }
-
-/* .buto:active,
+.buto:active,
 .buto:focus,
-.buto:hover,
-.buto:visited{
-    border: none;
-    border-style: none;
-    border-radius: 50%;
-    
-} */
-
-/* .owl-carousel .owl-nav .owl-prev,
-  .owl-carousel .owl-nav .owl-next,
-  .owl-carousel .owl-dot {
-    font-family: 'fontAwesome';
-    background-color: red;
-
 .buto:hover{
     margin: 0;
     border: none;
@@ -348,18 +335,32 @@ padding: 0;
     margin: 0;
     border: none;
 }
-.owl-carousel .owl-nav .owl-prev:before{
-    // fa-chevron-left
-    content: "\f053";
-    margin-right:10px;
-    background-color: red;
+
+.owl-carousel:active .owl-nav:active button.owl-next:active, .owl-carousel:active .owl-nav:active button.owl-prev:active, .owl-carousel:active button.owl-dot:active{
+    background-color: #fafafa;
+    outline: 0;
+    box-shadow: none;
+    
 }
-.owl-carousel .owl-nav .owl-next:after{
-    //fa-chevron-right
-    content: "\f054";
-    margin-right:10px;
-    background-color: red;
-} */
+
+.owl-carousel:hover .owl-nav:hover button.owl-next:hover, .owl-carousel:hover .owl-nav:hover button.owl-prev:hover, .owl-carousel:hover button.owl-dot:hover{
+    background-color: #fafafa;
+    outline: 0;
+    box-shadow: none;
+    
+}
+
+.owl-carousel:focus .owl-nav:focus button.owl-next:focus, .owl-carousel:afocus .owl-nav:focus button.owl-prev:focus, .owl-carousel:focus button.owl-dot:focus{
+    background-color: #fafafa;
+    outline: platform-default-focus-outline-style-
+    box-shadow: none;
+}
+
+.owl-carousel:focus .owl-nav:focus button.owl-next:focus, .owl-carousel:afocus .owl-nav:focus button.owl-prev:focus, .owl-carousel:focus button.owl-dot:focus{
+    background-color: #fafafa;
+    outline: platform-default-focus-outline-style-
+    box-shadow: none;
+}
 
 
   
