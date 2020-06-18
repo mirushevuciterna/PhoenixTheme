@@ -256,6 +256,10 @@ a .fa{
     border-radius: 3%;
     height: 12rem;
 }
+.owl-stage{
+    display: flex;
+    align-items: center;
+}
 .owl-item {
 font-family: sans-serif;
 font-weight: bold;
@@ -283,6 +287,7 @@ box-shadow: none;
 #causeTitull, .card-title{
     color: #322D53;
     padding-bottom: 20px;
+    font-family: 'Prata', serif;
 }
 .causeAll{
     background-color: #fafafa;
@@ -294,6 +299,7 @@ box-shadow: none;
     width: 50%;
     text-align: center;
     margin: 0 auto;
+    font-family: 'Prata', serif;
 }
 .active {
 margin:0;
@@ -314,19 +320,22 @@ padding: 0;
     right: -50px;
     display: block !important;
 }
-.buto:active,
-.buto:focus,
-.buto:hover{
-    margin: 0;
-    border: none;
-    background-color: red;
 
-
-}
 .buto {
-    margin: 0;
-    border: none;
+    background-color: #fafafa;
+} 
+
+
+
+ .owl-nav:hover button.owl-next:hover,  button.owl-prev:hover,  button.owl-dot:hover{
+    background-color: #fafafa;
+    outline: none;
+    box-shadow: none;
+
 }
 
-
-  
+@media only screen and (max-width: 600px) {
+    .causeTop {
+        width: 80%;  
+    }
+}
