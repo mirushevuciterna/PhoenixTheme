@@ -9,7 +9,7 @@
         <div class="bgcolor1">
 			<div class="containercontent1">
 
-				<div class="owl-caro owl-carousel owl-theme" style="border: none; border-style: none;">
+				<div class="owl-caro owl-carousel owl-theme">
 					<div class="item foto1">
                             <div class="card p-3 cardthyrje">
                                 <img class="card-img-top fotoinside" src="<?php echo get_stylesheet_directory_uri();?>/images/charity3.jpg" alt="Card image cap">

@@ -68,12 +68,6 @@ body{
     padding-top: 50px;
     padding-bottom: 50px;
 }
-.owl-stage{
-    display: flex;
-    align-items: center;
-}
-
-
 .foto{
     width: 130px;
     height: auto;
@@ -277,7 +271,7 @@ padding: 1rem;
 background-color: #FF704D;
 color: white;
 border-radius: 25px;
-border-style: none;font-family: 'Prata', serif;
+border-style: none;
 width: 10rem;
 }
 #butoniCard:hover {
@@ -300,7 +294,6 @@ box-shadow: none;
 }
 .causeTop p, .foto1{
     color: #949494;
-    font-family: 'Prata', serif;
 }
 .causeTop {
     width: 50%;
@@ -331,32 +324,6 @@ padding: 0;
 .buto {
     background-color: #fafafa;
 } 
-
-.owl-carousel:active .owl-nav:active button.owl-next:active, .owl-carousel:active .owl-nav:active button.owl-prev:active, .owl-carousel:active button.owl-dot:active{
-    background-color: #fafafa;
-    outline: 0;
-    box-shadow: none;
-    
-}
-
-.owl-carousel:hover .owl-nav:hover button.owl-next:hover, .owl-carousel:hover .owl-nav:hover button.owl-prev:hover, .owl-carousel:hover button.owl-dot:hover{
-    background-color: #fafafa;
-    outline: 0;
-    box-shadow: none;
-    
-}
-
-.owl-carousel:focus .owl-nav:focus button.owl-next:focus, .owl-carousel:afocus .owl-nav:focus button.owl-prev:focus, .owl-carousel:focus button.owl-dot:focus{
-    background-color: #fafafa;
-    outline: platform-default-focus-outline-style-
-    box-shadow: none;
-}
-
-.owl-carousel:focus .owl-nav:focus button.owl-next:focus, .owl-carousel:afocus .owl-nav:focus button.owl-prev:focus, .owl-carousel:focus button.owl-dot:focus{
-    background-color: #fafafa;
-    outline: platform-default-focus-outline-style-
-    box-shadow: none;
-}
 
 
 
