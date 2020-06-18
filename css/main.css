@@ -416,10 +416,7 @@ a .fa {
     bottom: 46px;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 64dda5c5757b11db3ab45c9f3e342243435fda7b
+
 /* FOOTER */
 
 
@@ -533,9 +530,39 @@ padding: 0;
         width: 80%;  
     }
 }
-<<<<<<< HEAD
-=======
-/* FOOTER */
->>>>>>> 316366e41772de2bff43b43bf4c0892dcf524d03
-=======
->>>>>>> 64dda5c5757b11db3ab45c9f3e342243435fda7b
+
+
+
+/* Difference component */
+.diffbackground {
+    content: url(https://www.ekko-wp.com/static/wp-content/uploads/sites/3/2019/04/charity7.jpg?id=);
+   
+
+}
+background-image:url('');
+.bg-image {
+    background-image: url('https://www.ekko-wp.com/static/wp-content/uploads/sites/3/2019/04/charity7.jpg?id=');
+    height: 700px;
+}
+.gjatsia{
+    height: 100%;
+}
+
+p {
+    color:blue;
+}
+  
+  @media screen and (max-width: 1024px) { /* Specific to this particular image */
+    img.bg {
+      left: 50%;
+      margin-left: -512px;   /* 50% */
+    }
+  }
+.abcd{
+    width: 100%;
+}
+
+
+
+/* Difference component*/
+
