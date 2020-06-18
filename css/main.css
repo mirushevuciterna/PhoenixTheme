@@ -576,6 +576,7 @@ padding: 0;
     border-style: none;
     width: 10rem;
     margin-right: 50px;
+    font-size: 0.8rem;
 }
 .butonidiff:hover {
     background-color: #322D53 !important;
@@ -586,6 +587,7 @@ padding: 0;
     border-radius: 25px;
     border-style: none;
     border: 1px solid #FF704D;
+    font-size: 0.8rem;
 
     }
 .butonidiff2:hover {
