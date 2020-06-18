@@ -282,6 +282,32 @@ box-shadow: none;
 .causeAll p, .foto1{
     color: #949494;
 }
+.active {
+margin:0;
+padding: 0;
+}
+.owl-prev {
+    width: 40px;
+    position: absolute;
+    top: 40%;
+    left: -50px;
+    display: block !important;
+}
+
+.owl-next {
+    width: 40px;
+    position: absolute;
+    top: 40%;
+    right: -50px;
+    display: block !important;
+}
+.buto:active,
+.buto:focus,
+.buto:hover{
+    border: none;
+    border-style: none;
+    background-color: white;
+}
 
 
   
