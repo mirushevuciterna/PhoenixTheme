@@ -534,11 +534,11 @@ padding: 0;
 
 /* Difference component */
 .diffbackground {
-    background: url(https://www.ekko-wp.com/static/wp-content/uploads/sites/3/2019/04/charity7.jpg?id=) no-repeat center  !important ; 
-    -webkit-background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    background-size: 100% 100%;
+    background: url("../images/charity7.jpg") ; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     min-height: 100vh;
     color: white;
     margin-bottom: 70px;
