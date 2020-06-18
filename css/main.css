@@ -245,11 +245,16 @@ a .fa{
 .foto1{
     height: auto;    
 }
+.cardthyrje {
+    height: 28rem;
+    border-radius: 3%;
+}
 .foto1:hover{
     opacity: 1;
 }
-.fotoinside, .cardthyrje{
+.fotoinside{
     border-radius: 3%;
+    height: 12rem;
 }
 .owl-item {
 font-family: sans-serif;
@@ -277,9 +282,18 @@ box-shadow: none;
 }
 #causeTitull, .card-title{
     color: #322D53;
+    padding-bottom: 20px;
 }
-.causeAll p, .foto1{
+.causeAll{
+    background-color: #fafafa;
+}
+.causeTop p, .foto1{
     color: #949494;
+}
+.causeTop {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
 }
 .active {
 margin:0;
@@ -303,9 +317,15 @@ padding: 0;
 .buto:active,
 .buto:focus,
 .buto:hover{
+    margin: 0;
     border: none;
-    border-style: none;
-    background-color: white;
+    background-color: red;
+
+
+}
+.buto {
+    margin: 0;
+    border: none;
 }
 
 
