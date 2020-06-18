@@ -281,32 +281,66 @@ box-shadow: none;
 .causeAll p, .foto1{
     color: #949494;
 }
-.active {
+/* .active {
 margin:0;
 padding: 0;
-}
+} */
 .owl-prev {
-    width: 40px;
+    width: 70px;
+    height: 70px;
     position: absolute;
     top: 40%;
     left: -50px;
     display: block !important;
+    background-color: red;
+}
+.owl-prev:active,
+.owl-prev:hover
+{
+    background-color: red;
 }
 
 .owl-next {
-    width: 40px;
+    width: 70px;
     position: absolute;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 70%;
     top: 40%;
     right: -50px;
+    background-color: red;
     display: block !important;
 }
-.buto:active,
+
+/* .buto:active,
 .buto:focus,
-.buto:hover{
+.buto:hover,
+.buto:visited{
     border: none;
     border-style: none;
-    background-color: white;
+    border-radius: 50%;
+    
+} */
+
+/* .owl-carousel .owl-nav .owl-prev,
+  .owl-carousel .owl-nav .owl-next,
+  .owl-carousel .owl-dot {
+    font-family: 'fontAwesome';
+    background-color: red;
+
 }
+.owl-carousel .owl-nav .owl-prev:before{
+    // fa-chevron-left
+    content: "\f053";
+    margin-right:10px;
+    background-color: red;
+}
+.owl-carousel .owl-nav .owl-next:after{
+    //fa-chevron-right
+    content: "\f054";
+    margin-right:10px;
+    background-color: red;
+} */
 
 
   

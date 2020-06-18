@@ -35,7 +35,7 @@ $('.owl-carous').owlCarousel({
 
 //CausesComponent
 
-$('.owl-caro').owlCarousel({
+$('.owl-carousel').owlCarousel({
     
     margin:10,
     item:6,
@@ -44,7 +44,7 @@ $('.owl-caro').owlCarousel({
     autoplayTimeout: 3000,
     loop: true,
     nav: false,
-    navText : ['<img class="buto" src="https://image.flaticon.com/icons/svg/481/481117.svg" aria-hidden="true"></img>','<img class="buto" src="https://image.flaticon.com/icons/svg/481/481115.svg" aria-hidden="true"></i>'],
+    // navText : ['<img class="buto" src="https://image.flaticon.com/icons/svg/481/481117.svg" aria-hidden="true"></img>','<img class="buto" src="https://image.flaticon.com/icons/svg/481/481115.svg" aria-hidden="true"></i>'],
     responsiveClass: true,
     responsive:{
         
