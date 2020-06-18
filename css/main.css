@@ -31,7 +31,6 @@ box-shadow: none;
     font-size: 1.5rem;
     margin: 0;
     padding: 1.1rem 0 0.9rem 0.5rem;
-
 }
 
 .navbar .navbar-toggler-icon {
@@ -281,6 +280,32 @@ box-shadow: none;
 }
 .causeAll p, .foto1{
     color: #949494;
+}
+.active {
+margin:0;
+padding: 0;
+}
+.owl-prev {
+    width: 40px;
+    position: absolute;
+    top: 40%;
+    left: -50px;
+    display: block !important;
+}
+
+.owl-next {
+    width: 40px;
+    position: absolute;
+    top: 40%;
+    right: -50px;
+    display: block !important;
+}
+.buto:active,
+.buto:focus,
+.buto:hover{
+    border: none;
+    border-style: none;
+    background-color: white;
 }
 
 
