@@ -100,18 +100,19 @@ var x = setInterval(function() {
 }, 1000);
 
 
+//changeFjalite
+var wordsArray = ["Comunity support", "Volunter and fundraise", "Give a helping hand","Donate to make a difference"];
 
-
-    $(function () {
-  count = 0;
-  wordsArray = [ "Donate to make a difference", "Volunter and fundraise", "Give a helping hand","Comunity support"];
-  setInterval(function () {
-    if ( count <= 3){
-    $("#word").fadeOut(400, function () {
-      $(this).text(wordsArray[count % wordsArray.length]).fadeIn(400);
-    }); } else {
-        $(this).text(wordsArray[3]).fadeIn(400);
-    }   
-    count++;    
-  }, 2700);
-});
+var count = 0;
+function word(){
+  if(count < ( wordsArray.length ) ){
+  $("#word").fadeOut(400, function () {
+    $(this).text(wordsArray[count % wordsArray.length]).fadeIn(400);
+    count++;
+    }
+    )}
+  else{
+       stop;
+  }  
+}
+setInterval(word, 2000);
