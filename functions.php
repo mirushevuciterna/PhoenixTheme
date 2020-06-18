@@ -32,13 +32,16 @@ function phoenix_theme_setup() {
 }
 add_action( 'init', 'phoenix_theme_setup' );
 
-
-// CUSTOM POST TYPE
+/* 
+    ====================================
+        Custom Post Type
+    ====================================
+*/
 
 function phoenix_custom_post_type() {
     $labels = array(
         'name' => 'Portfolio',
-        'singular_name' => 'Portfolio',
+        'singullar_name' => 'Portfolio',
         'add_new' => 'Add Item',
         'all_items' => 'All Items',
         'add_new_item' => 'Add Item',
@@ -48,8 +51,7 @@ function phoenix_custom_post_type() {
         'search_item' => 'Search Portfolio',
         'not_found' => 'No items found',
         'not_found_in_trash' => 'No items found in trash',
-        'parent_item_colon' => 'Parent Item',
-        'show_in_nav_menus' => true
+        'parent_item_colon' => 'Parent Item' 
     );
     $args = array(
         'labels' => $labels,
@@ -60,8 +62,17 @@ function phoenix_custom_post_type() {
         'rewrite' => true,
         'capability_type' => 'post',
         'hierarchical' => false,
-        'supports' => array('title','editor','excerpt','thumbnail','revisions',),
-        'taxonomies' => array('category','post_tag'),
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail',
+            'revisions',
+        ),
+        'taxonomies' => array(
+            'category',
+            'post_tag'
+        ),
         'menu_position' => 5,
         'exclude_from_search' => false
     );
@@ -70,4 +81,3 @@ function phoenix_custom_post_type() {
 add_action('init', 'phoenix_custom_post_type');
 
 add_theme_support('post-thumbnails');
-
