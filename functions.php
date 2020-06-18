@@ -48,7 +48,8 @@ function phoenix_custom_post_type() {
         'search_item' => 'Search Portfolio',
         'not_found' => 'No items found',
         'not_found_in_trash' => 'No items found in trash',
-        'parent_item_colon' => 'Parent Item'
+        'parent_item_colon' => 'Parent Item',
+        'show_in_nav_menus' => true
     );
     $args = array(
         'labels' => $labels,
@@ -60,7 +61,7 @@ function phoenix_custom_post_type() {
         'capability_type' => 'post',
         'hierarchical' => false,
         'supports' => array('title','editor','excerpt','thumbnail','revisions',),
-       // 'taxonomies' => array('category','post_tag'),
+        'taxonomies' => array('category','post_tag'),
         'menu_position' => 5,
         'exclude_from_search' => false
     );
