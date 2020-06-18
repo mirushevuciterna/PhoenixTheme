@@ -245,11 +245,16 @@ a .fa{
 .foto1{
     height: auto;    
 }
+.cardthyrje {
+    height: 28rem;
+    border-radius: 3%;
+}
 .foto1:hover{
     opacity: 1;
 }
-.fotoinside, .cardthyrje{
+.fotoinside{
     border-radius: 3%;
+    height: 12rem;
 }
 .owl-item {
 font-family: sans-serif;
@@ -277,8 +282,12 @@ box-shadow: none;
 }
 #causeTitull, .card-title{
     color: #322D53;
+    padding-bottom: 20px;
 }
-.causeAll p, .foto1{
+.causeAll{
+    background-color: #fafafa;
+}
+.causeTop p, .foto1{
     color: #949494;
 }
 /* .active {
@@ -328,6 +337,16 @@ padding: 0;
     font-family: 'fontAwesome';
     background-color: red;
 
+.buto:hover{
+    margin: 0;
+    border: none;
+    background-color: red;
+
+
+}
+.buto {
+    margin: 0;
+    border: none;
 }
 .owl-carousel .owl-nav .owl-prev:before{
     // fa-chevron-left
