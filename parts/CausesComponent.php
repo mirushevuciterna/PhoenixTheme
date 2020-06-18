@@ -16,7 +16,7 @@
                                 <div class="card-body d-flex flex-column">
                                     <h4 class="card-title">Animal welfare</h4>
                                     <small>
-                                        <p>This is a longer card with supporting your text beljkasdfhlsdnfldjfdjnow as a natural lead-in to additional content</p>
+                                        <p>This is a longer card with supporting your text now as a natural lead-in to additional content</p>
                                     </small>
                                     <button type="button" id="butoniCard" class="mt-auto btn btn-md btn-primary">Contact us</button>
                                 </div>

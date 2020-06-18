@@ -57,7 +57,7 @@ $('.owl-caro').owlCarousel({
             dots: true
         },
         960:{
-            items:3,
+            items:2,
             nav:true,
             dots: true
         },
@@ -68,5 +68,6 @@ $('.owl-caro').owlCarousel({
         }
     }
 });
+document.addEventListener('click', function(e) { if(document.activeElement.toString() == '[object HTMLButtonElement]'){ document.activeElement.blur(); } });
 
 //CausesComponent
