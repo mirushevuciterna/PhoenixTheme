@@ -26,10 +26,10 @@ body {
     box-shadow: none;
 }
 
-#butoniNav:focus,
-#butoniNav:active {
-    outline: none;
-    box-shadow: none;
+.btnbutoniNav:focus,
+.btn:active {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .navbar-brand {
@@ -463,11 +463,12 @@ color: white;
 border-radius: 25px;
 border-style: none;
 width: 10rem;
+border: 1px solid #FF704D;
+
 }
 #butoniCard:hover {
 background-color: white;
 color: #FF704D;
-border: 1px solid #FF704D;
 }
 #butoniCard:focus,
 #butoniCard:active {
@@ -533,23 +534,83 @@ padding: 0;
 
 /* Difference component */
 .diffbackground {
-    background: #6d6d6d url(https://www.ekko-wp.com/static/wp-content/uploads/sites/3/2019/04/charity7.jpg?id=) no-repeat center  !important ; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background: url(https://www.ekko-wp.com/static/wp-content/uploads/sites/3/2019/04/charity7.jpg?id=) no-repeat center  !important ; 
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
     min-height: 100vh;
-   
+    color: white;
+    margin-bottom: 70px;
+}
+.makeadifference div {
+    font-family: 'Prata', serif;
+    font-size: 3.2rem;
+}
 
+.asistance h1 {
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif; 
+}
+.lartdiff {
+    height: 30vw;
+}
+.makeadifference {
+    height: 20vh;
+    width:37vw;
+    padding-right: 20px;
+}
+.makeadifference2 {
+    height: 10vh;
+    width:37vw;
+
+
+}
+.coldiff2 {
+    background-color: rgba(7, 5, 5, 0.651);
+}
+.butonidiff {
+    background-color: #FF704D !important;
+    color: white;
+    border-radius: 25px;
+    border-style: none;
+    width: 10rem;
+    margin-right: 50px;
+}
+.butonidiff:hover {
+    background-color: #322D53 !important;
+}
+.butonidiff2{
+    background-color: #FF704D;
+    color: white;
+    border-radius: 25px;
+    border-style: none;
+    border: 1px solid #FF704D;
+
+    }
+.butonidiff2:hover {
+    background-color:#322d5300;
+    color: #FF704D;
+    
+    }
+.butonidiff2:focus,
+.butonidiff2:active {
+outline: none !important;
+    box-shadow: none !important;
+    }
+.progress-bar {
+    background-color: #FF704D;
+    height: 15px;
+}
+.progress {
+    height: 15px;
+    background-color:  rgba(83, 81, 81, 0.651);
+}
+#progdiff {
+    color: #FF704D;
 }
 
   
-  @media screen and (max-width: 1024px) { /* Specific to this particular image */
-    img.bg {
-      left: 50%;
-      margin-left: -512px;   /* 50% */
-    }
-  }
 
 
 
