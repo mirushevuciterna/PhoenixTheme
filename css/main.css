@@ -181,7 +181,7 @@ body {
     .pricing-card {
         width: 90%;
     }
-    .card-row{
+    .card-row {
         font-size: 12px;
     }
 }
@@ -216,6 +216,38 @@ body {
 } */
 
 /*  DONATE FEATURE */
+
+/* Active Events Component */
+
+.charity-image img {
+    width: 350px !important;
+    height: 290px !important;
+}
+
+#charity-content {
+    border-radius: 10px;
+    text-align: center;
+    width: 85%;
+    margin-top: -50px;
+    margin-left: 25px;
+    background-color: white;
+}
+#charity-content h4{
+    font-size: 20px;
+}
+#charity-content p{
+    font-size: 14px;
+    color: #949494;
+    padding-top: 0;
+    margin-top: -10px;
+}
+
+#active-events-section {
+    background-color: rgb(244, 246, 247) !important;
+}
+
+
+/* Active Events Component */
 
 /* Logos Parts - Owl Carousel */
 
@@ -418,83 +450,100 @@ a .fa {
 
 /* FOOTER */
 
-
 /* Causes Component */
 
-.bgcolor1{
+.bgcolor1 {
     background-color: #fafafa;
     margin: 0;
     padding: 0;
 }
-.containercontent1{
+
+.containercontent1 {
     width: 80vw;
     margin: 0 auto;
     padding-top: 50px;
     padding-bottom: 50px;
 }
-.foto1{
-    height: auto;    
+
+.foto1 {
+    height: auto;
 }
+
 .cardthyrje {
     height: 28rem;
     border-radius: 3%;
 }
-.foto1:hover{
+
+.foto1:hover {
     opacity: 1;
 }
-.fotoinside{
+
+.fotoinside {
     border-radius: 3%;
     height: 12rem;
 }
-.owl-stage{
+
+.owl-stage {
     display: flex;
     align-items: center;
 }
+
 .owl-item {
-font-family: sans-serif;
-font-weight: bold;
-display: flex;
-justify-content: center;
-padding: 1rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
 }
-#butoniCard{
-background-color: #FF704D;
-color: white;
-border-radius: 25px;
-border-style: none;
-width: 10rem;
+
+#butoniCard {
+    background-color: #FF704D;
+    color: white;
+    border-radius: 25px;
+    border-style: none;
+    width: 10rem;
 }
+
 #butoniCard:hover {
-background-color: white;
-color: #FF704D;
-border: 1px solid #FF704D;
+    background-color: white;
+    color: #FF704D;
+    border: 1px solid #FF704D;
 }
+
 #butoniCard:focus,
 #butoniCard:active {
-outline: none;
-box-shadow: none;
+    outline: none;
+    box-shadow: none;
 }
-#causeTitull, .card-title{
+
+#causeTitull,
+.card-title {
     color: #322D53;
     padding-bottom: 20px;
     font-family: 'Prata', serif;
 }
-.causeAll{
+
+.causeAll {
     background-color: #fafafa;
 }
-.causeTop p, .foto1{
+
+.causeTop p,
+.foto1 {
     color: #949494;
 }
+
 .causeTop {
     width: 50%;
     text-align: center;
     margin: 0 auto;
     font-family: 'Prata', serif;
 }
+
 .active {
-margin:0;
-padding: 0;
+    margin: 0;
+    padding: 0;
 }
+
 .owl-prev {
     width: 40px;
     position: absolute;
@@ -513,19 +562,18 @@ padding: 0;
 
 .buto {
     background-color: #fafafa;
-} 
+}
 
-
-
- .owl-nav:hover button.owl-next:hover,  button.owl-prev:hover,  button.owl-dot:hover{
+.owl-nav:hover button.owl-next:hover,
+button.owl-prev:hover,
+button.owl-dot:hover {
     background-color: #fafafa;
     outline: none;
     box-shadow: none;
-
 }
 
 @media only screen and (max-width: 600px) {
     .causeTop {
-        width: 80%;  
+        width: 80%;
     }
 }
