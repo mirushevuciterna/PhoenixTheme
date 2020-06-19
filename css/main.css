@@ -667,7 +667,7 @@ outline: none !important;
 
     .makeadifference {
      height: 15vh;
-     width:38vw;
+     width:40vw;
      margin:  0 20px !important;
      padding: 0 20px !important;
     }
@@ -699,5 +699,9 @@ outline: none !important;
     opacity: 1; 
  } 
 } 
+
+.fotoloading{
+    width: 30px;
+}
 /* Difference component*/
 
