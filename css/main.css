@@ -679,28 +679,25 @@ outline: none !important;
     }
 
  }
-
-@media only screen and (min-width: 1700px) {
-    
-    .makeadifference {
-     height: 15vh;
-     width:38vw;
-     margin:  0 20px !important;
-     padding: 0 20px !important;
-    }
-    .makeadifference2{
-        width:38vw;
-        margin:  0 20px !important;
-        padding: 40px 20px !important;
-        
-    }
-
- }
-
-  
-
-
-
-
+ .asistance{
+ 
+    animation: fadeInAnimation ease 2s ;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+}
+.butonidiff{
+ 
+    animation: fadeInAnimation ease 2s ;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+}
+@keyframes fadeInAnimation { 
+0% { 
+    opacity: 0; 
+} 
+100% { 
+    opacity: 1; 
+ } 
+} 
 /* Difference component*/
 

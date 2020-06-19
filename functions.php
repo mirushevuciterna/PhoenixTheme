@@ -9,6 +9,8 @@ function phoenix_script_enqueue(){
     wp_enqueue_script('boortstrapjs', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '1.0.0', true);
     wp_enqueue_style( 'pratafont', '//fonts.googleapis.com/css2?family=Prata&display=swap' );
     wp_enqueue_style( 'Montserrat', '//fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap' );
+    wp_enqueue_style( 'w3animright', '//www.w3schools.com/w3css/4/w3.css');
+
 }
 
 add_action('wp_enqueue_scripts', 'phoenix_script_enqueue');
