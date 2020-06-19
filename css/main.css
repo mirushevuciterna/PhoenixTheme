@@ -699,5 +699,9 @@ outline: none !important;
     opacity: 1; 
  } 
 } 
+
+.fotoloading{
+    width: 30px;
+}
 /* Difference component*/
 
