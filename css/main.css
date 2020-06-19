@@ -536,11 +536,11 @@ padding: 0;
 
 /* Difference component */
 .diffbackground {
-    background: url(https://www.ekko-wp.com/static/wp-content/uploads/sites/3/2019/04/charity7.jpg?id=) no-repeat center  !important ; 
-    -webkit-background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    background-size: 100% 100%;
+    background: url("../images/charity7.jpg") ; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     min-height: 100vh;
     color: white;
     margin-bottom: 70px;
@@ -578,6 +578,7 @@ padding: 0;
     border-style: none;
     width: 10rem;
     margin-right: 50px;
+    font-size: 0.8rem;
 }
 .butonidiff:hover {
     background-color: #322D53 !important;
@@ -588,6 +589,7 @@ padding: 0;
     border-radius: 25px;
     border-style: none;
     border: 1px solid #FF704D;
+    font-size: 0.8rem;
 
     }
 .butonidiff2:hover {
@@ -610,6 +612,58 @@ outline: none !important;
 }
 #progdiff {
     color: #FF704D;
+}
+@media only screen and (max-width: 600px) {
+   .diffbackground {
+       height: 100vh;
+       display: flex;
+       align-items: flex-start !important;
+       justify-content: center;
+
+   }
+   .lartdiff{
+       margin: 50px 0 0 !important;
+       padding: 0 !important;
+       height: 100vh;
+       display: flex;
+       align-items: flex-start;
+       justify-content: start;
+   }
+   .makeadifference {
+    height: 15vh;
+    width:90vw;
+    margin:  0 20px !important;
+    padding: 0 20px !important;
+}
+.makeadifference #word{
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+.makeadifference2 {
+    height: 10vh;
+    width:90vw;
+    margin: 20px 20px 0 !important ;
+    padding: 0 20px !important;
+}
+.asistance {
+    margin: 0 !important;
+    padding: 20px 0 !important;
+}
+.asistance h2{
+    font-size: 1.5rem !important;
+    margin:  0 0 15px !important;
+    padding: 0 !important;
+    display: flex;
+    justify-content: center;
+}
+.timeri h1 {
+    font-size: 1.2rem !important;
+}
+.timeri h5
+{
+    font-size: 1rem !important;
+}
 }
 
   
