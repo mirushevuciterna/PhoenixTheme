@@ -5,9 +5,7 @@
     get_template_part('parts/donateComponent');
     get_template_part('parts/logosComponent');
     get_template_part('parts/TextOnImage');
-      
 
-      
 ?>
 
 <?php get_footer(); ?>

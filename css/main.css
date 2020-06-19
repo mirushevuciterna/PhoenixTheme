@@ -416,6 +416,7 @@ a .fa {
     bottom: 46px;
 }
 
+
 /* FOOTER */
 
 
@@ -532,6 +533,7 @@ padding: 0;
 }
 
 
+
 /* Difference component */
 .diffbackground {
     background: url("../images/charity7.jpg") ; 
@@ -563,8 +565,6 @@ padding: 0;
 .makeadifference2 {
     height: 10vh;
     width:37vw;
-
-
 }
 .coldiff2 {
     background-color: rgba(7, 5, 5, 0.651);
@@ -611,7 +611,7 @@ outline: none !important;
 #progdiff {
     color: #FF704D;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 760px) {
    .diffbackground {
        height: 100vh;
        display: flex;
@@ -664,9 +664,27 @@ outline: none !important;
 }
 }
 
+@media only screen and (min-width: 1700px) {
+    
+    .makeadifference {
+     height: 15vh;
+     width:38vw;
+     margin:  0 20px !important;
+     padding: 0 20px !important;
+    }
+    .makeadifference2{
+        width:38vw;
+        margin:  0 20px !important;
+        padding: 40px 20px !important;
+        
+    }
+
+ }
+
   
 
 
 
 
 /* Difference component*/
+

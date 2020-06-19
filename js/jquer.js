@@ -36,7 +36,7 @@ $('.owl-carous').owlCarousel({
 //CausesComponent
 
 $('.owl-caro').owlCarousel({
-    
+
     margin:10,
     item:6,
     singleItem: true,
@@ -47,7 +47,7 @@ $('.owl-caro').owlCarousel({
     navText : ['<img class="buto" src="https://image.flaticon.com/icons/svg/481/481117.svg" aria-hidden="true"></img>','<img class="buto" src="https://image.flaticon.com/icons/svg/481/481115.svg" aria-hidden="true"></i>'],
     responsiveClass: true,
     responsive:{
-        
+
         0:{
             items: 1,
             dots: true
