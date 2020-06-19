@@ -1,18 +1,18 @@
 <div class="diffbackground d-flex justify-content-center align-items-center  ">
     <div class="container">
-        <div class="row lartdiff"  >           
-            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center ">
+        <div class="row lartdiff "  >           
+            <div class=" col-md-6 d-flex flex-column justify-content-center align-items-center ">
                 <div class="row makeadifference my-5">
                     <div id="word" >Donate to make a difference</div>
                 </div>
-                <div class="row makeadifference2">
-                <button  type="button" class="butonidiff align-self-start btn btn-lg btn-block btn-primary" >READ MORE</button>
+                <div class="w3-animate-zoom row makeadifference2">
+                <button  type="button" class=" butonidiff align-self-start btn btn-lg btn-block btn-primary" >READ MORE</button>
                 </div>
             </div>  
 
 
 
-            <div class="coldiff2 col-md-6 d-flex justify-content-center align-items-center ">
+            <div class="w3-animate-zoom coldiff2 col-md-6 d-flex justify-content-center align-items-center ">
                 <div class="asistance">
                     <h2 class="mb-4 px-5">Child assistance charity</h2>
                     <div class="row text-center">
