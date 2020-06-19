@@ -663,6 +663,22 @@ outline: none !important;
     font-size: 1rem !important;
 }
 }
+@media only screen and (min-width: 1700px) {
+
+    .makeadifference {
+     height: 15vh;
+     width:38vw;
+     margin:  0 20px !important;
+     padding: 0 20px !important;
+    }
+    .makeadifference2{
+        width:38vw;
+        margin:  0 20px !important;
+        padding: 40px 20px !important;
+
+    }
+
+ }
 
   
 
