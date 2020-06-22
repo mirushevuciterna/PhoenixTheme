@@ -250,7 +250,9 @@ body {
     text-decoration: none;
     color: #322d53;   
 }
-
+.p-6{
+    padding: 0 60px !important;
+}
 .charity-text-image:hover {
     color: #ff704d;
     cursor: pointer;
