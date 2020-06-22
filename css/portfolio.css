@@ -65,20 +65,25 @@
 
 /* POST CONTENT */
 
-.post-content-1{
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+.post-content-1, .post-content-2{
+    /* margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw); */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
-.post-content-1 .img{
+.post-content-1 .row, .post-content-2 .row{
+    margin: 0 -50px;
+}
+.post-content-1 .img, .post-content-2 .img{
         padding-top: 275px !important;
         padding-bottom: 200px !important;
-        background-image: url(https://www.ekko-wp.com/static/wp-content/uploads/sites/3/2019/04/charity2.jpg) !important;
+        /* background-image: url(https://www.ekko-wp.com/static/wp-content/uploads/sites/3/2019/04/charity2.jpg) !important; */
         background-position-x: 50%;
         background-position-y: 50%;
         background-repeat: no-repeat !important;
         background-size: cover !important;
 }
-.post-content-1 h2 {
+.post-content-1 h2, .post-content-2 h2 {
     color: #322d53;
     font-weight: 400;
     font-family: Prata;
@@ -99,9 +104,14 @@
     color: #949494;
     margin-bottom: 20px;
 }
-.post-content-1 .text{
+.post-content-1 .text, .post-content-2 .text{
     padding: 150px 80px 0 80px;
 }
+/* @media (max-width: 1024px) and (min-width: 767px){
+.post-content-1 .text, .post-content-2 .text {
+    width: 100%;
+}
+} */
 @media (max-width: 1200px){
     /* .post-content-1 img{
         width: 100%;

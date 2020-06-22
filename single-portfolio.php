@@ -39,16 +39,29 @@
     <div class="post-content-1 w-100">
         <div class="row">
             <?php $image = get_field('image_1');
+            if( $image ) { ?>
+                <div class="img col-12 col-lg-6" style="background-image:url('<?= $image ?>')"></div>
+            <?php  } ?> 
+            <div class="text col-9 col-lg-5 m-auto">
+                <h2>1. <?php the_field('section_title_1') ?></h2>
+                <div class="separator-line"></div>
+                <h6 class="description"><?php the_field('description_1') ?></h6>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-content-2 w-100">
+        <div class="row">
+            <?php $image = get_field('image_1');
             if( $image ) {
             echo wp_get_attachment_image( $image);
             } ?> 
-            <div class="img col-12 col-lg-6"></div>
             <div class="text col-9 col-lg-5 m-auto">
-                <?php //get_field('section_title_1') ?>
-                <h2>1. Create the look you want on your website. Website building made easy, simple & fast.</h2>
+                <h2>2. Drive traffic to your website and increase engagement with your visitors.</h2>
                 <div class="separator-line"></div>
-                <h6 class="description">Customize the framework to match your small business processes using simple drag-and-drop tools.</h6>
+                <h6 class="description">Welcome your visitors with elegance and flexibility and center the world around your website.</h6>
             </div>
+            <div class="img col-12 col-lg-6"></div>
         </div>
     </div>
     <?php endwhile;  ?>
