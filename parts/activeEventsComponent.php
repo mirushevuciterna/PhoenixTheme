@@ -13,7 +13,7 @@ query_posts( $args ); ?>
         </div>
     </div>
     <?php if( have_posts() ): ?>
-        <div class="p-5 d-flex flex-sm-row flex-column justify-content-between" id="active-events-section">
+        <div class="p-5 d-flex flex-sm-row flex-column justify-content-between owl-caro owl-carousel owl-theme" id="active-events-section">
             
             <?php while(have_posts(  )) : the_post(  ); ?>
             <div class="d-flex mr-auto flex-column charity-text-image">

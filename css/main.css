@@ -206,28 +206,29 @@ body {
     padding-left: 10px;
 }
 
+/* .hideMe{
+    opacity: 0;
+} */
+
 .donateText {
     color: #949494;
     padding-top: 10px;
 }
-
-/* .hideMe{
-    opacity: 0;
-} */
 
 /*  DONATE FEATURE */
 
 /* Active Events Component */
 
 .charity-image img {
-    width: 350px !important;
-    height: 290px !important;
+    width: 300px !important;
+    height: 240px !important;
+    border-radius: 15px;
 }
 
-@media screen and (min-width: 360px) {
+@media only screen and (min-width: 760px) {
     .charity-image img {
-        width: 300px !important;
-        height: 240px !important;
+        width: 350px !important;
+        height: 290px !important;
     }
 }
 
