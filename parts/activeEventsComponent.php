@@ -1,6 +1,6 @@
 <?php 
 
-$args = array('post_type'=>'portfolio', 'post_per_page'=>3);
+$args = array('post_type'=>'portfolio', 'post_per_page'=>-1);
 query_posts( $args ); ?>
 <div class="active-events">
     <div class="p-5 event-title-paragraph">
@@ -18,7 +18,7 @@ query_posts( $args ); ?>
             <?php while(have_posts(  )) : the_post(  ); ?>
             <div class="d-flex flex-column charity-text-image">
                 <div class="p-2 charity-image">
-                    <?php echo the_post_thumbnail('medium') ?>
+                    <?php echo the_post_thumbnail('large') ?>
                 </div>
                 <div class="p-2" id="charity-content">
                     <h4><?php the_title(); ?></h4>
