@@ -135,7 +135,6 @@
     background-color: #fff;
     padding-bottom: 0px;
     margin-bottom: 15px;
-    width: calc(33.3% - 30px);
     margin-right: 30px;
     height: 100%;
 }
@@ -170,9 +169,9 @@
     width: 100%;
 }
 } */
-@media (max-width: 1200px){
-    /* .post-content-1 img{
+/* @media (max-width: 1200px){
+    .related-content{
         width: 100%;
-    } */
-}
+    }
+} */
 /* POST CONTENT */

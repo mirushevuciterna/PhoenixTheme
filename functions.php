@@ -1,4 +1,5 @@
 <?php 
+
 function phoenix_script_enqueue(){
    
     wp_enqueue_style( 'bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' );
@@ -321,4 +322,11 @@ function get_breadcrumb() {
            
     }
        
+}
+
+function dd($obj){
+    echo '<pre>';
+    print_r($obj);
+    echo '</pre>';
+    die();
 }

@@ -67,7 +67,7 @@
                 <?php  } ?>
             </div>
         </div>
-
+        <?php endwhile;  ?>
         <div class="row get-in-touch">
             <div class="w-50 text-center m-auto">
                 <h2>Interested? Let's get in touch!</h2>
@@ -87,34 +87,40 @@
             <h3 class="px-5">
                 Related Projects
             </h3>
-            <div class="related-content px-5 d-flex flex-row">
-                <!-- <div class="portfolio">
-                    <a href="<?= get_permalink() ?>">
-                        <img src="<?php the_post_thumbnail('medium') ?>">
-                    </a>
-                </div> -->
-  
-                <div class="card-portfolio d-flex flex-column">
-                    <a href="<?= get_permalink();?>"><img width="400px" height="250px" class="card-img-top" src="<?php the_post_thumbnail()?>"></a>
-                    <div class="card-body">
-                        <span class="blog-label"><span class="fa fa-folder-open"></span> Marketing, Web design </span>
-                        <h5 class="card-title mt-4"><a href="<?= get_permalink(); ?>"><?php the_title(); ?></a></h5>
-                        <a class="post-link" href="<?= get_permalink(); ?>">View project <i class="fa fa-arrow-right" id="right-arrow"></i></a>
-                    </div>
-                </div>
+            
+            <div class="related-content px-5 d-flex flex-column flex-sm-row">
+        
+            <?php 
+            $args = array(
+                'post_type'=>'portfolio', 
+                'posts_per_page' => 3, 
+                'post__not_in' => array( $post->ID  )
+            );
+            query_posts( $args ); 
+            $related = new WP_Query($args);
+            if( $related->have_posts() ) { 
+            while( $related->have_posts() ) { 
+	        $related->the_post();              
+            ?>
+                    <div class="card-portfolio d-flex flex-column ">
+                        <a href="<?= get_permalink();?>">             
+                            <?php the_post_thumbnail(array(400, 250), array('class'=>'card-img-top')); ?>
+                        </a>
 
-                <div class="card-portfolio d-flex flex-column">
-                    <a href="<?= get_permalink();?>"><img width="400px" height="250px" class="card-img-top" src="<?php the_post_thumbnail()?>"></a>
-                    <div class="card-body">
-                        <span class="blog-label"><span class="fa fa-folder-open"></span> Marketing, Web design </span>
-                        <h5 class="card-title mt-4"><a href="<?= get_permalink(); ?>"><?php the_title(); ?></a></h5>
-                        <a class="post-link" href="<?= get_permalink(); ?>">View project <i class="fa fa-arrow-right" id="right-arrow"></i></a>
+                        <div class="card-body">
+                            <span class="blog-label"><span class="fa fa-folder-open"></span> Marketing, Web design </span>
+                            <h5 class="card-title mt-4"><a href="<?= get_permalink(); ?>"><?php the_title(); ?></a></h5>
+                            <a class="post-link" href="<?= get_permalink(); ?>">View project <i class="fa fa-arrow-right"
+                                    id="right-arrow"></i></a>
+                        </div>
                     </div>
-                </div>
-    
+            <?php  }
+            wp_reset_postdata();
+            } ?>
+
             </div>
         </div>
-        <?php endwhile;  ?>
+
     </div>
 </div>
 
