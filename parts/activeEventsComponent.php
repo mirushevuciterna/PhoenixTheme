@@ -13,10 +13,10 @@ query_posts( $args ); ?>
         </div>
     </div>
     <?php if( have_posts() ): ?>
-        <div class="p-5 d-flex flex-row justify-content-between" id="active-events-section">
+        <div class="p-5 d-flex flex-sm-row flex-column justify-content-between" id="active-events-section">
             
             <?php while(have_posts(  )) : the_post(  ); ?>
-            <div class="d-flex flex-column charity-text-image">
+            <div class="d-flex mr-auto flex-column charity-text-image">
                 <div class="p-2 charity-image">
                     <?php echo the_post_thumbnail('large') ?>
                 </div>
@@ -28,8 +28,8 @@ query_posts( $args ); ?>
             <?php endwhile;  ?>
         </div>
     <?php endif; ?>
-    <div class="p-5 d-flex flex-row justify-content-beetween">
-        <div class="inpire-quote p-2">
+    <div class="p-5 d-flex flex-sm-row flex-column justify-content-beetween">
+        <div class="mr-auto inpire-quote p-2">
             <h2>Give and change the world</h2>
             <p>Tristique senectus et netus et malesuada fames ac turpis.<br>
             Pharetra sit amet aliquam id diam maecenas ultricies.<br> Lorem ipsum dolor sit amet.</p>

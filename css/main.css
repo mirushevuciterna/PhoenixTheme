@@ -224,6 +224,13 @@ body {
     height: 290px !important;
 }
 
+@media screen and (min-width: 360px) {
+    .charity-image img {
+        width: 300px !important;
+        height: 240px !important;
+    }
+}
+
 #charity-content {
     border-radius: 10px;
     text-align: center;
@@ -274,11 +281,13 @@ body {
 }
 
 .inpire-quote {
-    width: 75%;
+    /* width: 75%; */
+    text-align: center;
 }
 
 .donate-buttoni {
-    width: 25%;
+    /* width: 25%; */
+    text-align: center;
 }
 
 .donateBTN {
@@ -299,12 +308,14 @@ body {
     background-color: #fff !important;
     color: #ff704d;
 }
-.inpire-quote h2{
-    color:#322d53;
+
+.inpire-quote h2 {
+    color: #322d53;
     font-weight: bolder;
     padding-bottom: 15px;
 }
-.inpire-quote p{
+
+.inpire-quote p {
     color: #949494;
 }
 
