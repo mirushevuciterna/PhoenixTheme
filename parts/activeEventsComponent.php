@@ -16,15 +16,17 @@ query_posts( $args ); ?>
         <div class="p-5 d-flex flex-sm-row flex-column justify-content-between owl-caro owl-carousel owl-theme" id="active-events-section">
             
             <?php while(have_posts(  )) : the_post(  ); ?>
-            <div class="d-flex mr-auto flex-column charity-text-image">
-                <div class="p-2 charity-image">
-                    <?php echo the_post_thumbnail('large') ?>
+            <a href="<?php echo get_permalink(); ?>">
+                <div class="d-flex mr-auto flex-column charity-text-image">
+                    <div class="p-2 charity-image">
+                        <?php echo the_post_thumbnail('large') ?>
+                    </div>
+                    <div class="p-2" id="charity-content">
+                        <h4><?php the_title(); ?></h4>
+                        <p><?php the_excerpt(); ?></p>
+                    </div>
                 </div>
-                <div class="p-2" id="charity-content">
-                    <h4><?php the_title(); ?></h4>
-                    <p><?php the_excerpt(); ?></p>
-                </div>
-                </div>
+            </a>
             <?php endwhile;  ?>
         </div>
     <?php endif; ?>
