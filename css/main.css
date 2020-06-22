@@ -246,6 +246,11 @@ body {
     margin-top: -130px;
 }
 
+.p-5 a {
+    text-decoration: none;
+    color: #322d53;   
+}
+
 .charity-text-image:hover {
     color: #ff704d;
     cursor: pointer;
@@ -253,6 +258,7 @@ body {
 
 #charity-content h4 {
     font-size: 20px;
+    font-weight: bold !important;
 }
 
 #charity-content p {
