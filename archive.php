@@ -9,7 +9,7 @@ if( have_posts() ):
             class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1"><?php the_title() ?></h5>
-                <small>Posted on <?php the_time('j F Y') ?> at <?php the_time('g:i a') ?></small>
+                <small><?php echo meks_time_ago() ?></small>
             </div>
             <p class="mb-1"><?php the_excerpt() ?></p>
             <?php the_post_thumbnail('medium') ?>
