@@ -59,6 +59,28 @@ body {
     background-color: #322D53;
 }
 
+/* Donation video feature */
+
+.video-container {
+    background-image: url("../images/charity10.webp");
+    width: 50%;
+}
+
+.donation-title {
+    color: #322d53;
+}
+
+.donation-paragraph {
+    color: #949494;
+}
+
+.donationVideoText {
+    text-align: center;
+    width: 50%;
+}
+
+/* Donation video feature */
+
 /*  DONATE FEATURE */
 
 .donate-section {
@@ -248,11 +270,13 @@ body {
 
 .p-5 a {
     text-decoration: none;
-    color: #322d53;   
+    color: #322d53;
 }
-.p-6{
+
+.p-6 {
     padding: 0 60px !important;
 }
+
 .charity-text-image:hover {
     color: #ff704d;
     cursor: pointer;

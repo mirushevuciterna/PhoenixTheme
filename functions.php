@@ -5,6 +5,7 @@ function phoenix_script_enqueue(){
     wp_enqueue_style( 'bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' );
     wp_enqueue_style('customstyle', get_stylesheet_directory_uri().'/css/main.css');
     wp_enqueue_style('style', get_stylesheet_directory_uri().'/css/portfolio.css');
+    wp_enqueue_style('style', get_stylesheet_directory_uri().'/css/donationVideo.css');
     wp_enqueue_style('owlcarouselmincss', get_stylesheet_directory_uri().'/css/owl.carousel.min.css');
     wp_enqueue_style('owlthemedefaultmincss', get_stylesheet_directory_uri().'/css/owl.theme.default.min.css');
     wp_enqueue_script( 'jquery');
