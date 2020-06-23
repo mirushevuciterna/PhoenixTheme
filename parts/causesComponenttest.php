@@ -10,8 +10,8 @@
 			<div class="containercontent1">
                 <div class="owl-caro owl-carousel owl-theme">
                     <?php
-                        if( have_rows('test_test') ):
-                            while ( have_rows('test_test') ) : the_row(); ?>
+                        if( have_rows('carousel_card') ):
+                            while ( have_rows('carousel_card') ) : the_row(); ?>
                                 <div class="item foto1">
                                     <div class="card p-3 cardthyrje">
                                         <img class="card-img-top fotoinside" src="<?php the_sub_field('card_image');?>" alt="test" alt="Card image cap">
