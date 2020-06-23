@@ -81,7 +81,7 @@ $('.owl-caro-active-events').owlCarousel({
     autoplayTimeout: 5000,
     loop: true,
     nav: false,
-    navText : ['<img class="buto" src="https://image.flaticon.com/icons/svg/481/481117.svg" aria-hidden="true"></img>','<img class="buto" src="https://image.flaticon.com/icons/svg/481/481115.svg" aria-hidden="true"></i>'],
+    // navText : ['<img class="buto" src="https://image.flaticon.com/icons/svg/481/481117.svg" aria-hidden="true"></img>','<img class="buto" src="https://image.flaticon.com/icons/svg/481/481115.svg" aria-hidden="true"></i>'],
     responsiveClass: true,
     responsive:{
         
@@ -95,12 +95,12 @@ $('.owl-caro-active-events').owlCarousel({
         },
         960:{
             items:2,
-            nav:true,
+            nav:false,
             dots: true
         },
         1200:{
             items: 3,
-            nav: true,
+            nav: false,
             dots: true
         }
     }
