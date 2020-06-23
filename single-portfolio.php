@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
-
+<?php //dd(get_field_objects($post->id)); ?>
+<?php //dd(get_the_category($post->id)); ?>
 
 <div class="container-fluid">
     <div>
@@ -14,12 +15,22 @@
             <div class="col col-12 col-md-3">
                 <div class="text-left">
                     <h6>Client</h6>
-                    <p>Incubator Design</p>
+                    <p><?php the_field('client'); ?></p>
                 </div>
 
                 <div>
+                    <?php
+                    $tools_used = get_field('tools_used');
+                    if( $tools_used ): ?>
                     <h6>Tools Used</h6>
-                    <p>Photoshop</p>
+                    <?php 
+                    $tools = [];
+                    foreach ($tools_used as $tool){
+                        $tools[] = $tool->post_title;
+                    }                                
+                    ?>                                     
+                    <p><?php echo implode(', ', $tools); ?> </p>
+                    <?php endif; ?>
                 </div>
             </div>
 
@@ -30,7 +41,7 @@
 
             <div class="col col-12 col-md-2 categories">
                 <h6>Categories</h6>
-                <?php foreach (get_categories() as $category){ ?>
+                <?php foreach (get_the_category() as $category){ ?>
                 <div class="row">
                     <div><i class="fa fa-check mx-3" style="font-size:14px;"></i></div>
                     <?= "<p>"; echo $category->name; echo "</p>"; ?>
@@ -117,8 +128,18 @@
                             <?php the_post_thumbnail(array(400, 250), array('class'=>'card-img-top')); ?>
                         </a>
 
-                        <div class="card-body">
-                            <span class="blog-label"><span class="fa fa-folder-open"></span> Marketing, Web design </span>
+                        <div class="card-body">            
+                            <span class="blog-label">
+                                <span class="fa fa-folder-open"></span> 
+                                <?php 
+                                $categories = [];
+                                foreach (get_the_category() as $category){
+                                    $categories[] = $category->name;
+                                }                                
+                                ?>                        
+                                <?php echo implode(', ', $categories); ?>                    
+                            </span>
+
                             <h5 class="card-title mt-4"><a href="<?= get_permalink(); ?>"><?php the_title(); ?></a></h5>
                             <a class="post-link" href="<?= get_permalink(); ?>">View project <i class="fa fa-arrow-right"
                                     id="right-arrow"></i></a>

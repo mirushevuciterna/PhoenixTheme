@@ -83,6 +83,38 @@ function phoenix_custom_post_type() {
 }
 add_action('init', 'phoenix_custom_post_type');
 
+function phoenix_custom_post_tools_used() {
+    $labels = array(
+        'name' => 'Tools Used',
+        'singular_name' => 'Tools Used',
+        'add_new' => 'Add Item',
+        'all_items' => 'All Items',
+        'add_new_item' => 'Add Item',
+        'edit_item' => 'Edit Item',
+        'new_item' => 'New Item',
+        'view_item' => 'View Item',
+        'search_item' => 'Search Tool',
+        'not_found' => 'No items found',
+        'not_found_in_trash' => 'No items found in trash',
+        'parent_item_colon' => 'Parent Item' 
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => false,
+        'publicly_queryable' => false,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'supports' => array('title'),
+        'menu_position' => 5,
+        'exclude_from_search' => true
+    );
+    register_post_type('tools_used', $args);
+}
+add_action('init', 'phoenix_custom_post_tools_used');
+
 /* 
     ====================================
         Theme support
