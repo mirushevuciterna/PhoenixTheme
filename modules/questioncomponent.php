@@ -1,5 +1,5 @@
 <div class="questionSect">
-        <div class="row">
+        <div id="rreshtiques" class="row">
             <div class="questionFoto col-lg-6"></div>
             <div class="queskolright col-lg-6 d-flex justify-content-center align-items-center">
                 <div class=" quesrightcont d-flex flex-column " >
@@ -11,7 +11,7 @@
                                 
                                     <div class="quesAll">
                                         <div class="menu">
-                                            <div class="menu-item toggler"><?php the_sub_field('quescom_button');?></div>
+                                            <div class="menu-item quesdiff toggler"><?php the_sub_field('quescom_button');?></div>
                                             <div class="collapsible-wrapper collapsed">
                                                 <div class="collapsible">
                                                     <div class="menu-item"><?php the_sub_field('quescomp_content');?></div>
@@ -29,31 +29,5 @@
             </div>
     </div>
 </div>
-
-
-                    <!-- <div class="quesAll">
-                        <button class="accordion">1. Where your donations go?</button>
-                        <div class="panel">
-                        <p>Lorem ipsum...</p>
-                    </div>          
-                    </div> 
-
-
-
-
-                    <div class="quesAll">
-                        <button class="accordion">2.How does the program work?</button>
-                        <div class="panel">
-                        <p>Lorem ipsum...</p>
-                        </div>
-                    </div>
-                    <div class="quesAll">
-                        <button class="accordion">3.Can my donation be anonymous?</button>
-                        <div class="panel">
-                        <p>Lorem ipsum...</p>
-                        </div>
-                    </div> -->
-                    
-                    
 
                  
