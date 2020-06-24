@@ -28,11 +28,6 @@ function wpb_adding_scripts() {
     wp_enqueue_script('owlcarouselminjs');
     wp_register_script('jquerjs', get_template_directory_uri() . '/js/jquer.js', array('jquery'),'1.1', true);
     wp_enqueue_script('jquerjs');
-<<<<<<< HEAD
-    wp_register_script('fadeInFeature', get_template_directory_uri() . '/js/fadeInFeature.js', array('jquery'), '1.1', true);
-    wp_enqueue_script('fadeInFeature');
-=======
->>>>>>> 714b1d3647a38fb3761c52524c27e24695cd7140
     wp_enqueue_script('fadeInFeature', get_template_directory_uri() . '/js/fadeInFeature.js', array('jquery'), '1.1', true);
     wp_register_script('causescomponentjs', get_template_directory_uri() . '/modules/assets/js/causescomponent.js', array('jquery'),'1.1', true);
     wp_enqueue_script('causescomponentjs');
@@ -42,11 +37,8 @@ function wpb_adding_scripts() {
     wp_enqueue_script('volunteerscomponentjs');
 
 
-<<<<<<< HEAD
-=======
     wp_register_script('fadeInFeature', get_template_directory_uri() . '/js/fadeInFeature.js', array('jquery'), '1.1', true);
     wp_enqueue_script('fadeInFeature');
->>>>>>> 714b1d3647a38fb3761c52524c27e24695cd7140
 } 
 
 add_action( 'wp_enqueue_scripts', 'wpb_adding_scripts'); 

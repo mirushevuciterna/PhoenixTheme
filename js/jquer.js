@@ -79,9 +79,6 @@ function word(){
 setInterval(word, 2000);
 
 
-<<<<<<< HEAD
-  
-=======
 //CausesComponent
 
 $('.owl-caro-active-events').owlCarousel({
@@ -118,4 +115,3 @@ $('.owl-caro-active-events').owlCarousel({
     }
 });
 document.addEventListener('click', function(e) { if(document.activeElement.toString() == '[object HTMLButtonElement]'){ document.activeElement.blur(); } });
->>>>>>> 714b1d3647a38fb3761c52524c27e24695cd7140
