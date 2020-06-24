@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 <?php 
+    get_template_part('parts/DifferenceComponent');
     get_template_part('parts/CausesComponent');
     get_template_part('parts/donationVideo');
     get_template_part('parts/donateComponent');
