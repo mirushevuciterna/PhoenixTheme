@@ -1,14 +1,16 @@
 <div class="bgcolor">
 			<div class="containercontent">
-
 				<div class="owl-carous owl-carousel owl-theme">
-					<div class="item foto"><img src="<?php echo get_stylesheet_directory_uri();?>/images/logo1.png" alt=""/></div>
-					<div class="item foto"><img src="<?php echo get_stylesheet_directory_uri();?>/images/logo2.png" alt=""/></div>
-					<div class="item foto"><img src="<?php echo get_stylesheet_directory_uri();?>/images/logo3.png" alt=""/></div>
-					<div class="item foto"><img src="<?php echo get_stylesheet_directory_uri();?>/images/logo4.png" alt=""/></div>
-					<div class="item foto"><img src="<?php echo get_stylesheet_directory_uri();?>/images/logo5.png" alt=""/></div>
-					<div class="item foto"><img src="<?php echo get_stylesheet_directory_uri();?>/images/logo6.png" alt=""/></div>
+						<?php
+                        if( have_rows('img_carousel') ):
+							while ( have_rows('img_carousel') ) : the_row(); ?>							
+							<div class="item foto"><img src="<?php the_sub_field('car_img');?>" alt=""/></div>
+                                <?php endwhile;
+                                else :
+                                    // no rows found
+                                endif;
+                                ?>
 				</div>				
 			</div>
-		</div>
+	</div>
 		
