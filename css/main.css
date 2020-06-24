@@ -533,11 +533,6 @@ a .fa {
 /* FOOTER */
 
 
-
- 
-
-
-
 /* Difference component */
 .diffbackground {
     background: url("../images/charity7.jpg") ; 
@@ -683,7 +678,7 @@ outline: none !important;
     }
 
  }
- .asistance{
+.asistance{
  
     animation: fadeInAnimation ease 2s ;
     animation-iteration-count: 1; 
@@ -707,6 +702,7 @@ outline: none !important;
 .fotoloading{
     width: 30px;
 }
+.buto {
+    background-color: #fafafa;
+}
 /* Difference component*/
-
-

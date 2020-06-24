@@ -48,7 +48,6 @@
                                     <div class="volbuttonsleft">
                                         <span class="expbuttons mr-2"><a href=""><i class="fa fa-envelope" ><span id="afterexp">New result</span></i></a></span>
                                         <span class="expbuttons mr-2"><a href=""><i class="fa fa-phone" ><span id="afterexp">New result</span></i></a></span>
-
                                     </div>
                                 </div>
                             </div>
