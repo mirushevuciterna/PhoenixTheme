@@ -7,7 +7,7 @@
 
 
     <div class="bgcolor1">
-        <div class="containercontent1 hideMe">
+        <div class="containercontent1">
 
             <div class="owl-caro owl-carousel owl-theme">
                 <div class="item foto1">
