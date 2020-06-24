@@ -62,64 +62,47 @@ body {
 /* Donation video feature */
 
 .video-container {
-    background-image: url("../images/charity10.webp");
-    width: 50%;
+    width: 100%;
+}
+
+.video-container iframe {
+    width: 100%;
 }
 
 .donation-title {
     color: #322d53;
-    font-weight: 400;
-    font-family: Prata;
-    font-size: 36px;
-    line-height: 48px;
-    margin-bottom: 20px;
-    letter-spacing: -0.03em;
-}
-
-.colcontent {
-    padding-top: 150px !important;
-    /* margin-left: 200px; */
-}
-
-.colcontent2 {
-    width: 60%;
-    margin-left: 120px;
-}
-
-.col iframe {
-    width: 100%;
-    height: 100%;
-}
-
-.donationhr {
-    height: 2px;
-    border-width: 0;
-    color: gray;
-    background-color: gray
-}
-
-.vedeoas {
-    width: 100%;
-    height: 100%;
+    text-align: center;
 }
 
 .donation-paragraph {
-    width: 80%;
-    font-size: 16px;
-    line-height: 26px;
-    font-weight: 400;
-    margin: 0;
     color: #949494;
-    margin-bottom: 20px;
-}
-
-.bckdonation {
-    background-color: #f4f2f0 !important;
+    text-align: center;
 }
 
 .donationVideoText {
     text-align: center;
-    width: 50%;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.donationVideoFeature {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media only screen and (min-width: 760px) {
+    .donationVideoFeature {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .video-container {
+        width: 50%;
+    }
+    .donationVideoText {
+        width: 50%;
+    }
 }
 
 /* Donation video feature */
