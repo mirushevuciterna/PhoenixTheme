@@ -42,6 +42,7 @@
                 else :
 
                     echo('No volunteers');
+                      echo('No volunteers');  echo('No volunteers');
 
                 endif;
 
