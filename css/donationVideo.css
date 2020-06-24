@@ -1,7 +1,50 @@
-    .video-container {
-        background: url(https://www.ekko-wp.com/static/wp-content/uploads/sites/3/2019/04/charity9.jpg) !important;
-    }
+/* Donation video feature */
 
-    .donationVideoText{
-        color: pink;
+.video-container {
+    width: 100%;
+    margin-bottom: -5px;
+}
+
+.video-container iframe {
+    width: 100%;
+}
+
+.donation-title {
+    color: #322d53;
+    text-align: center;
+}
+
+.donation-paragraph {
+    color: #949494;
+    text-align: center;
+}
+
+.donationVideoText {
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.donationVideoFeature {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+}
+
+@media only screen and (min-width: 760px) {
+    .donationVideoFeature {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: none;
     }
+    .video-container {
+        width: 50%;
+    }
+    .donationVideoText {
+        width: 50%;
+    }
+}
+
+/* Donation video feature */
