@@ -59,8 +59,4 @@
             <br> Lorem ipsum dolor sit amet</p>
         <button class="btn btn-lg donateBTN">Read more</button>
     </div>
-<<<<<<< HEAD
-</div>
-=======
 </div> -->
->>>>>>> 4615bc10b69c86cfbb7b37b6dea62a48cb9d3fe1
