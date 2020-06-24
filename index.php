@@ -5,6 +5,7 @@
     get_template_part('modules/causescomponent');
     get_template_part('parts/donateComponent');
     get_template_part('modules/questioncomponent');
+    get_template_part('parts/donateComponent');
     get_template_part('parts/activeEventsComponent');
     get_template_part('parts/logosComponent');
     get_template_part('parts/TextOnImage');
