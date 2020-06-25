@@ -20,12 +20,26 @@
     margin-top: -50px;
     margin-left: 25px;
     background-color: white;
-    transition: margin-top 2s;
+}
+#charity-content:hover{
+    animation: bounce2 0.5s ease-in;
+    -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+    animation-fill-mode: forwards;    
+
+    
+}
+@keyframes bounce2{
+    
+    50% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(-50px);
+
+    }
 }
 
-#charity-content:hover {
-    margin-top: -130px;
-}
+
 
 .p-5 a {
     text-decoration: none;
