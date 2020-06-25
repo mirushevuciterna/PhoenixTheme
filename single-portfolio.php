@@ -123,7 +123,7 @@
             while( $related->have_posts() ) { 
 	        $related->the_post();              
             ?>
-                    <div class="card-portfolio col col-12 col-sm-8 col-md-3 mx-auto">
+                    <div class="card-portfolio col col-12 col-sm-8 col-md-3 mx-sm-4">
                         <a href="<?= get_permalink();?>">             
                             <?php the_post_thumbnail(array(400, 250), array('class'=>'card-img-top')); ?>
                         </a>
