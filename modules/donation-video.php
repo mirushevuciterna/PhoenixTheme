@@ -4,7 +4,18 @@
         <?php if (get_sub_field('position') == 'left_video') { ?>
             <div class="donationVideoFeature">
                 <div class="video-container">
-                    <?php the_sub_field('video'); ?>
+                    <div class="playDiv" id="myBtn">
+                        <i class="fa fa-play"></i>
+                    </div>
+
+                    <div id="myModal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <?php the_sub_field('video'); ?>
+                        </div>
+                    </div>
+                    
                 </div>
                 <div class="donationVideoText p-5 ">
                     <h3 class="donation-title"><?php the_sub_field('titulli_video');?></h3>

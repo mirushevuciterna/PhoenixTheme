@@ -15,7 +15,7 @@ query_posts( $args ); ?>
     <!-- <div class="p-6"> -->
     <?php if( have_posts() ): ?>
         
-            <div class="p-5 d-flex hideMe flex-column justify-content-between owl-caro-active-events owl-carousel owl-theme" id="active-events-section">
+            <div class="p-5 d-flex flex-column justify-content-between owl-caro-active-events owl-carousel owl-theme" id="active-events-section">
                 <?php while(have_posts(  )) : the_post(  ); ?>
                 <a href="<?php echo get_permalink(); ?>">
                     <div class="d-flex mr-auto flex-column charity-text-image">
@@ -33,6 +33,7 @@ query_posts( $args ); ?>
         
             
     <?php endif; ?>
+    <?php wp_reset_query(); ?>
     <!-- </div> -->
     <div class="p-5 d-flex flex-sm-row flex-column justify-content-beetween">
         <div class="mr-auto inpire-quote p-2 hideMe">
