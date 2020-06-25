@@ -110,7 +110,7 @@
         <div class="related-projects">
             <h3 class="px-5">Related Projects</h3>      
 
-            <div class="related-content px-5 d-flex flex-column flex-sm-row">   
+            <div class="related-content px-5 row">   
             <?php 
             $args = array(
                 'post_type'=>'portfolio', 
@@ -123,7 +123,7 @@
             while( $related->have_posts() ) { 
 	        $related->the_post();              
             ?>
-                    <div class="card-portfolio d-flex flex-column ">
+                    <div class="card-portfolio col col-12 col-sm-8 col-md-3 mx-auto">
                         <a href="<?= get_permalink();?>">             
                             <?php the_post_thumbnail(array(400, 250), array('class'=>'card-img-top')); ?>
                         </a>
