@@ -33,6 +33,7 @@ query_posts( $args ); ?>
         
             
     <?php endif; ?>
+    <?php wp_reset_query(); ?>
     <!-- </div> -->
     <div class="p-5 d-flex flex-sm-row flex-column justify-content-beetween">
         <div class="mr-auto inpire-quote p-2 hideMe">
