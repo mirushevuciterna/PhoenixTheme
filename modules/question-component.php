@@ -11,7 +11,7 @@
                                 
                                     <div class="quesAll">
                                         <div class="menu">
-                                            <div class="menu-item quesdiff toggler"><?php the_sub_field('quescom_button');?></div>
+                                            <div class="menu-item quesdiff toggler"><?php the_sub_field('quescomp_button');?></div>
                                             <div class="collapsible-wrapper collapsed">
                                                 <div class="collapsible">
                                                     <div class="menu-item"><?php the_sub_field('quescomp_content');?></div>

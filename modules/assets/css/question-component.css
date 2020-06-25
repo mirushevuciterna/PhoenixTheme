@@ -1,7 +1,7 @@
 /*QUESTION COMPONENT*/
 
 .questionFoto {
-    background: url("../../../images/question.jpg") ; 
+    background: url("../images/question.jpg") ; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
