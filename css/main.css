@@ -71,7 +71,7 @@ footer {
 }
 
 .footer-navbar a {
-    color: #949494;
+    color: #949494 !important;
     line-height: 1.8;
 }
 
