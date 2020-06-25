@@ -15,8 +15,8 @@
 .foto1VOL{
     height: auto;    
 }
-.cardthyrjVOLe {
-    height: 28rem;
+.cardthyrjeVOL {
+    height: 40rem;
     border-radius: 3%;
 }
 .foto1VOL:hover{
@@ -24,7 +24,7 @@
 }
 .fotoinsideVOL{
     border-radius: 3%;
-    height: 25rem;
+    height:25rem;
 }
 .owl-stage{
     display: flex;
@@ -37,32 +37,27 @@ display: flex;
 justify-content: center;
 padding: 1rem;
 }
-#butoniCardVOL{
-background-color: #FF704D;
-color: white;
-border-radius: 25px;
-border-style: none;
-width: 10rem;
-border: 1px solid #FF704D;
 
-}
-#butoniCardVOL:hover {
-background-color: white;
-color: #FF704D;
-}
-#butoniCardVOL:focus,
-#butoniCardVOL:active {
-outline: none;
-box-shadow: none;
-}
 #causeTitullVOL{
     color: #322D53;
     padding: 70px 0 20px 0;
     font-family: 'Prata', serif;
 }
-#causeTitullVOL .card-title{
+.cardthyrjeVOL .card-title{
     color: #322D53;
     font-family: 'Prata', serif;
+    margin-bottom: 0;
+}
+.cardthyrjeVOL h5{
+    margin-top: 5px;
+    font-size: 0.8rem;
+}
+.cardthyrjeVOL p {
+    font-size: 0.9rem;
+    margin: 15px 0;
+}
+.cardthyrjeVOL .card-body {
+    padding: 10px;
 }
 
 
@@ -126,6 +121,12 @@ padding: 0;
     border-radius: 50%;
     padding: 5px;
 }
+#voltest {
+    height: 5rem;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+  
 
 @media only screen and (max-width: 600px) {
     .causeTopVOL {
@@ -152,14 +153,18 @@ padding: 0;
     border-radius: 15px !important;
     background-color: #ff714d59 !important;
     color: #FF704D !important;
-
-
   }
   .expbuttons:hover #afterexp {
     max-width: 7rem;
+    font-size: 0.8rem;
   }
-  
-  
+ 
+  nav:hover button.owl-next:hover,  button.owl-prev:hover,  button.owl-dot:hover{
+    background-color: #fafafa;
+    outline: none;
+    box-shadow: none;
+}
+
 
 
 
