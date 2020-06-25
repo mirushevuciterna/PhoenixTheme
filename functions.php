@@ -49,6 +49,8 @@ function wpb_adding_scripts() {
     wp_enqueue_script('logos-componentjs');
     wp_register_script('fade-in-featurejs', get_template_directory_uri() . '/modules/assets/js/fade-in-feature.js', array('jquery'), '1.1', true);
     wp_enqueue_script('fade-in-featurejs');
+    wp_register_script('difference-componentjs', get_template_directory_uri() . '/modules/assets/js/difference-component.js', array('jquery'), '1.1', true);
+    wp_enqueue_script('difference-componentjs');
 } 
 
 add_action( 'wp_enqueue_scripts', 'wpb_adding_scripts'); 
