@@ -46,6 +46,11 @@ width: 10rem;
 border: 1px solid #FF704D;
 
 }
+.cardthyrje .card-title{
+    color: #322D53;
+    font-family: 'Prata', serif;
+
+}
 #butoniCard:hover {
 background-color: white;
 color: #FF704D;

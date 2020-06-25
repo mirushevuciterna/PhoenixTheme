@@ -6,28 +6,31 @@ $('.owl-caroVOL').owlCarousel({
     margin:10,
     item:6,
     singleItem: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
     loop: true,
-    nav: false,
-    navText : ['<img class="butoVOL" src="https://image.flaticon.com/icons/svg/481/481117.svg" aria-hidden="true"></img>','<img class="buto" src="https://image.flaticon.com/icons/svg/481/481115.svg" aria-hidden="true"></i>'],
+    nav: true,
+    navText : ['<img class="butoVOL" src="https://image.flaticon.com/icons/svg/481/481117.svg" aria-hidden="true"></img>','<img class="butoVOL" src="https://image.flaticon.com/icons/svg/481/481115.svg" aria-hidden="true"></i>'],
     responsiveClass: true,
     responsive:{
 
         0:{
             items: 1,
-            dots: true
+            dots: true,
+            nav: false
         },
         600:{
             items: 2,
-            dots: true
+            dots: true,
+            nav: false
+
         },
         960:{
             items:2,
-            nav:true,
             dots: true
         },
         1200:{
             items: 3,
-            nav: true,
             dots: true
         }
     }
