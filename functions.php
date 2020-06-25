@@ -4,8 +4,8 @@ function phoenix_script_enqueue(){
    
     wp_enqueue_style( 'bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' );
     wp_enqueue_style('customstyle', get_stylesheet_directory_uri().'/css/main.css');
-    wp_enqueue_style('style', get_stylesheet_directory_uri().'/css/portfolio.css');
-    wp_enqueue_style('donationVideo', get_stylesheet_directory_uri().'/css/donationVideo.css');
+    wp_enqueue_style('style', get_stylesheet_directory_uri().'/modules/assets/css/portfolio.css');
+    wp_enqueue_style('donation-video', get_stylesheet_directory_uri().'/modules/assets/css/donation-video.css');
     wp_enqueue_style('owlcarouselmincss', get_stylesheet_directory_uri().'/css/owl.carousel.min.css');
     wp_enqueue_style('owlthemedefaultmincss', get_stylesheet_directory_uri().'/css/owl.theme.default.min.css');
     wp_enqueue_script( 'jquery');
@@ -13,6 +13,18 @@ function phoenix_script_enqueue(){
     wp_enqueue_style( 'pratafont', '//fonts.googleapis.com/css2?family=Prata&display=swap' );
     wp_enqueue_style( 'Montserrat', '//fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap' );
     wp_enqueue_style( 'w3animright', '//www.w3schools.com/w3css/4/w3.css');
+    wp_enqueue_style('causes-componentstyle', get_stylesheet_directory_uri().'/modules/assets/css/causes-component.css');
+    wp_enqueue_style('question-componentstyle', get_stylesheet_directory_uri().'/modules/assets/css/question-component.css');
+    wp_enqueue_style('volunteers-componentstyle', get_stylesheet_directory_uri().'/modules/assets/css/volunteers-component.css');
+    wp_enqueue_style('logos-component', get_stylesheet_directory_uri().'/modules/assets/css/logos-component.css');
+    wp_enqueue_style('get-involved', get_stylesheet_directory_uri().'/modules/assets/css/get-involved.css');
+    wp_enqueue_style('active-events', get_stylesheet_directory_uri().'/modules/assets/css/active-events.css');
+    wp_enqueue_style('difference-component', get_stylesheet_directory_uri().'/modules/assets/css/difference-component.css');
+    wp_enqueue_style('donate-component', get_stylesheet_directory_uri().'/modules/assets/css/donate-component.css');
+    
+    
+    
+
 
 }
 
@@ -23,10 +35,20 @@ function wpb_adding_scripts() {
     wp_enqueue_script('jquery2minjs');
     wp_register_script('owlcarouselminjs', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'),'1.1', true);
     wp_enqueue_script('owlcarouselminjs');
-    wp_register_script('jquerjs', get_template_directory_uri() . '/js/jquer.js', array('jquery'),'1.1', true);
-    wp_enqueue_script('jquerjs');
-    wp_register_script('fadeInFeature', get_template_directory_uri() . '/js/fadeInFeature.js', array('jquery'), '1.1', true);
-    wp_enqueue_script('fadeInFeature');
+    wp_register_script('causes-componentjs', get_template_directory_uri() . '/modules/assets/js/causes-component.js', array('jquery'),'1.1', true);
+    wp_enqueue_script('causes-componentjs');
+    wp_register_script('question-componentjs', get_template_directory_uri() . '/modules/assets/js/question-component.js', array('jquery'),'1.1', true);
+    wp_enqueue_script('question-componentjs');
+    wp_register_script('volunteers-componentjs', get_template_directory_uri() . '/modules/assets/js/volunteers-component.js', array('jquery'),'1.1', true);
+    wp_enqueue_script('volunteers-componentjs');  
+    wp_register_script('active-eventsjs', get_template_directory_uri() . '/modules/assets/js/active-events.js', array('jquery'),'1.1', true);
+    wp_enqueue_script('active-eventsjs'); 
+    wp_register_script('donation-videojs', get_template_directory_uri() . '/modules/assets/js/donation-video.js', array('jquery'),'1.1', true);
+    wp_enqueue_script('donation-videojs');
+    wp_register_script('logos-componentjs', get_template_directory_uri() . '/modules/assets/js/logos-component.js', array('jquery'),'1.1', true);
+    wp_enqueue_script('logos-componentjs');
+    wp_register_script('fade-in-featurejs', get_template_directory_uri() . '/modules/assets/js/fade-in-feature.js', array('jquery'), '1.1', true);
+    wp_enqueue_script('fade-in-featurejs');
 } 
 
 add_action( 'wp_enqueue_scripts', 'wpb_adding_scripts'); 
