@@ -1,0 +1,118 @@
+/* Donation video feature */
+
+.video-container {
+    min-height: 360px;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    background: url("../images/charity10.webp") fixed;
+}
+
+.video-container .playDiv {
+    margin: auto;
+    height: 50px;
+    width: 50px;
+    border: 1px solid gray;
+    border-radius: 100%;
+    margin-top: 23%;
+}
+
+.video-container .playDiv:hover {
+    cursor: pointer;
+}
+
+.video-container .playDiv i {
+    margin-top: 33%;
+    margin-left: 8%;
+}
+
+.video-container iframe {
+    width: 100%;
+}
+
+.donation-title {
+    color: #322d53;
+    text-align: center;
+}
+
+.donation-paragraph {
+    color: #949494;
+    text-align: center;
+}
+
+.donationVideoText {
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.donationVideoFeature {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+}
+
+@media only screen and (min-width: 760px) {
+    .donationVideoFeature {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: none;
+    }
+    .video-container {
+        width: 50%;
+    }
+    .donationVideoText {
+        width: 50%;
+    }
+}
+
+/* Modal Video */
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Video */
+
+/* Donation video feature */
