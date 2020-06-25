@@ -8,10 +8,10 @@
                         <i class="fa fa-play"></i>
                     </div>
 
-                    <div id="myModal" class="modal">
+                    <div id="myModal" class="modal modal_multi">
                         <!-- Modal content -->
                         <div class="modal-content">
-                            <span class="close">&times;</span>
+                            <span class="close close_multi">&times;</span>
                             <?php the_sub_field('video'); ?>
                         </div>
                     </div>
@@ -35,17 +35,17 @@
 
                 <div class="video-container">
 
-                    <div id="myModal1" class="modal">
+                <div class="playDiv" id="myBtn">
+                        <i class="fa fa-play"></i>
+                    </div>
+
+                    <div id="myModal" class="modal modal_multi">
                         <!-- Modal content -->
                         <div class="modal-content">
-                            <span class="close1">&times;</span>
+                            <span class="close close_multi">&times;</span>
                             <?php the_sub_field('video'); ?>
                         </div>
                     </div>
-
-                    <div class="playDiv" id="myBtn1">
-                        <i class="fa fa-play"></i>
-                    </div> 
                 </div>
             </div>
     <?php 
@@ -54,3 +54,6 @@
                 
         endif;
     ?>
+
+
+      
