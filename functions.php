@@ -149,6 +149,7 @@ add_action('init', 'phoenix_custom_post_tools_used');
     ====================================
 */
 add_theme_support('post-thumbnails');
+add_theme_support('html5');
 
 
 /* 
