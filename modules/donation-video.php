@@ -36,7 +36,10 @@
                     <button class="btn btn-lg donateBTN"><?php the_sub_field('butoni_video');?></button>
                 </div>
 
-                <div class="video-container">
+                <?php $image = get_sub_field('image_video');
+                if( $image ) { ?>
+                <div class="video-container" style="background-image:url('<?= $image ?>')">
+                <?php  } ?>
 
                 <div class="playDiv" id="myBtn">
                         <i class="fa fa-play"></i>
