@@ -3,7 +3,10 @@
         while ( have_rows('video_youtube1') ) : the_row(); ?>
         <?php if (get_sub_field('position') == 'left_video') { ?>
             <div class="donationVideoFeature">
-                <div class="video-container">
+            <?php $image = get_sub_field('image_video');
+            if( $image ) { ?>
+                <div class="video-container" style="background-image:url('<?= $image ?>')">
+                <?php  } ?>
                     <div class="playDiv" id="myBtn">
                         <i class="fa fa-play"></i>
                     </div>
