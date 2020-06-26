@@ -127,6 +127,11 @@
     cursor: pointer;
 }
 
+#donationModalContent iframe {
+    width: 100% !important;
+    height: 400px;
+}
+
 
 /* Modal Video */
 
