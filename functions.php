@@ -395,3 +395,9 @@ function dd($obj){
 function meks_time_ago() {
 	return human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' );
 }
+
+add_filter('woocommerce_product_attribute_tab_content_term', function($content, $term, $attribute, $display_type) {
+    $content = str_replace(']]>', ']]>', $content);
+    $content = do_shortcode($content);
+    return $content;
+}, 10, 4);

@@ -3,22 +3,13 @@
         while ( have_rows('video_youtube1') ) : the_row(); ?>
         <?php if (get_sub_field('position') == 'left_video') { ?>
             <div class="donationVideoFeature">
-            <?php $image = get_sub_field('image_video');
-            if( $image ) { ?>
+                <?php $image = get_sub_field('image_video');
+                if( $image ) { ?>
                 <div class="video-container" style="background-image:url('<?= $image ?>')">
                 <?php  } ?>
-                    <div class="playDiv" id="myBtn">
+                    <div data-video="<?php the_sub_field('titulli_video');?>" class="playDiv" id="myBtn">
                         <i class="fa fa-play"></i>
-                    </div>
-
-                    <div id="myModal" class="modal modal_multi">
-                        <!-- Modal content -->
-                        <div class="modal-content">
-                            <span class="close close_multi">&times;</span>
-                            <?php the_sub_field('video'); ?>
-                        </div>
-                    </div>
-                    
+                    </div>      
                 </div>
                 <div class="donationVideoText p-5 ">
                     <h3 class="donation-title"><?php the_sub_field('titulli_video');?></h3>
@@ -40,18 +31,9 @@
                 if( $image ) { ?>
                 <div class="video-container" style="background-image:url('<?= $image ?>')">
                 <?php  } ?>
-
-                <div class="playDiv" id="myBtn">
+                    <div data-video="<?php the_sub_field('titulli_video');?>" class="playDiv" id="myBtn1111">
                         <i class="fa fa-play"></i>
-                    </div>
-
-                    <div id="myModal" class="modal modal_multi">
-                        <!-- Modal content -->
-                        <div class="modal-content">
-                            <span class="close close_multi">&times;</span>
-                            <?php the_sub_field('video'); ?>
-                        </div>
-                    </div>
+                    </div> 
                 </div>
             </div>
     <?php 
@@ -62,4 +44,11 @@
     ?>
 
 
-      
+    <div id="videoModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>    
+            <iframe  id="videoModalContent" height="400px" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    
