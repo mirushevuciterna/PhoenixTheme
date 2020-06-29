@@ -7,7 +7,7 @@
     <div>
         <?php while(have_posts(  )) : the_post(  ); ?>
         
-        <div class="mt-5 border-bottom title-section text-center hideMe">
+        <div class="mt-5 border-bottom title-section text-center">
             <h1 class="section-heading"><?php the_title(); ?></h1>
             <div id="breadcrumb"><?php get_breadcrumb(); ?></div>
         </div>
