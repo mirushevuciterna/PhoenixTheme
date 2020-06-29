@@ -1,5 +1,6 @@
 //diffcomponent
-
+if (document.location.pathname == "/") {
+    
 var countDownDate = new Date("Jun 5, 2021 15:37:25").getTime();
 
 var x = setInterval(function () {
@@ -42,3 +43,4 @@ function word() {
 }
 setInterval(word, 2000);
 
+}

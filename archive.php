@@ -12,7 +12,8 @@ if( have_posts() ):
                 <small><?php echo meks_time_ago() ?></small>
             </div>
             <p class="mb-1"><?php the_excerpt() ?></p>
-            <?php the_post_thumbnail('medium') ?>
+            <?php //the_post_thumbnail() ?>
+            <img src="<?php echo get_the_post_thumbnail_url (); ?>" class="col-12 col-md-6 pl-0">
         </a>
     </div>
     <?php endwhile;
