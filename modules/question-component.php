@@ -1,7 +1,7 @@
 <div class="questionSect">
         <div id="rreshtiques" class="row">
             <div class="questionFoto col-lg-6"></div>
-            <div class="queskolright col-lg-6 d-flex justify-content-center align-items-center">
+            <div class="queskolright col-lg-6 d-flex justify-content-center align-items-center ">
                 <div class=" quesrightcont d-flex flex-column " >
                     <div class="questiontitulli hideMe"><h1>Got any questions?</br> See more below</h1></div>
                     <div class="questionsbut">

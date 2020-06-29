@@ -1,5 +1,5 @@
 <div class="p-5 donate-section">
-    <div class="pg_row text-center">
+    <div class="pg_row text-center hideMe">
         <h6>
             <span>Learn More</span> about Ekko's unique features.</h6>
         <h2>A better way to give</h2>

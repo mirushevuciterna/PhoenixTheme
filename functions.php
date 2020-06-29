@@ -1,4 +1,8 @@
 <?php 
+function register_navwalker(){
+	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+}
+add_action( 'after_setup_theme', 'register_navwalker' );
 
 function phoenix_script_enqueue(){
    
@@ -149,6 +153,7 @@ add_action('init', 'phoenix_custom_post_tools_used');
     ====================================
 */
 add_theme_support('post-thumbnails');
+add_theme_support('html5');
 
 
 /* 
@@ -395,3 +400,9 @@ function dd($obj){
 function meks_time_ago() {
 	return human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' );
 }
+
+add_filter('woocommerce_product_attribute_tab_content_term', function($content, $term, $attribute, $display_type) {
+    $content = str_replace(']]>', ']]>', $content);
+    $content = do_shortcode($content);
+    return $content;
+}, 10, 4);

@@ -24,7 +24,9 @@
                 <?php wp_nav_menu( array (
             'theme_location' => 'primarymenu',
             'container' => false,
-            'menu_class' => 'navbar-nav m-auto ' 
+            'depth' => 2,
+            'walker' => new WP_Bootstrap_Navwalker(),
+            'menu_class' => 'navbar-nav m-auto '
             ) ); ?>
             </div>
 
