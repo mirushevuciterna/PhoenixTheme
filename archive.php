@@ -4,7 +4,7 @@
     <?php 
 if( have_posts() ): 
     while ( have_posts() ): the_post(); ?>
-    <div class="list-group my-5 py-3 col-12 col-md-8 hideMe">
+    <div class="list-group my-5 py-3 col-12 col-md-8">
         <a href="<?php echo the_permalink()?>"
             class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-between ">

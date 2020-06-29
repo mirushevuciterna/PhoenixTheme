@@ -72,11 +72,14 @@
 
     </body>
 
-<?php if (is_page('home')): ?>
+<?php //if (is_page('home')): ?>
     <script>
-        $('.dropdown-toggle').click(function() {     
-            window.location = $(this).attr('href'); 
-        });
+        // if (screen.width >= 1000) {
+        //     $('.dropdown-toggle').click(function() {     
+        //         window.location = $(this).attr('href'); 
+        //     });
+        // }
+        $('.nav-link').removeAttr('title');
     </script>
-<?php endif ?>
+<?php //endif ?>
 </html>

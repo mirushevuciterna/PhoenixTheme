@@ -4,7 +4,7 @@ Template Name: Contact
 */
 ?>
 <?php
-if(isset($_POST['submitted'])) {
+if(isset($_POST['submit'])) {
 	if(trim($_POST['contactName']) === '') {
 		$nameError = 'Please enter your name.';
 		$hasError = true;
@@ -47,80 +47,67 @@ if(isset($_POST['submitted'])) {
 	}
 
 } ?>
+
 <?php get_header(); ?>
-	<div class="container-fluid">
-		<div id="content">
+<div class="container-fluid">
+    <div id="content">
 
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-					<div class="entry-content">
-						<?php if(isset($emailSent) && $emailSent == true) { ?>
-							<div class="thanks">
-								<p>Thanks, your email was sent successfully.</p>
-							</div>
-						<?php } else { ?>
-							<?php the_content(); ?>
-							<?php if(isset($hasError) || isset($captchaError)) { ?>
-								<p class="error">Sorry, an error occured.<p>
-							<?php } ?>
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+            <h1 class="entry-title"><?php the_title(); ?></h1>
+            <div class="entry-content">
+                <?php if(isset($emailSent) && $emailSent == true) { ?>
+                <div class="thanks">
+                    <p>Thanks, your email was sent successfully.</p>
+                </div>
+                <?php } else { ?>
+                <?php the_content(); ?>
+                <?php //if(isset($hasError) || isset($captchaError)) { ?>
+                <!-- <p class="error">Sorry, an error occured.<p> -->
+                        <?php// } ?>
 
-						<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-	
+                        <form action="<?php the_permalink(); ?>" id="contactForm" method="post" class="my-3">
+                            <div class="form-group">
+                                <label for="contactName">Name:</label>
+                                <input type="text" name="contactName" id="contactName"
+                                    value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>"
+                                    class="required requiredField form-control" />
+                                <?php if($nameError != '') { ?>
+                                <span class="error"><?=$nameError;?></span>
+                                <?php } ?>
+                            </div>
 
-						<form action="<?php the_permalink(); ?>" id="contactForm" method="post">
-							<div class="form-group">
-							<li>
-								<label for="contactName">Name:</label>
-								<input type="text" name="contactName" id="contactName" value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>" class="required requiredField" />
-								<?php if($nameError != '') { ?>
-									<span class="error"><?=$nameError;?></span>
-								<?php } ?>
-							</li>
+                            <div>
+                                <label for="email">Email</label>
+                                <input type="text" name="email" id="email"
+                                    value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>"
+                                    class="required requiredField email form-control" />
+                                <?php if($emailError != '') { ?>
+                                <span class="error"><?=$emailError;?></span>
+                                <?php } ?>
+                            </div>
 
-							<li>
-								<label for="email">Email</label>
-								<input type="text" name="email" id="email" value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>" class="required requiredField email" />
-								<?php if($emailError != '') { ?>
-									<span class="error"><?=$emailError;?></span>
-								<?php } ?>
-							</li>
+                            <div>
+                                <label for="commentsText">Message:</label>
+                                <textarea name="comments" id="commentsText" rows="3"
+                                    class="required requiredField form-control">
+									<?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?>
+								</textarea>
+                                <?php if($commentError != '') { ?>
+                                <span class="error"><?=$commentError;?></span>
+                                <?php } ?>
+                            </div>
+							<br>
+                            <input type="submit" class="btn btn-primary" value="Send Mail" name="submit">
+							
+                        </form>
+                        <?php } ?>
+            </div><!-- .entry-content -->
+        </div><!-- .post -->
 
-							<li><label for="commentsText">Message:</label>
-								<textarea name="comments" id="commentsText" rows="20" cols="30" class="required requiredField"><?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?></textarea>
-								<?php if($commentError != '') { ?>
-									<span class="error"><?=$commentError;?></span>
-								<?php } ?>
-							</li>
-
-							<li>
-								<input type="submit">Send email</input>
-							</li>
-						</ul>
-						<input type="hidden" name="submit" id="submitted" value="true" />
-					</form>
-				<?php } ?>
-				</div><!-- .entry-content -->
-			</div><!-- .post -->
-
-				<?php endwhile; endif; ?>
-		</div><!-- #content -->
-	</div><!-- #container -->
+        <?php endwhile; endif; ?>
+    </div><!-- #content -->
+</div><!-- #container -->
 
 <?php get_footer(); ?>

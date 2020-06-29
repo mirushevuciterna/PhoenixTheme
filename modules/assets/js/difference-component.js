@@ -43,4 +43,4 @@ function word() {
 }
 setInterval(word, 2000);
 
-}
+} 
