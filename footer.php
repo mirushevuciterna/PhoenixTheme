@@ -72,11 +72,11 @@
 
     </body>
 
-<?php if (is_page('home')): ?>
+<?php //if (is_page('home')): ?>
     <script>
         $('.dropdown-toggle').click(function() {     
             window.location = $(this).attr('href'); 
         });
     </script>
-<?php endif ?>
+<?php //endif ?>
 </html>
