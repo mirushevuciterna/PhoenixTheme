@@ -1,5 +1,5 @@
 //diffcomponent
-if (document.location.pathname == "/") {
+if (document.location.pathname == "/" || document.location.pathname == "/wordpress_site/" || document.location.pathname == "/testsite/wordpress/"  || document.location.pathname == "/StarlabsWebPage/") {
     
 var countDownDate = new Date("Jun 5, 2021 15:37:25").getTime();
 
