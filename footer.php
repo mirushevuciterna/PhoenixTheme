@@ -79,6 +79,7 @@
             window.location = $(this).attr('href'); 
         });
         }
+        $('.nav-link').removeAttr('title');
     </script>
 <?php //endif ?>
 </html>
