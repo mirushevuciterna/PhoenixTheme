@@ -1,5 +1,5 @@
 <div class="bgcolor">
-			<div class="containercontent">
+			<div class="containercontent hideMe">
 				<div class="owl-carous owl-carousel owl-theme">
 						<?php
                         if( have_rows('img_carousel') ):
