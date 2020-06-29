@@ -1,5 +1,5 @@
 <div class="causeAllVOL">
-    <div class="causeTopVOL ">
+    <div class="causeTopVOL hideMe">
         <h1 id="causeTitullVOL"> Wonderful volunteers </h1>
         <p>Our charity relies on volunteers like you to support our organization's efforts.</p>
     </div>
@@ -15,15 +15,15 @@
                 <div class="item foto1VOL">
                     <div class="card p-3 cardthyrjeVOL">
                         <img class="card-img-top fotoinsideVOL"
-                            src="<?php the_sub_field('volunteer_image'); ?>""
+                            src="<?php the_sub_field('volunteer_image'); ?>"
                             alt="Card image cap">
-                            <div class="card-body d-flex flex-column">
+                            <div class="card-body d-flex flex-column hideMe">
                             <h4 class="card-title"><?php the_sub_field('volunteer_name'); ?></h4>
                             <h5><?php the_sub_field('volunteer_title'); ?></h5>
                             <small id="voltest">
                                 <p><?php the_sub_field('volunteer_description'); ?></p>
                             </small>
-                            <div class="volsocials row d=flex justify-content-between mx-2">
+                            <div class="volsocials hideMe row d=flex justify-content-between mx-2">
                                 <div class="volbuttonsright">
                                     <span class=""><a href=""><i class="fa fa-facebook fa-sm"></i></a></span>
                                     <span class="ml-1"><a href=""><i class="fa fa-linkedin"></i></a></span>

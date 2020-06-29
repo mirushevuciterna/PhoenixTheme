@@ -8,14 +8,14 @@ $videoIndex = 1;
                 if( $image ) { ?>
                 <div class="video-container" style="background-image:url('<?= $image ?>')">
                 <?php  } ?>
-                    <div onclick="playDonationVideo(<?php echo $videoIndex; ?>)" class="playDiv" id="myBtn1111">
+                    <div onclick="playDonationVideo(<?php echo $videoIndex; ?>)" class="playDiv hideMe" id="myBtn1111">
                         <i class="fa fa-play"></i>
                         <div id="donation-video-<?php echo $videoIndex; ?>" style="display: none">
                             <?php the_sub_field('video');?>
                         </div>
                     </div>
                 </div>
-                <div class="donationVideoText p-5 ">
+                <div class="donationVideoText p-5 hideMe">
                     <h3 class="donation-title"><?php the_sub_field('titulli_video');?></h3>
                     <p class="donation-paragraph"><?php the_sub_field('paragrafi_video');?></p>
                     <button class="btn btn-lg donateBTN"><?php the_sub_field('butoni_video');?></button>
@@ -25,7 +25,7 @@ $videoIndex = 1;
         <?php } else { ?>
 
             <div class="donationVideoFeature">
-                <div class="donationVideoText p-5 ">
+                <div class="donationVideoText p-5 hideMe">
                     <h3 class="donation-title"><?php the_sub_field('titulli_video');?></h3>
                     <p class="donation-paragraph"><?php the_sub_field('paragrafi_video');?></p>
                     <button class="btn btn-lg donateBTN"><?php the_sub_field('butoni_video');?></button>
@@ -35,7 +35,7 @@ $videoIndex = 1;
                 if( $image ) { ?>
                 <div class="video-container" style="background-image:url('<?= $image ?>')">
                 <?php  } ?>
-                    <div onclick="playDonationVideo(<?php echo $videoIndex; ?>)" class="playDiv" id="myBtn1111">
+                    <div onclick="playDonationVideo(<?php echo $videoIndex; ?>)" class="playDiv hideMe" id="myBtn1111">
                         <i class="fa fa-play"></i>
                         <div id="donation-video-<?php echo $videoIndex; ?>" style="display: none">
                             <?php the_sub_field('video');?>
