@@ -74,9 +74,11 @@
 
 <?php //if (is_page('home')): ?>
     <script>
+        if (screen.width >= 1000) {
         $('.dropdown-toggle').click(function() {     
             window.location = $(this).attr('href'); 
         });
+        }
     </script>
 <?php //endif ?>
 </html>
