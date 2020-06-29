@@ -71,4 +71,12 @@
       <?php wp_footer() ?>
 
     </body>
+
+<?php if (is_page('home')): ?>
+    <script>
+        $('.dropdown-toggle').click(function() {     
+            window.location = $(this).attr('href'); 
+        });
+    </script>
+<?php endif ?>
 </html>
