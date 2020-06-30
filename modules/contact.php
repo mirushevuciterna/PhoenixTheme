@@ -49,16 +49,18 @@ if(isset($_POST['submit'])) {
 } ?>
 
 <?php get_header(); ?>
-<div class="container-fluid">
-    <div id="content">
+<div class="contact-wrapper">
+    <div id="content" class="w-50 mx-auto my-0 py-5">
 
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-            <h1 class="entry-title"><?php the_title(); ?></h1>
+            <h2 class="entry-title mb-3">Let's get in touch</h2>
+            <p class="mb-4">Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days.</p>
             <div class="entry-content">
                 <?php if(isset($emailSent) && $emailSent == true) { ?>
                 <div class="thanks">
-                    <p>Thanks, your email was sent successfully.</p>
+                    <p class="text-success mb-3">Thanks, your email was sent successfully.</p>
+                    <a href="/contact">Go Back</a>
                 </div>
                 <?php } else { ?>
                 <?php the_content(); ?>
@@ -69,37 +71,32 @@ if(isset($_POST['submit'])) {
 
                         <form action="<?php the_permalink(); ?>" id="contactForm" method="post" class="my-3">
                             <div class="form-group">
-                                <label for="contactName">Name:</label>
-                                <input type="text" name="contactName" id="contactName"
+                                <input type="text" name="contactName" placeholder="Your name"
                                     value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>"
                                     class="required requiredField form-control" />
                                 <?php if($nameError != '') { ?>
-                                <span class="error"><?=$nameError;?></span>
+                                <span class="text-danger"><?=$nameError;?></span>
                                 <?php } ?>
                             </div>
 
-                            <div>
-                                <label for="email">Email</label>
-                                <input type="text" name="email" id="email"
+                            <div class="form-group">
+                                <input type="text" name="email" placeholder="Your email"
                                     value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>"
                                     class="required requiredField email form-control" />
                                 <?php if($emailError != '') { ?>
-                                <span class="error"><?=$emailError;?></span>
+                                <span class="text-danger"><?=$emailError;?></span>
                                 <?php } ?>
                             </div>
 
-                            <div>
-                                <label for="commentsText">Message:</label>
-                                <textarea name="comments" id="commentsText" rows="3"
-                                    class="required requiredField form-control">
-									<?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?>
-								</textarea>
+                            <div class="form-group">
+                                <textarea name="comments" rows="3" placeholder="Your message"
+                                    class="required requiredField form-control"></textarea>
                                 <?php if($commentError != '') { ?>
-                                <span class="error"><?=$commentError;?></span>
+                                <span class="text-danger"><?=$commentError;?></span>
                                 <?php } ?>
                             </div>
-							<br>
-                            <input type="submit" class="btn btn-primary" value="Send Mail" name="submit">
+						
+                            <input type="submit" class="btn btn-primary" id="butoniNav" value="Send Mail" name="submit">
 							
                         </form>
                         <?php } ?>

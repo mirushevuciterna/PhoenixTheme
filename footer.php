@@ -72,14 +72,16 @@
 
     </body>
 
-<?php //if (is_page('home')): ?>
+
     <script>
-        // if (screen.width >= 1000) {
-        //     $('.dropdown-toggle').click(function() {     
-        //         window.location = $(this).attr('href'); 
-        //     });
-        // }
+
+        if ($(window).width() > 1000) {
+            $('.dropdown-toggle').click(function() {   
+                window.location = $(this).attr('href'); 
+            });
+        }
+        console.log($( window ).width());
+        
         $('.nav-link').removeAttr('title');
     </script>
-<?php //endif ?>
 </html>
