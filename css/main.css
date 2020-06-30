@@ -2,6 +2,9 @@ html,
 body {
     margin: 70px 0 0;
 }
+.nav-item  {
+    padding-top: 70px;
+}
 
 .navbar {
     height: 70px;
@@ -62,7 +65,11 @@ body {
 /*Dropdown Css*/
 .dropdown:hover > .dropdown-menu {
   display: block;
+  margin-top: 5px;
+  border: none;
 }
+
+
 /* .dropdown-submenu {
     position: relative;
 } */
