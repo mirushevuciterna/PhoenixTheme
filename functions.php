@@ -25,7 +25,8 @@ function phoenix_script_enqueue(){
     wp_enqueue_style('active-events', get_stylesheet_directory_uri().'/modules/assets/css/active-events.css');
     wp_enqueue_style('difference-component', get_stylesheet_directory_uri().'/modules/assets/css/difference-component.css');
     wp_enqueue_style('donate-component', get_stylesheet_directory_uri().'/modules/assets/css/donate-component.css');
-    
+    wp_enqueue_style('contact', get_stylesheet_directory_uri().'/modules/assets/css/contact.css');
+ 
     
     
 
