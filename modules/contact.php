@@ -5,26 +5,26 @@ Template Name: Contact
 ?>
 <?php
 if(isset($_POST['submit'])) {
-	// Check for empty fields
-if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phone']) || empty($_POST['message']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-    http_response_code(500);
-    exit();
-  }
-  
-  $name = strip_tags(htmlspecialchars($_POST['name']));
-  $email = strip_tags(htmlspecialchars($_POST['email']));
-  $phone = strip_tags(htmlspecialchars($_POST['phone']));
-  $message = strip_tags(htmlspecialchars($_POST['message']));
-  
-  // Create the email and send the message
-  $to = "pashtrik.gashi1@gmail.com"; // Add your email address in between the "" replacing yourname@yourdomain.com - This is where the form will send a message to.
-  $subject = "Website Contact Form:  $name";
-  $body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email\n\nPhone: $phone\n\nMessage:\n$message";
-  $header = "From: noreply@gmail.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
-  $header .= "Reply-To: $email";	
-  
-  if(!mail($to, $subject, $body, $header))
-    http_response_code(500);
+        // Check for empty fields
+    if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phone']) || empty($_POST['message']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        http_response_code(500);
+        exit();
+    }
+    
+    $name = strip_tags(htmlspecialchars($_POST['name']));
+    $email = strip_tags(htmlspecialchars($_POST['email']));
+    $phone = strip_tags(htmlspecialchars($_POST['phone']));
+    $message = strip_tags(htmlspecialchars($_POST['message']));
+    
+    // Create the email and send the message
+    $to = "pashtrik.gashi1@gmail.com"; // Add your email address in between the "" replacing yourname@yourdomain.com - This is where the form will send a message to.
+    $subject = "Website Contact Form:  $name";
+    $body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email\n\nPhone: $phone\n\nMessage:\n$message";
+    $header = "From: noreply@gmail.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
+    $header .= "Reply-To: $email";	
+    
+    if(!mail($to, $subject, $body, $header))
+        http_response_code(500);
 
 } ?>
 
@@ -56,7 +56,7 @@ if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phone']) || 
                 <!-- Contact Section Form-->
                 <div class="row contact-form">
                     <div class="col-lg-8 mx-auto">
-                        <form action="<?php the_permalink(); ?>" id="contactForm" name="sentMessage" method="post" novalidate="novalidate">
+                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                     <label>Name</label><input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name." />
@@ -89,42 +89,6 @@ if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phone']) || 
                 </div>
             </div>
         </section>
-
-        <!-- <form action="<?php the_permalink(); ?>" id="contactForm" method="post" class="my-3">
-                            <div class="form-group">
-                                <label for="contactName">Name:</label>
-                                <input type="text" name="contactName" id="contactName"
-                                    value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>"
-                                    class="required requiredField form-control" />
-                                    <?php if($nameError != '') { ?>
-                                <span class="error"><?=$nameError;?></span>
-                                <?php } ?>
-                            </div>
-
-                            <div>
-                                <label for="email">Email</label>
-                                <input type="text" name="email" id="email"
-                                    value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>"
-                                    class="required requiredField email form-control" />
-                                <?php if($emailError != '') { ?>
-                                <span class="error"><?=$emailError;?></span>
-                                <?php } ?>
-                            </div>
-
-                            <div>
-                                <label for="commentsText">Message:</label>
-                                <textarea name="comments" id="commentsText" rows="3"
-                                    class="required requiredField form-control">
-									<?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?>
-								</textarea>
-                                <?php if($commentError != '') { ?>
-                                <span class="error"><?=$commentError;?></span>
-                                <?php } ?>
-                            </div>
-							<br>
-                            <input type="submit" class="btn btn-primary" value="Send Mail" name="submit">
-							
-                        </form> -->
 
                         <?php } ?>
             </div><!-- .entry-content -->
