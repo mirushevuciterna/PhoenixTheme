@@ -1,12 +1,12 @@
 <div class="causeAll">
-        <div class="causeTop " >
+        <div class="causeTop hideMe" >
             <h1 id="causeTitull"> Causes We Support </h1> 
-            <p ">We’re here for people like you who want to make a difference. Choose how and when 
+            <p>We’re here for people like you who want to make a difference. Choose how and when 
             you support the causes you care about here.</p>
         </div>
         
         
-        <div class="bgcolor1">
+        <div class="bgcolor1 hideMe">
 			<div class="containercontent1">
                 <div class="owl-caro owl-carousel owl-theme">
                     <?php

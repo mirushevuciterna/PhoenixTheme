@@ -1,5 +1,5 @@
 /** Donation Video Modal */
-
+if (document.location.pathname == "/") {
 function playDonationVideo(videoId) {
     let videoContent = document.getElementById("donation-video-" + videoId).innerHTML;
     let modal = document.getElementById("videoModal");
@@ -12,3 +12,4 @@ closeBtn.addEventListener("click", function(event) {
     document.getElementById("videoModal").style.display = "none";
     document.getElementById('donationModalContent').innerHTML = '';
 });
+}

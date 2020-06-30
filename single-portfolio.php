@@ -13,7 +13,7 @@
         </div>
         <div class="row basic-info">
             <div class="col col-12 col-md-3">
-                <div class="text-left">
+                <div class="text-left hideMe">
                     <h6>Client</h6>
                     <p><?php the_field('client'); ?></p>
                 </div>
@@ -34,12 +34,12 @@
                 </div>
             </div>
 
-            <div class="col col-12 col-md-6">
+            <div class="col col-12 col-md-6 hideMe">
                 <h6>Basic Info</h6>
                 <p><?php the_content(); ?></p>
             </div>
 
-            <div class="col col-12 col-md-2 categories">
+            <div class="col col-12 col-md-2 categories hideMe">
                 <h6>Categories</h6>
                 <?php foreach (get_the_category() as $category){ ?>
                 <div class="row">
@@ -63,7 +63,7 @@
                 if( $image ) { ?>
                 <div class="img col-12 col-lg-6" style="background-image:url('<?= $image ?>')"></div>
                 <?php  } ?>
-                <div class="text col-12 col-md-9 col-lg-5 m-auto">
+                <div class="text col-12 col-md-9 col-lg-5 m-auto hideMe">
                     <h2><?php echo $i; ?>. <?php the_sub_field('title') ?></h2>
                     <div class="separator-line"></div>
                     <h6 class="description"><?php the_sub_field('description') ?></h6>
@@ -75,7 +75,7 @@
         <div class="post-content-2 w-100">
             <div class="row">
                 <?php $image = get_sub_field('image'); ?>  
-                <div class="text col-12 col-md-9 col-lg-5 m-auto">
+                <div class="text col-12 col-md-9 col-lg-5 m-auto hideMe">
                     <h2><?php echo $i ?>. <?php the_sub_field('title') ?></h2>
                     <div class="separator-line"></div>
                     <h6 class="description"><?php the_sub_field('description') ?></h6>
@@ -92,7 +92,7 @@
         <?php endwhile;  ?>
 
         <div class="row get-in-touch">
-            <div class="w-50 text-center m-auto">
+            <div class="w-50 text-center m-auto hideMe">
                 <h2>Interested? Let's get in touch!</h2>
                 <h6>
                     LeadEngine is a fully packed practical tool of premium built and design.
@@ -108,7 +108,7 @@
 
 
         <div class="related-projects">
-            <h3 class="px-5">Related Projects</h3>      
+            <h3 class="px-5 hideMe">Related Projects</h3>      
 
             <div class="related-content px-5 row">   
             <?php 
@@ -123,7 +123,7 @@
             while( $related->have_posts() ) { 
 	        $related->the_post();              
             ?>
-                    <div class="card-portfolio col col-12 col-sm-8 col-md-3 mx-sm-4">
+                    <div class="card-portfolio col col-12 col-sm-8 col-md-3 mx-sm-4 hideMe">
                         <a href="<?= get_permalink();?>">             
                             <?php the_post_thumbnail(array(400, 250), array('class'=>'card-img-top')); ?>
                         </a>
