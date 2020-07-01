@@ -26,11 +26,7 @@ function phoenix_script_enqueue(){
     wp_enqueue_style('active-events', get_stylesheet_directory_uri().'/modules/assets/css/active-events.css');
     wp_enqueue_style('difference-component', get_stylesheet_directory_uri().'/modules/assets/css/difference-component.css');
     wp_enqueue_style('donate-component', get_stylesheet_directory_uri().'/modules/assets/css/donate-component.css');
-    
-    
-    
-
-
+    wp_enqueue_style('home', get_stylesheet_directory_uri().'/modules/assets/css/home.css');
 }
 
 add_action('wp_enqueue_scripts', 'phoenix_script_enqueue');
@@ -411,3 +407,19 @@ add_filter('woocommerce_product_attribute_tab_content_term', function($content, 
     $content = do_shortcode($content);
     return $content;
 }, 10, 4);
+
+
+/** Pagination */
+if ( ! function_exists( 'post_pagination' ) ) :
+    function post_pagination() {
+      global $wp_query;
+      $pager = 999999999; // need an unlikely integer
+  
+         echo paginate_links( array(
+              'base' => str_replace( $pager, '%#%', esc_url( get_pagenum_link( $pager ) ) ),
+              'format' => '?paged=%#%',
+              'current' => max( 1, get_query_var('paged') ),
+              'total' => $wp_query->max_num_pages
+         ) );
+    }
+ endif;
