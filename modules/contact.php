@@ -1,8 +1,9 @@
 <?php
 /*
-Template Name: Contact
+Template Name: Contact-Test
 */
 ?>
+
 <?php
 if(isset($_POST['submit'])) {
 	if(trim($_POST['contactName']) === '') {
@@ -49,62 +50,79 @@ if(isset($_POST['submit'])) {
 } ?>
 
 <?php get_header(); ?>
-<div class="contact-wrapper">
-    <div id="content" class="w-50 mx-auto my-0 py-5">
 
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-            <h2 class="entry-title mb-3">Let's get in touch</h2>
-            <p class="mb-4">Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days.</p>
-            <div class="entry-content">
-                <?php if(isset($emailSent) && $emailSent == true) { ?>
-                <div class="thanks">
-                    <p class="text-success mb-3">Thanks, your email was sent successfully.</p>
-                    <a href="/contact">Go Back</a>
-                </div>
-                <?php } else { ?>
-                <?php the_content(); ?>
-                <?php //if(isset($hasError) || isset($captchaError)) { ?>
-                <!-- <p class="error">Sorry, an error occured.<p> -->
-                        <?php// } ?>
+<div class="row contactsett">
+    <div class="contactleftside col-md-4 d-flex align-items-center justify-content-center">
+        <div class="allcontactitems">
+            <div class="contactitems">
+                <i class="fa fa-envelope d-flex justify-content-center my-2" ></i>
+                <p class="d-flex justify-content-center">phoenixtheme@gmail.com</p>
+                <i class="fa fa-phone d-flex justify-content-center my-2" ></i>
+                <p class="d-flex justify-content-center">+38349000000</p>
+                <i class="fa fa-map-marker d-flex justify-content-center my-2" ></i>
+                <p class="d-flex justify-content-center">Prishtine</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="contactrightside col-md-8 d-flex justify-content-center align-items-center">
+        <div class="container-fluid">
+            <div id="content">
+                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+                    <h1 class="entry-title d-flex justify-content-center align-items-center mb-2"><?php the_title(); ?></h1>
+                    <h5 class="entry-info d-flex justify-content-center align-items-center">Got any questions? Feel free to ask! </h5>
+                    <div class="entry-content">
+                        <?php if(isset($emailSent) && $emailSent == true) { ?>
+                        <div class="thanks">
+                            <p>Thanks, your email was sent successfully.</p>
+                            <button type="button" class="butonidiff butminoradds"><a href=''>Go Back</a></button>
+                        </div>
+                        <?php } else { ?>
+                        <?php the_content(); ?>
+                        <?php //if(isset($hasError) || isset($captchaError)) { ?>
+                        <!-- <p class="error">Sorry, an error occured.<p> -->
+                        
 
+                                <form class=" validate-form ">
+                                    <div class="form-group mb-0 wrap-input1 validate-input" data-validate="Name is required">
+                                        <label for="contactName" class="mt-3">Name:</label>
+                                        <input type="text" name="contactName" id="contactName"
+                                            value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>"
+                                            class=" input1 required requiredField form-control" />   
+                                    </div>
+                                    
 
-                        <form action="<?php the_permalink(); ?>" id="contactForm" method="post" class="my-3">
-                            <div class="form-group">
-                                <input type="text" name="contactName" placeholder="Your name"
-                                    value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>"
-                                    class="required requiredField form-control" />
-                                <?php if($nameError != '') { ?>
-                                <span class="text-danger"><?=$nameError;?></span>
+                                    <div class="wrap-input1 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                                        <label for="email" class="mt-3">Email:</label>
+                                        <input type="text" name="email" id="email"
+                                            value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>"
+                                            class="input1 required requiredField email form-control" />
+                                    </div>
+
+                                    <div class=" wrap-input1 validate-input" data-validate="Message is required">
+                                        <label for="commentsText" class="mt-3">Message:</label>
+                                        <textarea name="comments" id="commentsText" rows="3"
+                                            class="input1 required requiredField form-control">
+                                            <?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?>
+                                            </textarea>
+                                    </div>
+                                    
+                                    <div class="container-contact1-form-btn">
+                                        <button class="butonidiff butminoradds">Send</button>
+                                    </div>
+                                    
+                                </form>
                                 <?php } ?>
-                            </div>
+                    </div><!-- .entry-content -->
+                </div><!-- .post -->
 
-                            <div class="form-group">
-                                <input type="text" name="email" placeholder="Your email"
-                                    value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>"
-                                    class="required requiredField email form-control" />
-                                <?php if($emailError != '') { ?>
-                                <span class="text-danger"><?=$emailError;?></span>
-                                <?php } ?>
-                            </div>
+                <?php endwhile; endif; ?>
+            </div><!-- #content -->
+        </div><!-- #container -->
+    </div>
+</div>
 
-                            <div class="form-group">
-                                <textarea name="comments" rows="3" placeholder="Your message"
-                                    class="required requiredField form-control"></textarea>
-                                <?php if($commentError != '') { ?>
-                                <span class="text-danger"><?=$commentError;?></span>
-                                <?php } ?>
-                            </div>
-						
-                            <input type="submit" class="btn btn-primary" id="butoniNav" value="Send Mail" name="submit">
-							
-                        </form>
-                        <?php } ?>
-            </div><!-- .entry-content -->
-        </div><!-- .post -->
 
-        <?php endwhile; endif; ?>
-    </div><!-- #content -->
-</div><!-- #container -->
 
 <?php get_footer(); ?>

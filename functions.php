@@ -21,12 +21,13 @@ function phoenix_script_enqueue(){
     wp_enqueue_style('question-componentstyle', get_stylesheet_directory_uri().'/modules/assets/css/question-component.css');
     wp_enqueue_style('volunteers-componentstyle', get_stylesheet_directory_uri().'/modules/assets/css/volunteers-component.css');
     wp_enqueue_style('logos-component', get_stylesheet_directory_uri().'/modules/assets/css/logos-component.css');
+    wp_enqueue_style('contact', get_stylesheet_directory_uri().'/modules/assets/css/contact.css');
     wp_enqueue_style('get-involved', get_stylesheet_directory_uri().'/modules/assets/css/get-involved.css');
     wp_enqueue_style('active-events', get_stylesheet_directory_uri().'/modules/assets/css/active-events.css');
     wp_enqueue_style('difference-component', get_stylesheet_directory_uri().'/modules/assets/css/difference-component.css');
     wp_enqueue_style('donate-component', get_stylesheet_directory_uri().'/modules/assets/css/donate-component.css');
-    wp_enqueue_style('contact-page', get_stylesheet_directory_uri().'/modules/assets/css/contact.css');
-
+    wp_enqueue_style('contact', get_stylesheet_directory_uri().'/modules/assets/css/contact.css');
+    wp_enqueue_style('contact-us', get_stylesheet_directory_uri().'/modules/assets/css/contact-us.css');
 }
 
 add_action('wp_enqueue_scripts', 'phoenix_script_enqueue');
@@ -50,8 +51,15 @@ function wpb_adding_scripts() {
     wp_enqueue_script('logos-componentjs');
     wp_register_script('fade-in-featurejs', get_template_directory_uri() . '/modules/assets/js/fade-in-feature.js', array('jquery'), '1.1', true);
     wp_enqueue_script('fade-in-featurejs');
+    wp_register_script('contactjs', get_template_directory_uri() . '/modules/assets/js/contact.js', array('jquery'), '1.1', true);
+    wp_enqueue_script('contactjs');
+    wp_register_script('jqBootstrapValidation', get_template_directory_uri() . '/modules/assets/js/jqBootstrapValidation.js', array('jquery'), '1.1', true);
+    wp_enqueue_script('jqBootstrapValidation');
     wp_register_script('difference-componentjs', get_template_directory_uri() . '/modules/assets/js/difference-component.js', array('jquery'), '1.1', true);
     wp_enqueue_script('difference-componentjs');
+    wp_register_script('contact-usjs', get_template_directory_uri() . '/modules/assets/js/contact-us.js', array('jquery'), '1.1', true);
+    wp_enqueue_script('contact-usjs');
+    
 } 
 
 add_action( 'wp_enqueue_scripts', 'wpb_adding_scripts'); 
@@ -398,16 +406,19 @@ function meks_time_ago() {
 	return human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' );
 }
 
+
+
+/** Pagination */
 if ( ! function_exists( 'post_pagination' ) ) :
-   function post_pagination() {
-     global $wp_query;
-     $pager = 999999999; // need an unlikely integer
- 
-        echo paginate_links( array(
-             'base' => str_replace( $pager, '%#%', esc_url( get_pagenum_link( $pager ) ) ),
-             'format' => '?paged=%#%',
-             'current' => max( 1, get_query_var('paged') ),
-             'total' => $wp_query->max_num_pages
-        ) );
-   }
-endif;
+    function post_pagination() {
+      global $wp_query;
+      $pager = 999999999; // need an unlikely integer
+  
+         echo paginate_links( array(
+              'base' => str_replace( $pager, '%#%', esc_url( get_pagenum_link( $pager ) ) ),
+              'format' => '?paged=%#%',
+              'current' => max( 1, get_query_var('paged') ),
+              'total' => $wp_query->max_num_pages
+         ) );
+    }
+ endif;

@@ -74,7 +74,6 @@
 
 
     <script>
-
         if ($(window).width() > 1000) {
             $('.dropdown-toggle').click(function() {   
                 window.location = $(this).attr('href'); 
