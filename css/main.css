@@ -173,3 +173,40 @@ a .fa {
 }
 
 /* FOOTER */
+
+
+/* BLOG POSTS */
+.wrapper-blog{
+    width: 100%;
+}
+.posts h2{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-weight: 500;
+}
+.posts .entry-meta{
+    text-align: center;
+}
+.entry-meta > span{
+    padding-right: 15px;
+}
+.entry-meta > span > span{
+    color: #FF704D;
+}
+.posts h2 a:hover{
+    color: #FF704D;
+}
+.post-link{
+    font-weight: bold;
+}
+
+/* BLOG POSTS */
+
+/* SINGLE POST */
+#wrapper-blog-post h1{
+    font-size: 40px;
+    font-weight: 700;
+    color: #000;
+}
+/* SINGLE POST */

@@ -398,8 +398,16 @@ function meks_time_ago() {
 	return human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' );
 }
 
-add_filter('woocommerce_product_attribute_tab_content_term', function($content, $term, $attribute, $display_type) {
-    $content = str_replace(']]>', ']]>', $content);
-    $content = do_shortcode($content);
-    return $content;
-}, 10, 4);
+if ( ! function_exists( 'post_pagination' ) ) :
+   function post_pagination() {
+     global $wp_query;
+     $pager = 999999999; // need an unlikely integer
+ 
+        echo paginate_links( array(
+             'base' => str_replace( $pager, '%#%', esc_url( get_pagenum_link( $pager ) ) ),
+             'format' => '?paged=%#%',
+             'current' => max( 1, get_query_var('paged') ),
+             'total' => $wp_query->max_num_pages
+        ) );
+   }
+endif;
