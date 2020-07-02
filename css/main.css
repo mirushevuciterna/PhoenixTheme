@@ -213,3 +213,40 @@ a .fa {
 }
 
 /* FOOTER */
+
+
+/* home  */
+.containerhome{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.datakoha{
+    font-weight: bold;
+}
+
+.titulli123{
+    font-size: 50px;
+    text-align: center;
+    font-family: monospace;
+    margin-bottom: 15px;
+}
+.konten{
+    font-size: 10px;
+    text-align: center;
+}
+.linebet{
+    height:2px;
+    border-width:3;
+    color:gray;
+    background-color:gray
+}
+.pagi{
+    text-align: center;
+    display: block;
+}
+h3 a{
+    background-color: rgba(51, 51, 51, 0.26);
+}
+
+

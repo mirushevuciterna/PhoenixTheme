@@ -26,7 +26,16 @@ function phoenix_script_enqueue(){
     wp_enqueue_style('active-events', get_stylesheet_directory_uri().'/modules/assets/css/active-events.css');
     wp_enqueue_style('difference-component', get_stylesheet_directory_uri().'/modules/assets/css/difference-component.css');
     wp_enqueue_style('donate-component', get_stylesheet_directory_uri().'/modules/assets/css/donate-component.css');
+<<<<<<< HEAD
     wp_enqueue_style('home', get_stylesheet_directory_uri().'/modules/assets/css/home.css');
+=======
+    wp_enqueue_style('contact-us', get_stylesheet_directory_uri().'/modules/assets/css/contact-us.css');
+    
+    
+    
+
+
+>>>>>>> shuajb/donationvideo
 }
 
 add_action('wp_enqueue_scripts', 'phoenix_script_enqueue');
@@ -56,6 +65,9 @@ function wpb_adding_scripts() {
     wp_enqueue_script('jqBootstrapValidation');
     wp_register_script('difference-componentjs', get_template_directory_uri() . '/modules/assets/js/difference-component.js', array('jquery'), '1.1', true);
     wp_enqueue_script('difference-componentjs');
+    wp_register_script('contact-usjs', get_template_directory_uri() . '/modules/assets/js/contact-us.js', array('jquery'), '1.1', true);
+    wp_enqueue_script('contact-usjs');
+    
 } 
 
 add_action( 'wp_enqueue_scripts', 'wpb_adding_scripts'); 
@@ -409,7 +421,10 @@ add_filter('woocommerce_product_attribute_tab_content_term', function($content, 
 }, 10, 4);
 
 
+<<<<<<< HEAD
 /** Pagination */
+=======
+>>>>>>> shuajb/donationvideo
 if ( ! function_exists( 'post_pagination' ) ) :
     function post_pagination() {
       global $wp_query;

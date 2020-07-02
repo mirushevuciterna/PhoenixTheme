@@ -89,7 +89,10 @@
         <?php } $i++;
         endwhile; endif; ?>
     
-        <?php endwhile;  ?>
+        <?php endwhile;
+        echo paginate_links(); 
+        
+        ?>
 
         <div class="row get-in-touch">
             <div class="w-50 text-center m-auto hideMe">
