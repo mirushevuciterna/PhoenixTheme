@@ -21,12 +21,14 @@ function phoenix_script_enqueue(){
     wp_enqueue_style('question-componentstyle', get_stylesheet_directory_uri().'/modules/assets/css/question-component.css');
     wp_enqueue_style('volunteers-componentstyle', get_stylesheet_directory_uri().'/modules/assets/css/volunteers-component.css');
     wp_enqueue_style('logos-component', get_stylesheet_directory_uri().'/modules/assets/css/logos-component.css');
+    wp_enqueue_style('contact', get_stylesheet_directory_uri().'/modules/assets/css/contact.css');
     wp_enqueue_style('get-involved', get_stylesheet_directory_uri().'/modules/assets/css/get-involved.css');
     wp_enqueue_style('active-events', get_stylesheet_directory_uri().'/modules/assets/css/active-events.css');
     wp_enqueue_style('difference-component', get_stylesheet_directory_uri().'/modules/assets/css/difference-component.css');
     wp_enqueue_style('donate-component', get_stylesheet_directory_uri().'/modules/assets/css/donate-component.css');
     wp_enqueue_style('contact', get_stylesheet_directory_uri().'/modules/assets/css/contact.css');
- 
+     wp_enqueue_style('contact-us', get_stylesheet_directory_uri().'/modules/assets/css/contact-us.css');
+    
     
     
 
@@ -54,8 +56,15 @@ function wpb_adding_scripts() {
     wp_enqueue_script('logos-componentjs');
     wp_register_script('fade-in-featurejs', get_template_directory_uri() . '/modules/assets/js/fade-in-feature.js', array('jquery'), '1.1', true);
     wp_enqueue_script('fade-in-featurejs');
+    wp_register_script('contactjs', get_template_directory_uri() . '/modules/assets/js/contact.js', array('jquery'), '1.1', true);
+    wp_enqueue_script('contactjs');
+    wp_register_script('jqBootstrapValidation', get_template_directory_uri() . '/modules/assets/js/jqBootstrapValidation.js', array('jquery'), '1.1', true);
+    wp_enqueue_script('jqBootstrapValidation');
     wp_register_script('difference-componentjs', get_template_directory_uri() . '/modules/assets/js/difference-component.js', array('jquery'), '1.1', true);
     wp_enqueue_script('difference-componentjs');
+    wp_register_script('contact-usjs', get_template_directory_uri() . '/modules/assets/js/contact-us.js', array('jquery'), '1.1', true);
+    wp_enqueue_script('contact-usjs');
+    
 } 
 
 add_action( 'wp_enqueue_scripts', 'wpb_adding_scripts'); 
@@ -409,6 +418,7 @@ add_filter('woocommerce_product_attribute_tab_content_term', function($content, 
 }, 10, 4);
 
 
+/** Pagination */
 if ( ! function_exists( 'post_pagination' ) ) :
     function post_pagination() {
       global $wp_query;

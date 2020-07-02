@@ -23,13 +23,25 @@
 }
 .butminoradds{
     height: 50px;
+    font-size: 15px !important;
 }
 .butminoradds:focus,
 .butminoradds:active {
     outline: none !important;
     box-shadow: none !important;
 }
-
+.entry-title{
+    font-weight: bold;
+    color: #322D53;
+}
+.entry-info{
+    color: #949494;
+}
+.form-control:focus,
+.form-control:active {
+    border: 2px solid #ff704D !important;
+    box-shadow: none !important;
+}
 .contactleftside{
     animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
@@ -49,7 +61,10 @@
         border-radius: 0 ;
         padding: 50px 0; 
     }
+    .contactrightside{
+        margin-top: 30px;
+    }
     .contactsett {
-       margin-bottom: 150px !important;
+       margin-bottom: 170px !important;
     }
 }
