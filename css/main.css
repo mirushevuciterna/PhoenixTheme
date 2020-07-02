@@ -221,6 +221,7 @@ a .fa {
 
 /* FOOTER */
 
+<<<<<<< HEAD
 .blognumbers .page-numbers {
     margin: 5px;
 }
@@ -260,3 +261,41 @@ a .fa {
     height: 2px;
     background-color: #FF704D;
 }
+=======
+
+/* home  */
+.containerhome{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.datakoha{
+    font-weight: bold;
+}
+
+.titulli123{
+    font-size: 50px;
+    text-align: center;
+    font-family: monospace;
+    margin-bottom: 15px;
+}
+.konten{
+    font-size: 10px;
+    text-align: center;
+}
+.linebet{
+    height:2px;
+    border-width:3;
+    color:gray;
+    background-color:gray
+}
+.pagi{
+    text-align: center;
+    display: block;
+}
+h3 a{
+    background-color: rgba(51, 51, 51, 0.26);
+}
+
+
+>>>>>>> 1bd100c6287a93c8091d0beb70d8b484eaf7c3ca
