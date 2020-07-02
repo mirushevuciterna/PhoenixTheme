@@ -59,7 +59,6 @@ if(isset($_POST['submit'])) {
             <i class="fa fa-map-marker d-flex justify-content-center my-2" ></i>
             <p class="d-flex justify-content-center">Prishtine</p>
         </div>
-      
     </div>
     
 
@@ -67,11 +66,10 @@ if(isset($_POST['submit'])) {
 
 
 
-        <?php get_header(); ?>
-        <div class="contactrightside col-md-8 d-flex justify-content-center align-items-center">
+    <?php get_header(); ?>
+    <div class="contactrightside col-md-8 d-flex justify-content-center align-items-center">
         <div class="container-fluid">
             <div id="content">
-
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
                     <h1 class="entry-title"><?php the_title(); ?></h1>
