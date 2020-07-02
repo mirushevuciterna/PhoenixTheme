@@ -220,3 +220,43 @@ a .fa {
 }
 
 /* FOOTER */
+
+.blognumbers .page-numbers {
+    margin: 5px;
+}
+.current {
+    font-weight: 500;
+    color: #FF704D;
+}
+.blogsettings{
+ margin: 0 5vw;
+ padding: 0;
+}
+.blogsettings .blogunder {
+    color: grey;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.blogsettings h3 {
+    color: #322d53;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 0;
+}
+.blogsettings .post-categories {
+    color: grey;
+    list-style-type: none;
+    margin: 0 !important;
+    padding: 0 0 0 5px;
+    color: #FF704D;
+}
+.blogsettings p{
+    text-align: justify;
+}
+.blogsettings hr {
+    border: none;
+    height: 2px;
+    background-color: #FF704D;
+}
