@@ -418,10 +418,7 @@ add_filter('woocommerce_product_attribute_tab_content_term', function($content, 
 }, 10, 4);
 
 
-<<<<<<< HEAD
 /** Pagination */
-=======
->>>>>>> shuajb/donationvideo
 if ( ! function_exists( 'post_pagination' ) ) :
     function post_pagination() {
       global $wp_query;
