@@ -26,16 +26,13 @@ function phoenix_script_enqueue(){
     wp_enqueue_style('active-events', get_stylesheet_directory_uri().'/modules/assets/css/active-events.css');
     wp_enqueue_style('difference-component', get_stylesheet_directory_uri().'/modules/assets/css/difference-component.css');
     wp_enqueue_style('donate-component', get_stylesheet_directory_uri().'/modules/assets/css/donate-component.css');
-<<<<<<< HEAD
     wp_enqueue_style('home', get_stylesheet_directory_uri().'/modules/assets/css/home.css');
-=======
     wp_enqueue_style('contact-us', get_stylesheet_directory_uri().'/modules/assets/css/contact-us.css');
     
     
     
 
 
->>>>>>> shuajb/donationvideo
 }
 
 add_action('wp_enqueue_scripts', 'phoenix_script_enqueue');
