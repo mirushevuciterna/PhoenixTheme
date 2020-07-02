@@ -48,32 +48,30 @@ if(isset($_POST['submit'])) {
 	}
 
 } ?>
+
+<?php get_header(); ?>
+
 <div class="row contactsett">
     <div class="contactleftside col-md-4 d-flex align-items-center justify-content-center">
         <div class="allcontactitems">
             <div class="contactitems">
-            <i class="fa fa-envelope d-flex justify-content-center my-2" ></i>
-            <p class="d-flex justify-content-center">phoenixtheme@gmail.com</p>
-            <i class="fa fa-phone d-flex justify-content-center my-2" ></i>
-            <p class="d-flex justify-content-center">+38349000000</p>
-            <i class="fa fa-map-marker d-flex justify-content-center my-2" ></i>
-            <p class="d-flex justify-content-center">Prishtine</p>
+                <i class="fa fa-envelope d-flex justify-content-center my-2" ></i>
+                <p class="d-flex justify-content-center">phoenixtheme@gmail.com</p>
+                <i class="fa fa-phone d-flex justify-content-center my-2" ></i>
+                <p class="d-flex justify-content-center">+38349000000</p>
+                <i class="fa fa-map-marker d-flex justify-content-center my-2" ></i>
+                <p class="d-flex justify-content-center">Prishtine</p>
+            </div>
         </div>
     </div>
     
-
-
-
-
-
-    <?php get_header(); ?>
     <div class="contactrightside col-md-8 d-flex justify-content-center align-items-center">
         <div class="container-fluid">
             <div id="content">
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-                    <h1 class="entry-title"><?php the_title(); ?></h1>
-                    <h5>Got any questions? Feel free to ask! </h5>
+                    <h1 class="entry-title d-flex justify-content-center align-items-center mb-2"><?php the_title(); ?></h1>
+                    <h5 class="entry-info d-flex justify-content-center align-items-center">Got any questions? Feel free to ask! </h5>
                     <div class="entry-content">
                         <?php if(isset($emailSent) && $emailSent == true) { ?>
                         <div class="thanks">
@@ -84,8 +82,7 @@ if(isset($_POST['submit'])) {
                         <?php the_content(); ?>
                         <?php //if(isset($hasError) || isset($captchaError)) { ?>
                         <!-- <p class="error">Sorry, an error occured.<p> -->
-                                <?php// } ?>
-
+                        
 
                                 <form class=" validate-form ">
                                     <div class="form-group mb-0 wrap-input1 validate-input" data-validate="Name is required">
@@ -97,7 +94,7 @@ if(isset($_POST['submit'])) {
                                     
 
                                     <div class="wrap-input1 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                                        <label for="email" class="mt-3">Email</label>
+                                        <label for="email" class="mt-3">Email:</label>
                                         <input type="text" name="email" id="email"
                                             value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>"
                                             class="input1 required requiredField email form-control" />
@@ -110,14 +107,9 @@ if(isset($_POST['submit'])) {
                                             <?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?>
                                             </textarea>
                                     </div>
-                                    <br>
+                                    
                                     <div class="container-contact1-form-btn">
-                                        <button class="contact1-form-btn">
-                                            <span>
-                                                Send Email
-                                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                                            </span>
-                                        </button>
+                                        <button class="butonidiff butminoradds">Send</button>
                                     </div>
                                     
                                 </form>
@@ -128,8 +120,8 @@ if(isset($_POST['submit'])) {
                 <?php endwhile; endif; ?>
             </div><!-- #content -->
         </div><!-- #container -->
-        </div>
- </div>
+    </div>
+</div>
 
 
 
