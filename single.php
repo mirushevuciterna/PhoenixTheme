@@ -24,7 +24,7 @@
             <div class="post-content py-3">
                 <?php the_content(); ?>
             </div>
-            <div class="text-primary"><?php the_tags() ?></div>
+            <div class="text-primary mb-5"><?php the_tags() ?></div>
         </div>
      
         <?php endwhile;  ?>
