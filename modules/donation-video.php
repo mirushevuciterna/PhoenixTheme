@@ -25,7 +25,7 @@ $videoIndex = 1;
         <?php } else { ?>
 
             <div class="donationVideoFeature">
-                <div class="donationVideoText p-5 hideMe">
+                <div class="donationVideoText p-5 hideMe order-last order-md-first">
                     <h3 class="donation-title"><?php the_sub_field('titulli_video');?></h3>
                     <p class="donation-paragraph"><?php the_sub_field('paragrafi_video');?></p>
                     <button class="btn btn-lg donateBTN"><?php the_sub_field('butoni_video');?></button>
