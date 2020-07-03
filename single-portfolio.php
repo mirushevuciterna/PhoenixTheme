@@ -61,7 +61,7 @@
                 <div class="row">
                 <?php $image = get_sub_field('image');
                 if( $image ) { ?>
-                <div class="img col-12 col-lg-6" style="background-image:url('<?= $image ?>')"></div>
+                <div class="img col-12 col-lg-6 order-last order-md-first" style="background-image:url('<?= $image ?>')"></div>
                 <?php  } ?>
                 <div class="text col-12 col-md-9 col-lg-5 m-auto hideMe">
                     <h2><?php echo $i; ?>. <?php the_sub_field('title') ?></h2>
@@ -74,7 +74,6 @@
        
         <div class="post-content-2 w-100">
             <div class="row">
-                <?php $image = get_sub_field('image'); ?>  
                 <div class="text col-12 col-md-9 col-lg-5 m-auto hideMe">
                     <h2><?php echo $i ?>. <?php the_sub_field('title') ?></h2>
                     <div class="separator-line"></div>

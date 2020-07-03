@@ -20,11 +20,19 @@
                 </span> 
                 <span class="comment-count"><span class="fa fa-comment"></span> <?php echo get_comments_number() ?> comments</span>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-7">
             <img src="<?php echo get_the_post_thumbnail_url (); ?>" class="px-0 col-12">
             <div class="post-content py-3">
                 <?php the_content(); ?>
             </div>
             <div class="text-primary mb-5"><?php the_tags() ?></div>
+        </div>
+
+        <div class="col-12 col-md-4 ml-0 ml-md-5">
+        <?php get_sidebar(); ?>
+        </div>
         </div>
      
         <?php endwhile;  ?>
@@ -78,5 +86,4 @@
 
     </div>
 </div>
-
 <?php get_footer(); ?>

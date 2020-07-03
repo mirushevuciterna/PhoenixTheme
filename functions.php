@@ -51,8 +51,6 @@ function wpb_adding_scripts() {
     wp_enqueue_script('logos-componentjs');
     wp_register_script('fade-in-featurejs', get_template_directory_uri() . '/modules/assets/js/fade-in-feature.js', array('jquery'), '1.1', true);
     wp_enqueue_script('fade-in-featurejs');
-    wp_register_script('contactjs', get_template_directory_uri() . '/modules/assets/js/contact.js', array('jquery'), '1.1', true);
-    wp_enqueue_script('contactjs');
     wp_register_script('jqBootstrapValidation', get_template_directory_uri() . '/modules/assets/js/jqBootstrapValidation.js', array('jquery'), '1.1', true);
     wp_enqueue_script('jqBootstrapValidation');
     wp_register_script('difference-componentjs', get_template_directory_uri() . '/modules/assets/js/difference-component.js', array('jquery'), '1.1', true);
@@ -395,6 +393,12 @@ function get_breadcrumb() {
        
 }
 
+/* 
+    ====================================
+        Dumb and Die 
+    ====================================
+*/
+
 function dd($obj){
     echo '<pre>';
     print_r($obj);
@@ -408,7 +412,11 @@ function meks_time_ago() {
 
 
 
-/** Pagination */
+/* 
+    ====================================
+        Pagination
+    ====================================
+*/
 if ( ! function_exists( 'post_pagination' ) ) :
     function post_pagination() {
       global $wp_query;
@@ -422,3 +430,18 @@ if ( ! function_exists( 'post_pagination' ) ) :
          ) );
     }
  endif;
+
+ /* 
+    ====================================
+        Sidebar function
+    ====================================
+*/
+function phoenix_widget_setup() {
+    register_sidebar(array(
+        'name' => 'Sidebar',
+        'id' => 'sidebar-1',
+        'class' => 'custom',
+        'description' => 'Single post of blog sidebar',
+    ));
+}
+add_action('widgets_init', 'phoenix_widget_setup');

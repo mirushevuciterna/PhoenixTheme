@@ -19,7 +19,7 @@ if( have_posts() ):
     <?php endwhile;
 endif;
 ?>
-
+<?php post_pagination(); ?>
 </div>
 
 <?php get_footer(); ?>

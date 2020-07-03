@@ -114,9 +114,7 @@ if(isset($_POST['submit'])) {
                             <div class=" wrap-input1 validate-input" data-validate="Message is required">
                                 <label for="commentsText" class="mt-3">Message:</label>
                                 <textarea name="comments" id="commentsText" rows="3"
-                                    class="input1 required requiredField form-control">
-                                    <?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?>
-                                    </textarea>
+                                    class="input1 required requiredField form-control"></textarea>
                             </div>
                             
                             <div class="container-contact1-form-btn">
