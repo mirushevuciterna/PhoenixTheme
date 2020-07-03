@@ -125,14 +125,14 @@
             while( $related->have_posts() ) { 
 	        $related->the_post();              
             ?>
-                    <div class="card-portfolio col col-12 col-sm-8 col-md-3 mx-sm-4 hideMe">
-                        <a href="<?= get_permalink();?>">             
+                    <div class="card-portfolio col col-12 col-sm-8 col-md-3 mx-sm-4">
+                        <a class="hideMe" href="<?= get_permalink();?>">             
                             <?php the_post_thumbnail(array(400, 250), array('class'=>'card-img-top')); ?>
                         </a>
 
                         <div class="card-body">            
                             <span class="blog-label">
-                                <span class="fa fa-folder-open"></span> 
+                                <span class="fa fa-folder-open hideMe"></span> 
                                 <?php 
                                 $categories = [];
                                 foreach (get_the_category() as $category){
@@ -142,8 +142,8 @@
                                 <?php echo implode(', ', $categories); ?>                    
                             </span>
 
-                            <h5 class="card-title mt-4"><a href="<?= get_permalink(); ?>"><?php the_title(); ?></a></h5>
-                            <a class="post-link" href="<?= get_permalink(); ?>">View project <i class="fa fa-arrow-right"
+                            <h5 class="hideMe card-title mt-4"><a href="<?= get_permalink(); ?>"><?php the_title(); ?></a></h5>
+                            <a class="hideMe post-link" href="<?= get_permalink(); ?>">View project <i class="fa fa-arrow-right"
                                     id="right-arrow"></i></a>
                         </div>
                     </div>

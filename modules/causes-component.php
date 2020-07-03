@@ -16,9 +16,9 @@
                                     <div class="card p-3 cardthyrje">
                                         <img class="card-img-top fotoinside" src="<?php the_sub_field('card_image');?>" alt="test" alt="Card image cap">
                                         <div class="cardcause card-body d-flex flex-column">
-                                            <h4 class="card-title"><?php the_sub_field('card_title');?></h4>
-                                            <small><p><?php the_sub_field('card_text'); ?></p></small>
-                                            <button type="button" id="butoniCard" class="mt-auto btn btn-md btn-primary"><?php the_sub_field('card_button');?></button>
+                                            <h4 class="card-title hideMe"><?php the_sub_field('card_title');?></h4>
+                                            <small><p class="hideMe"><?php the_sub_field('card_text'); ?></p></small>
+                                            <button type="button" id="butoniCard" class="mt-auto hideMe btn btn-md btn-primary"><?php the_sub_field('card_button');?></button>
                                         </div>
                                     </div>
                                 </div>
