@@ -94,7 +94,7 @@ button:hover {
 
 input.input1 {
   height: 50px;
-  border-radius: 25px;
+  border-radius: 12px;
   padding: 0 30px;
 }
 input.input1 + .shadow-input1 {
@@ -103,7 +103,7 @@ input.input1 + .shadow-input1 {
 
 textarea.input1 {
   min-height: 150px;
-  border-radius: 25px;
+  border-radius: 12px;
   padding: 12px 30px;
 }
 textarea.input1 + .shadow-input1 {
