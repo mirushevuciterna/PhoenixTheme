@@ -26,7 +26,6 @@ function phoenix_script_enqueue(){
     wp_enqueue_style('difference-component', get_stylesheet_directory_uri().'/modules/assets/css/difference-component.css');
     wp_enqueue_style('donate-component', get_stylesheet_directory_uri().'/modules/assets/css/donate-component.css');
     wp_enqueue_style('contact', get_stylesheet_directory_uri().'/modules/assets/css/contact.css');
-    wp_enqueue_style('contact-us', get_stylesheet_directory_uri().'/modules/assets/css/contact-us.css');
 }
 
 add_action('wp_enqueue_scripts', 'phoenix_script_enqueue');
