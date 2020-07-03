@@ -49,7 +49,7 @@ if(isset($_POST['submit'])) {
 		wp_mail($emailTo, $subject, $body, $headers);
 		$emailSent = true;
         $_SESSION['emailSent'] = true;
-        header('Location: /contact/');
+        header('Location: /testsite/wordpress/contact/');
         exit;
 	}
 
