@@ -72,12 +72,15 @@
 
     </body>
 
-<script>
-if ($(window).width() > 1000) {
-    $('.dropdown-toggle').click(function() {
-        window.location = $(this).attr('href'); 
-    });
-}
-$('.nav-link').removeAttr('title');
-</script>
+
+    <script>
+        if ($(window).width() > 1000) {
+            $('.dropdown-toggle').click(function() {   
+                window.location = $(this).attr('href'); 
+            });
+        }
+        console.log($( window ).width());
+        
+        $('.nav-link').removeAttr('title');
+    </script>
 </html>

@@ -63,54 +63,12 @@ body {
 }
 
 /*Dropdown Css*/
+
 .dropdown:hover > .dropdown-menu {
   display: block;
   margin-top: 5px;
   border: none;
 }
-
-
-/* .dropdown-submenu {
-    position: relative;
-} */
-/* .dropdown-submenu>.dropdown-menu {
-    top: 0;
-    left: 100%;
-    margin-top: -6px;
-    margin-left: -1px;
-    -webkit-border-radius: 0 6px 6px 6px;
-    -moz-border-radius: 0 6px 6px;
-    border-radius: 0 6px 6px 6px;
-} */
-.dropdown-submenu:hover > .dropdown-menu {
-    display: block;
-}
-/* .dropdown-submenu>a:after {
-    display: block;
-    content: " ";
-    float: right;
-    width: 0;
-    height: 0;
-    border-color: transparent;
-    border-style: solid;
-    border-width: 5px 0 5px 5px;
-    border-left-color: #ccc;
-    margin-top: 5px;
-    margin-right: -10px;
-} */
-/* .dropdown-submenu:hover>a:after {
-    border-left-color: #fff;
-} */
-/* .dropdown-submenu.pull-left {
-    float: none;
-} */
-/* .dropdown-submenu.pull-left>.dropdown-menu {
-    left: -100%;
-    margin-left: 10px;
-    -webkit-border-radius: 6px 0 6px 6px;
-    -moz-border-radius: 6px 0 6px 6px;
-    border-radius: 6px 0 6px 6px;
-} */
 /*./Dropdown Css*/
 
 
@@ -221,42 +179,41 @@ a .fa {
 
 /* FOOTER */
 
-.blognumbers .page-numbers {
-    margin: 5px;
+
+/* BLOG POSTS */
+.wrapper-blog{
+    width: 100%;
 }
-.current {
+.posts h2{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
     font-weight: 500;
+}
+.posts .entry-meta{
+    text-align: center;
+}
+.entry-meta > span{
+    padding-right: 15px;
+}
+.entry-meta > span > span{
     color: #FF704D;
 }
-.blogsettings{
- margin: 0 5vw;
- padding: 0;
-}
-.blogsettings .blogunder {
-    color: grey;
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-}
-.blogsettings h3 {
-    color: #322d53;
-    font-weight: bolder;
-    display: flex;
-    justify-content: center;
-    margin: 50px 0 0;
-}
-.blogsettings .post-categories {
-    color: grey;
-    list-style-type: none;
-    margin: 0 !important;
-    padding: 0 0 0 5px;
+.posts h2 a:hover{
     color: #FF704D;
 }
-.blogsettings p{
-    text-align: justify;
+.post-link{
+    font-weight: bold;
 }
-.blogsettings hr {
-    border: none;
-    height: 2px;
-    background-color: #FF704D;
+
+/* BLOG POSTS */
+
+/* SINGLE POST */
+#wrapper-blog-post h1{
+    font-size: 40px;
+    font-weight: 700;
+    color: #000;
 }
+/* SINGLE POST */
+
+
