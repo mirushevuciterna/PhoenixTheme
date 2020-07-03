@@ -132,7 +132,5 @@ if(isset($_POST['submit'])) {
         </div><!-- #container -->
     </div>
 </div>
-
-
 <?php $_SESSION['emailSent'] = false; ?>
 <?php get_footer(); ?>

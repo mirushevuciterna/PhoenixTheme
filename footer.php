@@ -71,6 +71,8 @@
       <?php wp_footer() ?>
 
     </body>
+    
+<script>
 
 
     <script>
