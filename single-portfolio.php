@@ -61,7 +61,7 @@
                 <div class="row">
                 <?php $image = get_sub_field('image');
                 if( $image ) { ?>
-                <div class="img col-12 col-lg-6" style="background-image:url('<?= $image ?>')"></div>
+                <div class="img col-12 col-lg-6 order-last order-md-first" style="background-image:url('<?= $image ?>')"></div>
                 <?php  } ?>
                 <div class="text col-12 col-md-9 col-lg-5 m-auto hideMe">
                     <h2><?php echo $i; ?>. <?php the_sub_field('title') ?></h2>
@@ -74,7 +74,6 @@
        
         <div class="post-content-2 w-100">
             <div class="row">
-                <?php $image = get_sub_field('image'); ?>  
                 <div class="text col-12 col-md-9 col-lg-5 m-auto hideMe">
                     <h2><?php echo $i ?>. <?php the_sub_field('title') ?></h2>
                     <div class="separator-line"></div>
@@ -126,14 +125,14 @@
             while( $related->have_posts() ) { 
 	        $related->the_post();              
             ?>
-                    <div class="card-portfolio col col-12 col-sm-8 col-md-3 mx-sm-4 hideMe">
-                        <a href="<?= get_permalink();?>">             
+                    <div class="card-portfolio col col-12 col-sm-8 col-md-3 mx-sm-4">
+                        <a class="hideMe" href="<?= get_permalink();?>">             
                             <?php the_post_thumbnail(array(400, 250), array('class'=>'card-img-top')); ?>
                         </a>
 
                         <div class="card-body">            
                             <span class="blog-label">
-                                <span class="fa fa-folder-open"></span> 
+                                <span class="fa fa-folder-open hideMe"></span> 
                                 <?php 
                                 $categories = [];
                                 foreach (get_the_category() as $category){
@@ -143,8 +142,8 @@
                                 <?php echo implode(', ', $categories); ?>                    
                             </span>
 
-                            <h5 class="card-title mt-4"><a href="<?= get_permalink(); ?>"><?php the_title(); ?></a></h5>
-                            <a class="post-link" href="<?= get_permalink(); ?>">View project <i class="fa fa-arrow-right"
+                            <h5 class="hideMe card-title mt-4"><a href="<?= get_permalink(); ?>"><?php the_title(); ?></a></h5>
+                            <a class="hideMe post-link" href="<?= get_permalink(); ?>">View project <i class="fa fa-arrow-right"
                                     id="right-arrow"></i></a>
                         </div>
                     </div>
