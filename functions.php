@@ -21,7 +21,6 @@ function phoenix_script_enqueue(){
     wp_enqueue_style('question-componentstyle', get_stylesheet_directory_uri().'/modules/assets/css/question-component.css');
     wp_enqueue_style('volunteers-componentstyle', get_stylesheet_directory_uri().'/modules/assets/css/volunteers-component.css');
     wp_enqueue_style('logos-component', get_stylesheet_directory_uri().'/modules/assets/css/logos-component.css');
-    wp_enqueue_style('contact', get_stylesheet_directory_uri().'/modules/assets/css/contact.css');
     wp_enqueue_style('get-involved', get_stylesheet_directory_uri().'/modules/assets/css/get-involved.css');
     wp_enqueue_style('active-events', get_stylesheet_directory_uri().'/modules/assets/css/active-events.css');
     wp_enqueue_style('difference-component', get_stylesheet_directory_uri().'/modules/assets/css/difference-component.css');
