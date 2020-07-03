@@ -29,8 +29,9 @@ if( have_posts() ):
     <?php endwhile;
 endif;
 ?>
-
+<div class="blog-numbers d-flex justify-content-center align-items-center">
 <?php post_pagination(); ?>
+</div>
 </div>
 
 <?php get_footer(); ?>
