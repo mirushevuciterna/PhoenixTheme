@@ -5,26 +5,29 @@ Template Name: Contact-Test
 ?>
 
 <?php
+session_start();
 if(isset($_POST['submit'])) {
+
+    $errors = [];
 	if(trim($_POST['contactName']) === '') {
-		$nameError = 'Please enter your name.';
+		$errors[] = 'Please enter your name.';
 		$hasError = true;
 	} else {
 		$name = trim($_POST['contactName']);
 	}
 
 	if(trim($_POST['email']) === '')  {
-		$emailError = 'Please enter your email address.';
+		$errors[] = 'Please enter your email address.';
 		$hasError = true;
 	} else if (!preg_match("/^[[:alnum:]][a-z0-9_.-]*@[a-z0-9.-]+\.[a-z]{2,4}$/i", trim($_POST['email']))) {
-		$emailError = 'You entered an invalid email address.';
+		$errors[] = 'You entered an invalid email address.';
 		$hasError = true;
 	} else {
 		$email = trim($_POST['email']);
 	}
 
 	if(trim($_POST['comments']) === '') {
-		$commentError = 'Please enter a message.';
+		$errors[] = 'Please enter a message.';
 		$hasError = true;
 	} else {
 		if(function_exists('stripslashes')) {
@@ -45,6 +48,9 @@ if(isset($_POST['submit'])) {
 
 		wp_mail($emailTo, $subject, $body, $headers);
 		$emailSent = true;
+        $_SESSION['emailSent'] = true;
+        header('Location: /testsite/wordpress/contact/');
+        exit;
 	}
 
 } ?>
@@ -73,47 +79,51 @@ if(isset($_POST['submit'])) {
                     <h1 class="entry-title d-flex justify-content-center align-items-center mb-2"><?php the_title(); ?></h1>
                     <h5 class="entry-info d-flex justify-content-center align-items-center">Got any questions? Feel free to ask! </h5>
                     <div class="entry-content">
-                        <?php if(isset($emailSent) && $emailSent == true) { ?>
-                        <div class="thanks">
-                            <p>Thanks, your email was sent successfully.</p>
-                            <button type="button" class="butonidiff butminoradds"><a href=''>Go Back</a></button>
-                        </div>
-                        <?php } else { ?>
-                        <?php the_content(); ?>
-                        <?php //if(isset($hasError) || isset($captchaError)) { ?>
-                        <!-- <p class="error">Sorry, an error occured.<p> -->
+
+                        <?php if ($_SESSION['emailSent']) { ?>
+                            <div class="alert alert-success mt-5">
+                                Thanks, your email was sent successfully
+                            </div>
+                        <?php } ?> 
+
+                        <?php if ($errors) { ?>
+                            <div class="alert alert-danger">
+                            <?php foreach ($errors as $err)  { ?>
+                                <?php echo $err; ?> <br>
+                            <?php } ?>
+                            </div>
+                        <?php } ?>
+
+                        <?php //the_content(); ?>
                         
+                        <form class="validate-form" action="<?php the_permalink(); ?>" id="contactForm" method="post">
+                            <div class="form-group mb-0 wrap-input1 validate-input" data-validate="Name is required">
+                                <label for="contactName" class="mt-3">Name:</label>
+                                <input type="text" name="contactName" id="contactName"
+                                    value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>"
+                                    class=" input1 required requiredField form-control" />   
+                            </div>
+                            
+                            <div class="wrap-input1 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                                <label for="email" class="mt-3">Email:</label>
+                                <input type="text" name="email" id="email"
+                                    value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>"
+                                    class="input1 required requiredField email form-control" />
+                            </div>
 
-                                <form class=" validate-form ">
-                                    <div class="form-group mb-0 wrap-input1 validate-input" data-validate="Name is required">
-                                        <label for="contactName" class="mt-3">Name:</label>
-                                        <input type="text" name="contactName" id="contactName"
-                                            value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>"
-                                            class=" input1 required requiredField form-control" />   
-                                    </div>
-                                    
-
-                                    <div class="wrap-input1 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                                        <label for="email" class="mt-3">Email:</label>
-                                        <input type="text" name="email" id="email"
-                                            value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>"
-                                            class="input1 required requiredField email form-control" />
-                                    </div>
-
-                                    <div class=" wrap-input1 validate-input" data-validate="Message is required">
-                                        <label for="commentsText" class="mt-3">Message:</label>
-                                        <textarea name="comments" id="commentsText" rows="3"
-                                            class="input1 required requiredField form-control">
-                                            <?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?>
-                                            </textarea>
-                                    </div>
-                                    
-                                    <div class="container-contact1-form-btn">
-                                        <button class="butonidiff butminoradds">Send</button>
-                                    </div>
-                                    
-                                </form>
-                                <?php } ?>
+                            <div class=" wrap-input1 validate-input" data-validate="Message is required">
+                                <label for="commentsText" class="mt-3">Message:</label>
+                                <textarea name="comments" id="commentsText" rows="3"
+                                    class="input1 required requiredField form-control">
+                                    <?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?>
+                                    </textarea>
+                            </div>
+                            
+                            <div class="container-contact1-form-btn">
+                                <button class="butonidiff butminoradds" name="submit">Send</button>
+                            </div>                      
+                        </form>
+                  
                     </div><!-- .entry-content -->
                 </div><!-- .post -->
 
@@ -124,5 +134,5 @@ if(isset($_POST['submit'])) {
 </div>
 
 
-
+<?php $_SESSION['emailSent'] = false; ?>
 <?php get_footer(); ?>

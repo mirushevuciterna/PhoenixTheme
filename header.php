@@ -9,7 +9,7 @@
     <script src="https://use.fontawesome.com/6cadc76375.js"></script>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
 
         <!-- <?php wp_nav_menu(array('theme_location'=>'primarymenu')); ?> -->
 
