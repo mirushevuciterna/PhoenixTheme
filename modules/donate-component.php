@@ -35,18 +35,18 @@
         </div>
 
         <div class="col-md-4">
-            <div class="pricing-card hideMe">
-                <h5 class="pricing-title">Payroll giving</h5>
+            <div class="pricing-card">
+                <h5 class="pricing-title  hideMe">Payroll giving</h5>
                 <div class="pricing-body">
 
-                    <div class="price-row border-bottom">
+                    <div class="price-row border-bottom  hideMe">
                         <span>50&euro;</span>
                         <div>billed monthly</div>
                     </div>
 
-                    <div class="card-row">
+                    <div class="card-row ">
                         <div class="row">                           
-                            <div class="d-flex col-12">
+                            <div class="d-flex col-12  hideMe">
                                 <span>Mattis Vulputate</span>
                                 <div class="ml-auto text-right"><i class="fa fa-check"></i></div>                            
                             </div>
@@ -55,7 +55,7 @@
 
                     <div class="card-row">
                         <div class="row">                           
-                            <div class="d-flex col-12">
+                            <div class="d-flex col-12  hideMe">
                                 <span>Mattis Vulputate</span>
                                 <div class="ml-auto text-right"><i class="fa fa-check"></i></div>                            
                             </div>
@@ -64,14 +64,14 @@
 
                     <div class="card-row mb-5">
                         <div class="row">                           
-                            <div class="d-flex col-12">
+                            <div class="d-flex col-12  hideMe">
                                 <span>Mattis Vulputate</span>
                                 <div class="ml-auto text-right"><i class="fa fa-check"></i></div>                            
                             </div>
                         </div>
                     </div>
 
-                    <button class="donate-button text-center">
+                    <button class="donate-button text-center  hideMe">
                         Donate now
                     </button>
                 </div>
