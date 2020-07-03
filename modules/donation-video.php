@@ -6,7 +6,7 @@ $videoIndex = 1;
             <div class="donationVideoFeature">
                 <?php $image = get_sub_field('image_video');
                 if( $image ) { ?>
-                <div class="video-container" style="background-image:url('<?= $image ?>')">
+                <div class="video-container d-flex justify-content-center align-items-center" style="background-image:url('<?= $image ?>')">
                 <?php  } ?>
                     <div onclick="playDonationVideo(<?php echo $videoIndex; ?>)" class="playDiv hideMe" id="myBtn1111">
                         <i class="fa fa-play"></i>
@@ -33,7 +33,7 @@ $videoIndex = 1;
 
                 <?php $image = get_sub_field('image_video');
                 if( $image ) { ?>
-                <div class="video-container" style="background-image:url('<?= $image ?>')">
+                <div class="video-container d-flex justify-content-center align-items-center" style="background-image:url('<?= $image ?>')">
                 <?php  } ?>
                     <div onclick="playDonationVideo(<?php echo $videoIndex; ?>)" class="playDiv hideMe" id="myBtn1111">
                         <i class="fa fa-play"></i>

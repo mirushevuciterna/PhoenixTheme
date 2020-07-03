@@ -22,7 +22,7 @@
 
 @media only screen and (min-width: 760px) {
     .video-container .playDiv {
-        margin-top: 23%;
+        margin: 0;
     }
 }
 
@@ -131,7 +131,6 @@
     width: 100% !important;
     height: 400px;
 }
-
 
 /* Modal Video */
 
