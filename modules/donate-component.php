@@ -7,13 +7,13 @@
 
     <div class="row mb-5">
         <div class="col-md-4">
-            <div class="donateInfo hideMe">
+            <div class="donateInfo ">
                 <i class="fa fa-paypal" id="ikonat"></i>
                 <h4>Easy and simple payments</h4>
                 <p class="donateText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur</p>
             </div>
 
-            <div class="donateInfo hideMe">
+            <div class="donateInfo ">
                 <i class="fa fa-gift" id="ikonat"></i>
                 <h4>Effective giving options</h4>
                 <p class="donateText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur</p>
@@ -21,13 +21,13 @@
         </div>
 
         <div class="col-md-4">
-            <div class="donateInfo hideMe">
+            <div class="donateInfo ">
                 <i class="fa fa-globe" id="ikonat"></i>
                 <h4>Donate worldwide</h4>
                 <p class="donateText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur</p>
             </div>
 
-            <div class="donateInfo hideMe">
+            <div class="donateInfo ">
                 <i class="fa fa-envelope" id="ikonat"></i>
                 <h4>Charitable service</h4>
                 <p class="donateText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur</p>

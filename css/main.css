@@ -264,4 +264,12 @@ a .fa {
 }
 /* SINGLE POST */
 
-
+.current {
+    color: #949494;
+}
+.page-numbers {
+    margin: 0 5px;
+}
+.page-numbers:hover {
+    color: #FF704D;
+}

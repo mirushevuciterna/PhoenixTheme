@@ -6,7 +6,7 @@
         </div>
         
         
-        <div class="bgcolor1 hideMe">
+        <div class="bgcolor1 ">
 			<div class="containercontent1">
                 <div class="owl-caro owl-carousel owl-theme">
                     <?php
