@@ -1,4 +1,11 @@
 <?php
+
+// Case: Donation Video
+if( get_row_layout() == 'donation_video' ):
+
+?>
+
+<?php
 $videoIndex = 1;
     if( have_rows('video_youtube1') ):
         while ( have_rows('video_youtube1') ) : the_row(); ?>
@@ -60,3 +67,4 @@ $videoIndex = 1;
         </div>
     </div>
     
+<?php endif; ?>
