@@ -1,3 +1,10 @@
+<?php
+
+// Case: Difference we support
+if( get_row_layout() == 'difference' ):
+
+?>
+
 <div class="diffbackground d-flex justify-content-center align-items-center  ">
     <div class="container">
         <div class="row lartdiff "  >           
@@ -38,10 +45,6 @@
                     
                     <p id="demo1"></p>
 
-
-
-
-
                     <p id="progdiff">Raised: $75.000</p>
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">75%</div>
@@ -54,3 +57,4 @@
     </div>
 </div>
 
+<?php endif; ?>
