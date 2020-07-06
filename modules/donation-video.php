@@ -34,10 +34,12 @@ $videoIndex = 1;
         <?php } else { ?>
 
             <div class="donationVideoFeature">
-                <div class="donationVideoText d-flex flex-column justify-content-center align-items-center p-5 hideMe order-last order-md-first">
-                    <h3 class="donation-title"><?php the_sub_field('titulli_video');?></h3>
-                    <p class="donation-paragraph"><?php the_sub_field('paragrafi_video');?></p>
-                    <button class="btn btn-lg donateBTN"><?php the_sub_field('butoni_video');?></button>
+                <div class="donationcontent px-5">
+                    <div class="donationVideoText d-flex flex-column justify-content-center align-items-center p-5 hideMe order-last order-md-first">
+                        <h3 class="donation-title"><?php the_sub_field('titulli_video');?></h3>
+                        <p class="donation-paragraph"><?php the_sub_field('paragrafi_video');?></p>
+                        <button class="btn btn-lg donateBTN"><?php the_sub_field('butoni_video');?></button>
+                    </div>
                 </div>
 
                 <?php $image = get_sub_field('image_video');
