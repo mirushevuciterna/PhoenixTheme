@@ -1,7 +1,7 @@
 /* Donation video feature */
 
 .video-container {
-    min-height: 360px;
+    min-height: 80vh;
     width: 100%;
     margin-bottom: 0;
     text-align: center;
@@ -44,17 +44,15 @@
 
 .donation-title {
     color: #322d53;
-    text-align: center;
+    font-weight: 600;
 }
 
 .donation-paragraph {
+    margin-top: 4vh;
     color: #949494;
-    text-align: center;
 }
 
 .donationVideoText {
-    text-align: center;
-    width: 100%;
     margin: 20px 0;
 }
 
@@ -63,6 +61,8 @@
     flex-direction: column;
     justify-content: space-between;
     border-bottom: 1px solid gray;
+    background-color: #F4F2F0;
+
 }
 
 @media only screen and (min-width: 760px) {
