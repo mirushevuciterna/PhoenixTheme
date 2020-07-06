@@ -1,3 +1,10 @@
+<?php
+
+// Case: Get Involved
+if( get_row_layout() == 'get_involved' ):
+
+?>
+
 <div class="containeri">
     <div class="container-fluid">
         <div class="content hideMe">
@@ -8,3 +15,5 @@
         </div>
     </div>
 </div>
+
+<?php endif; ?>

@@ -1,3 +1,10 @@
+<?php
+
+// Case: Donate
+if( get_row_layout() == 'donate' ):
+
+?>
+
 <div class="p-5 donate-section">
     <div class="pg_row text-center hideMe">
         <h6>
@@ -79,3 +86,5 @@
         </div>
     </div>
 </div>
+
+<?php endif; ?>

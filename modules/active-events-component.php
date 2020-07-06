@@ -1,6 +1,6 @@
 <?php 
 
-$args = array('post_type'=>'portfolio', 'post_per_page'=>-1);
+$args = array('post_type'=>'portfolio', 'posts_per_page'=>-1);
 query_posts( $args ); ?>
 <div class="active-events">
     <div class="p-5 event-title-paragraph">
