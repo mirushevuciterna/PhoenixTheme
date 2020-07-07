@@ -1,17 +1,9 @@
-<?php
+<?php 
 /*
-** Template Name: Custom Register Page
+** Template Name: Custom Signup Page
 */
 get_header(); 
-// Exit if accessed directly
-if ( !defined('ABSPATH')) exit;
 ?>
-<body id="login-page" <?php body_class(); ?>>
-
-<div class="container">
-
-<div class="row register-page-container p-3 p-lg-5 mt-5 d-flex justify-content-center w-75 mx-auto">
-
 <?php
 global $wpdb, $user_ID; 
 
@@ -111,26 +103,35 @@ $error = 2; // We will check for this variable before showing the sign up form.
 }
 
 }
+ ?> 
 
-if ( $error != 2 ) { ?> 
-
-<?php  ?>
+	
 <h2 style="font-size: 20px; font-family: 'DM Sans',sans-serif;">Sign up or log in to receive the latest news </h2>
 <div class="container-register" id="container">
     <div class="form-container sign-up-container">
         <form action="" method="post">
             <h1>Create Account</h1>
-
-            <input type="text" placeholder="Username" name="username" value="<?php if( ! empty($username) ) echo $username; ?>">
-            <input type="email" placeholder="Email" name="email" value="<?php if( ! empty($email) ) echo $email; ?>">
-            <input type="password" placeholder="Password" name="password" value="<?php if( ! empty($password) ) echo $password; ?>">
+            <div class="social-container">
+                <a href="#" class="social"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="social"><i class="fa fa-google"></i></a>
+                <a href="#" class="social"><i class="fa fa-linkedin"></i></a>
+            </div>
+            <span>or use your email for registration</span>
+            <input type="text" placeholder="Username" name="username">
+            <input type="email" placeholder="Email" name="email">
+            <input type="password" placeholder="Password" name="password">
             <button name="submit">Sign Up</button>
         </form>
     </div>
     <div class="form-container sign-in-container">
         <form action="" method="post">
             <h1>Sign in</h1>
- 
+            <div class="social-container">
+                <a href="#" class="social"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="social"><i class="fa fa-google"></i></a>
+                <a href="#" class="social"><i class="fa fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your account</span>
             <input type="email" placeholder="Email" name="email">
             <input type="password" placeholder="Password" name="password">
             <a href="#">Forgot your password?</a>
@@ -152,27 +153,11 @@ if ( $error != 2 ) { ?>
         </div>
     </div>
 </div>
-<div class="col-md-5 manual-register-form">
-
-
-
-</div>
-
 <?php 
 
 } ?>
 
-<?php }
-
-} else { ?>
-
-<p>You are logged in. Click <a href="<?php bloginfo('wpurl'); ?>">here to go home</a></p>
-
 <?php } ?>
 
-</div>
-</div>
-<?php get_footer(); 
-?>
-</body>
-</html>
+
+<?php get_footer(); ?>
