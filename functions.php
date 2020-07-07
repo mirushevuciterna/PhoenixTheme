@@ -55,7 +55,17 @@ function wpb_adding_scripts() {
     wp_enqueue_script('difference-componentjs');
     wp_register_script('contact-usjs', get_template_directory_uri() . '/modules/assets/js/contact-us.js', array('jquery'), '1.1', true);
     wp_enqueue_script('contact-usjs');
-    
+
+    global $post;
+	// if ( ! empty( $post ) && is_page( $post ) ) {
+	// 	wp_register_script('localizescript', get_template_directory_uri() . '/modules/assets/js/localize.js', array('jquery'),'1.1', true);
+    //     wp_enqueue_script('localizescript');
+		wp_localize_script( 'contact-usjs', 'vars', array(
+			// 'childCount' => count( get_children( $post->ID ) ),
+            'messageSent' => __('Thanks, your email was sent successfully.', 'pippin')
+            // 'dd' => dd(get_children( $post->ID ))
+		) );
+	// }
 } 
 
 add_action( 'wp_enqueue_scripts', 'wpb_adding_scripts'); 
@@ -429,7 +439,7 @@ if ( ! function_exists( 'post_pagination' ) ) :
     }
  endif;
 
- /* 
+/* 
     ====================================
         Sidebar function
     ====================================
@@ -443,3 +453,7 @@ function phoenix_widget_setup() {
     ));
 }
 add_action('widgets_init', 'phoenix_widget_setup');
+
+
+
+
