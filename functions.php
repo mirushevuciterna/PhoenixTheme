@@ -9,6 +9,7 @@ function phoenix_script_enqueue(){
     wp_enqueue_style( 'bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' );
     wp_enqueue_style('customstyle', get_stylesheet_directory_uri().'/css/main.css');
     wp_enqueue_style('style', get_stylesheet_directory_uri().'/modules/assets/css/portfolio.css');
+    wp_enqueue_style('signupstyle', get_stylesheet_directory_uri().'/css/signup.css');
     wp_enqueue_style('donation-video', get_stylesheet_directory_uri().'/modules/assets/css/donation-video.css');
     wp_enqueue_style('owlcarouselmincss', get_stylesheet_directory_uri().'/css/owl.carousel.min.css');
     wp_enqueue_style('owlthemedefaultmincss', get_stylesheet_directory_uri().'/css/owl.theme.default.min.css');
@@ -35,6 +36,8 @@ function wpb_adding_scripts() {
     wp_enqueue_script('jquery2minjs');
     wp_register_script('owlcarouselminjs', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'),'1.1', true);
     wp_enqueue_script('owlcarouselminjs');
+    wp_register_script('signupscript', get_template_directory_uri() . '/js/signup.js', array('jquery'),'1.1', true);
+    wp_enqueue_script('signupscript');
     wp_register_script('causes-componentjs', get_template_directory_uri() . '/modules/assets/js/causes-component.js', array('jquery'),'1.1', true);
     wp_enqueue_script('causes-componentjs');
     wp_register_script('question-componentjs', get_template_directory_uri() . '/modules/assets/js/question-component.js', array('jquery'),'1.1', true);
