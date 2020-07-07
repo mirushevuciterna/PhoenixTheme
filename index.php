@@ -2,7 +2,7 @@
 
 <?php 
 
- if( have_rows('flexible') ): ?>
+if( have_rows('flexible') ): ?>
     <?php while( have_rows('flexible') ): the_row(); ?>
         <?php if( get_row_layout() == 'difference' ): ?>
             <?php get_template_part('modules/difference-component'); ?>

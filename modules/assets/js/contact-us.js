@@ -29,7 +29,9 @@
             showValidate(message);
             check=false;
         }
-
+        if (check == true) {
+            alert(vars.messageSent);
+        }
         return check;
     });
 

@@ -49,7 +49,7 @@ if(isset($_POST['submit'])) {
 		wp_mail($emailTo, $subject, $body, $headers);
 		$emailSent = true;
         $_SESSION['emailSent'] = true;
-        header('Location: http://localhost/wordpress_site/contact/');
+        header('Location: /testsite/wordpress/contact/');
         exit;
 	}
 
@@ -81,9 +81,9 @@ if(isset($_POST['submit'])) {
                     <div class="entry-content">
 
                         <?php if ($_SESSION['emailSent']) { ?>
-                            <div class="alert alert-success mt-5">
+                            <!-- <div class="alert alert-success mt-5">
                                 Thanks, your email was sent successfully
-                            </div>
+                            </div> -->
                         <?php } ?> 
 
                         <?php if ($errors) { ?>
