@@ -9,7 +9,9 @@ function phoenix_script_enqueue(){
     wp_enqueue_style( 'bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' );
     wp_enqueue_style('customstyle', get_stylesheet_directory_uri().'/css/main.css');
     wp_enqueue_style('style', get_stylesheet_directory_uri().'/modules/assets/css/portfolio.css');
-    wp_enqueue_style('signupstyle', get_stylesheet_directory_uri().'/css/signup.css');
+    if(basename($_SERVER['REQUEST_URI']) == 'register'){
+        wp_enqueue_style('signupstyle', get_stylesheet_directory_uri().'/css/signup.css');
+    }
     wp_enqueue_style('donation-video', get_stylesheet_directory_uri().'/modules/assets/css/donation-video.css');
     wp_enqueue_style('owlcarouselmincss', get_stylesheet_directory_uri().'/css/owl.carousel.min.css');
     wp_enqueue_style('owlthemedefaultmincss', get_stylesheet_directory_uri().'/css/owl.theme.default.min.css');
@@ -37,8 +39,10 @@ function wpb_adding_scripts() {
     wp_enqueue_script('jquery2minjs');
     wp_register_script('owlcarouselminjs', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'),'1.1', true);
     wp_enqueue_script('owlcarouselminjs');
-    wp_register_script('signupscript', get_template_directory_uri() . '/js/signup.js', array('jquery'),'1.1', true);
-    wp_enqueue_script('signupscript');
+    if(basename($_SERVER['REQUEST_URI']) == 'register'){
+        wp_register_script('signupscript', get_template_directory_uri() . '/js/signup.js', array('jquery'),'1.1', true);
+        wp_enqueue_script('signupscript');
+    }
     wp_register_script('causes-componentjs', get_template_directory_uri() . '/modules/assets/js/causes-component.js', array('jquery'),'1.1', true);
     wp_enqueue_script('causes-componentjs');
     wp_register_script('question-componentjs', get_template_directory_uri() . '/modules/assets/js/question-component.js', array('jquery'),'1.1', true);
@@ -525,12 +529,14 @@ $dislike=0;
 $like_count=0;
 //check if post id and userid present
 global $wpdb;
-$row = $wpdb->get_results( "SELECT id FROM $wpdb->post_like_table WHERE postid = '$postid' AND userid = '$user'");
+$row = $wpdb->get_results( "SELECT id FROM $wpdb->post_like_table WHERE postid = '$postid' AND userid = '$user' AND userid != 0");
+if ( is_user_logged_in() ) {
 if(empty($row)){
 //insert row
-$wpdb->insert( $wpdb->post_like_table, array( 'postid' => $postid, 'userid' => $user ), array( '%d', '%s' ) );
+$wpdb->insert( $wpdb->post_like_table, array( 'postid' => $postid, 'userid' => $user ), array( '%d', '%d' ) );
 //echo $wpdb->insert_id;
 $like=1;
+}
 }
 if(!empty($row)){
 //delete row
