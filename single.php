@@ -28,6 +28,19 @@
                 <?php the_content(); ?>
             </div>
             <div class="text-primary mb-5"><?php the_tags() ?></div>
+            <?php if (comments_open()){
+                comments_template();
+                if (have_comments()) : ?>
+    <ol class="post-comments">
+        <?php
+            wp_list_comments(array(
+                'style'       => 'ol',
+                'short_ping'  => true,
+            )); ?>
+        
+    </ol>
+<?php endif;
+            }?>
         </div>
 
         <div class="col-12 col-md-4 ml-0 ml-md-5">

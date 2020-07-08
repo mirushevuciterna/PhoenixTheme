@@ -68,12 +68,9 @@
         </footer>
 
         <a href="#top" class="back-to-top active"><i class="fa fa-angle-up"></i></a>
-      <?php wp_footer() ?>
+        <?php wp_footer() ?>
 
-    </body>
-    
-<script>
-
+    <script>
         if ($(window).width() > 1000) {
             $('.dropdown-toggle').click(function() {
                 window.location = $(this).attr('href'); 
@@ -81,4 +78,6 @@
         }
         $('.nav-link').removeAttr('title');
     </script>
+
+    </body>
 </html>
