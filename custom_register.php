@@ -47,7 +47,6 @@ $args = array(
 wp_login_form($args); ?>
 
 <p class="text-center"><a class="mr-2" href="<?php echo wp_registration_url(); ?>">Register Now</a>
-<span clas="regspan mx-2">·</span><a class="ml-2" href="<?php echo wp_lostpassword_url( ); ?>" title="Lost Password">Lost Password?</a></p>
 
 </div>
 
@@ -70,7 +69,7 @@ $error = 1;
 $email = esc_sql($_REQUEST['email']);
 if ( !preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/", $email) ) { 
 
-echo '<div class="col-12 register-error">Please enter a valid email.</div>';
+$emailError = 'You entered an invalid email address.';
 $error = 1;
 }
 
@@ -83,12 +82,11 @@ $error = 1;
 
 if ( $error == 0 ) {
 
-// $random_password = wp_generate_password( 12, false ); 
 $status = wp_create_user( $username, $password, $email ); 
 
 if ( is_wp_error($status) ) {
 
-echo '<div class="col-12 register-error">Username already exists. Please try another one.</div>'; 
+echo '<div class="col-12 register-error">This user already exists. Please try another one.</div>'; 
 } else {
 
 $from = get_option('admin_email'); 
@@ -98,8 +96,7 @@ $message = "Registration successful.\nYour login details\nUsername: $username\nP
 
 // Email password and other details to the user
 wp_mail( $email, $subject, $message, $headers ); 
-
-echo "Please check your email for login details."; 
+echo "Please check your email for login details. "; 
 
 $error = 2; // We will check for this variable before showing the sign up form. 
 }
@@ -116,7 +113,11 @@ if ( $error != 2 ) { ?>
         <form action="" method="post">
             <h1>Create Account</h1>
             <input type="text" placeholder="Username" name="username" value="<?php if( ! empty($username) ) echo $username; ?>">
+            
             <input type="email" placeholder="Email" name="email" value="<?php if( ! empty($email) ) echo $email; ?>">
+            <?php if($emailError != '') { ?>
+                                    <span class="error"><?=$emailError;?></span>
+                                <?php } ?>
             <input type="password" placeholder="Password" name="password" value="<?php if( ! empty($password) ) echo $password; ?>">
             <button class="registerbutton" name="submit">Sign Up</button>
         </form>
@@ -161,9 +162,9 @@ if ( $error != 2 ) { ?>
 <?php }
 
 } else { ?>
-
+<div class="m-5 p-5">
 <p>You are logged in. Click <a href="<?php bloginfo('wpurl'); ?>">here to go home</a></p>
-
+</div>
 <?php } ?>
 
 </div>
