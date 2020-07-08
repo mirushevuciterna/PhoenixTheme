@@ -1,72 +1,28 @@
-*{
-	font-size: 16px;
-  line-height:24px;
-  color:#000;
-  text-decoration:none;
-  cursor:url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRlmXFhOTlk8w7IdjJWoA2VueY3Eqt0OUL8KA9LRoSZFYBtxdLK&usqp=CAU)
-}img{
-  position:relative;
-}.text-wrapper{
-  width:100%;
-  position:relative;
-  margin-top:-40%
-  }.text-wrapper h1{
-  text-align:center;
-  padding-top:20px;
-  font-family:'DM Sans',sans-serif;
-  margin-top:100px;
-  font-size:50px;
-  color:#fff;
-  }.text-wrapper p{
-  text-align:center;
-  font-family:'DM Sans',sans-serif;
-  margin-top:50px;
-  font-size:40px;
-  color:#fff
-  }.nav-bar{
-  margin:0 auto;
-  width:980px;
-  text-align:right;
-  font-weight:700;
-  margin-top:50px;
-  margin-bottom:30px;
-  height:100%;
-   font-family:'DM Sans',sans-serif;
-  }.nav-bar ul{
-  list-style-type:none;
-  }.nav-bar li{
-  display:inline;
-  padding-left:20px;
-  padding-right:20px;}
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 
-* {
-	box-sizing: border-box;
-}
-
-h1 {
+.registertitle {
 	font-weight: bold;
 	margin: 0;
 }
 
-h2 {
+.registerh2 {
 	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 10px;
 }
 
-p {
+.overlay-panel p {
 	font-size: 14px;
 	font-weight: 100;
 	line-height: 20px;
 	letter-spacing: 0.5px;
 	margin: 20px 0 30px;
 }
-
-span {
+.regspan {
 	font-size: 12px;
 }
 
-a {
+.form-container  a {
 	color: black;
 	font-size: 16px;
 	text-decoration: none;
@@ -74,10 +30,10 @@ a {
 	 font-family:'DM Sans',sans-serif;
 }
 
-button {
+.registerbutton{
 	border-radius: 20px;
-	border: 1px solid black;
-	background-color: black;
+	border: 1px solid #322D53;
+	background-color: #322D53;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -87,23 +43,16 @@ button {
 	transition: transform 80ms ease-in;
 }
 
-button:active {
+.registerbutton:active {
 	transform: scale(0.95);
 }
 
-button:focus {
+.registerbutton:focus {
 	outline: none;
 }
 
-button.ghost {
-	background-color: transparent;
-	border-color: #FFFFFF;
 
-}.ghost:hover{
-	background-color: black;
-	border:0px;
-}
-form {
+.form-container form {
 	background-color: #FFFFFF;
 	display: flex;
 	align-items: center;
@@ -114,7 +63,7 @@ form {
 	text-align: center;
 }
 
-input {
+.form-container input {
 	background-color: #eee;
 	border: none;
 	padding: 12px 15px;
@@ -185,7 +134,7 @@ input {
 	height: 100%;
 	overflow: hidden;
 	transition: transform 0.6s ease-in-out;
-	z-index: 100;
+	z-index: 9;
 }
 
 .container-register.right-panel-active .overlay-container{
@@ -195,7 +144,7 @@ input {
 .overlay {
 	background: #FF416C;
 	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, yellow, lightgreen);
+	background: linear-gradient(to right, rgb(245, 181, 85), #FF4B2B);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;

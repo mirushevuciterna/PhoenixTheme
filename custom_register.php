@@ -6,11 +6,10 @@ get_header();
 // Exit if accessed directly
 if ( !defined('ABSPATH')) exit;
 ?>
-<body id="login-page" <?php body_class(); ?>>
 
 <div class="container">
 
-<div class="row register-page-container p-3 p-lg-5 mt-5 d-flex justify-content-center w-75 mx-auto">
+<div class="row register-page-container p-3  mt-2 d-flex justify-content-center w-75 mx-auto">
 
 <?php
 global $wpdb, $user_ID; 
@@ -40,14 +39,13 @@ echo '<div class="col-12 register-error"><strong>ERROR:</strong> You are logged 
 <div class="col-md-5">
 
 <?php 
-$args = array(
-'redirect' => home_url().'/login/', 
-);
+$args = array()
+;
 
 wp_login_form($args); ?>
 
 <p class="text-center"><a class="mr-2" href="<?php echo wp_registration_url(); ?>">Register Now</a>
-<span clas="mx-2">·</span><a class="ml-2" href="<?php echo wp_lostpassword_url( ); ?>" title="Lost Password">Lost Password?</a></p>
+<span clas="regspan mx-2">·</span><a class="ml-2" href="<?php echo wp_lostpassword_url( ); ?>" title="Lost Password">Lost Password?</a></p>
 
 </div>
 
@@ -115,39 +113,40 @@ $error = 2; // We will check for this variable before showing the sign up form.
 if ( $error != 2 ) { ?> 
 
 <?php  ?>
-<h2 style="font-size: 20px; font-family: 'DM Sans',sans-serif;">Sign up or log in to receive the latest news </h2>
+<h2 class="registerh2" >Sign up or log in to receive the latest news </h2>
 <div class="container-register" id="container">
     <div class="form-container sign-up-container">
         <form action="" method="post">
             <h1>Create Account</h1>
-
             <input type="text" placeholder="Username" name="username" value="<?php if( ! empty($username) ) echo $username; ?>">
             <input type="email" placeholder="Email" name="email" value="<?php if( ! empty($email) ) echo $email; ?>">
             <input type="password" placeholder="Password" name="password" value="<?php if( ! empty($password) ) echo $password; ?>">
-            <button name="submit">Sign Up</button>
+            <button class="registerbutton" name="submit">Sign Up</button>
         </form>
     </div>
+
     <div class="form-container sign-in-container">
-        <form action="" method="post">
-            <h1>Sign in</h1>
+        <form method="post" name="loginform" id="loginform" action="<?php echo site_url( '/wp-login.php' ); ?>">
+            <h1 class="registertitle">Sign in</h1>
  
-            <input type="email" placeholder="Email" name="email">
-            <input type="password" placeholder="Password" name="password">
-            <a href="#">Forgot your password?</a>
-            <button name="submit">Sign In</button>
+            <input  id="user_login" type="text" size="20" name="log">
+            <input id="user_pass" type="password" name="pwd">
+            <button id="wp-submit" type="submit" value="Login" name="wp-submit" class="registerbutton" >Sign In</button>
         </form>
     </div>
+
+
     <div class="overlay-container">
         <div class="overlay">
             <div class="overlay-panel overlay-left">
-                <h1 style="font-size: 40px;">Welcome Back!</h1>
+                <h1 class="registertitle" style="font-size: 40px;">Welcome Back!</h1>
                 <p>To keep connected with us please login with your personal info</p>
-                <button class="ghost" id="signIn">Sign In</button>
+                <button class="registerbutton"  id="signIn">Sign In</button>
             </div>
             <div class="overlay-panel overlay-right">
-                <h1 style="font-size: 40px;">Hello, Friend!</h1>
+                <h1 class="registertitle" style="font-size: 40px;">Hello, Friend!</h1>
                 <p>Enter your personal details and start journey with us</p>
-                <button class="ghost" id="signUp">Sign Up</button>
+                <button  class="registerbutton"  id="signUp">Sign Up</button>
             </div>
         </div>
     </div>
@@ -174,5 +173,7 @@ if ( $error != 2 ) { ?>
 </div>
 <?php get_footer(); 
 ?>
-</body>
-</html>
+     
+
+
+
