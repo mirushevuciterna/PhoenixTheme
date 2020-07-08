@@ -39,8 +39,10 @@ echo '<div class="col-12 register-error"><strong>ERROR:</strong> You are logged 
 <div class="col-md-5">
 
 <?php 
-$args = array()
-;
+$args = array(
+    'redirect' => home_url().'/register/', 
+    );
+
 
 wp_login_form($args); ?>
 
@@ -124,8 +126,8 @@ if ( $error != 2 ) { ?>
         <form method="post" name="loginform" id="loginform" action="<?php echo site_url( '/wp-login.php' ); ?>">
             <h1 class="registertitle">Sign in</h1>
  
-            <input  id="user_login" type="text" size="20" name="log">
-            <input id="user_pass" type="password" name="pwd">
+            <input  id="user_login" type="text" placeholder="Username or email" size="20" name="log">
+            <input id="user_pass" type="password" name="pwd" placeholder="Password">
             <button id="wp-submit" type="submit" value="Login" name="wp-submit" class="registerbutton" >Sign In</button>
         </form>
     </div>
