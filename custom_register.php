@@ -56,7 +56,7 @@ if ( $error == 0 ) {
 $status = wp_create_user( $username, $password, $email ); 
 
 if ( is_wp_error($status) ) {
-echo '<div class="col-12 d-flex justify-content-center align-items-center font-weight-bold text-danger">Username already exists. Please try another one.</div>'; 
+echo '<div class="col-12 d-flex justify-content-center align-items-center font-weight-bold text-danger">This user already exists.</div>'; 
 } else {
 wp_redirect('/');
 exit;    
