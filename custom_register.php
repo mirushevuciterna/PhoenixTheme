@@ -3,8 +3,11 @@
 ** Template Name: Custom Register Page
 */
 // Exit if accessed directly
+get_header(); 
 if ( !defined('ABSPATH')) exit;
 ?>
+
+
 
 <div class="container">
 
@@ -47,21 +50,19 @@ $error = 0;
 $username = esc_sql($_REQUEST['username']); 
 if ( empty($username) ) {
 
-echo '<div class="col-12 register-error">User name should not be empty.</div>'; 
 $error = 1;
 }
 
 $email = esc_sql($_REQUEST['email']);
 if ( !preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/", $email) ) { 
 
-$emailError = 'You entered an invalid email address.';
+
 $error = 1;
 }
 
 $password = esc_sql($_REQUEST['password']); 
 if ( empty($password) || strlen($password) < 6) {
 
-echo '<div class="col-12 register-error">User password should not be empty and at least 6 characters.</div>'; 
 $error = 1;
 }
 
@@ -71,14 +72,12 @@ $status = wp_create_user( $username, $password, $email );
 
 if ( is_wp_error($status) ) {
 
-echo '<div class="col-12 register-error">This user already exists. Please try another one.</div>'; 
 } else {
 
 $from = get_option('admin_email'); 
 $headers = 'From: '.$from . "\r\n"; 
 $subject = "Registration successful"; 
 $message = "Registration successful.\nYour login details\nUsername: $username\nPassword: $password"; 
-
 // Email password and other details to the user
 wp_mail( $email, $subject, $message, $headers ); 
 
@@ -89,21 +88,19 @@ $error = 2; // We will check for this variable before showing the sign up form.
 }
 
 
-if ( $error != 2 ) { ?> 
-<?php get_header(); ?>
+ ?> 
 <h2 class="registerh2" >Sign up or log in to receive the latest news </h2>
 <div class="container-register" id="container">
     <div class="form-container sign-up-container">
         <form action="" method="post">
             <h1>Create Account</h1>
-            <input type="text" placeholder="Username" name="username" value="<?php if( ! empty($username) ) echo $username; ?>">
-            
-            <input type="email" placeholder="Email" name="email" value="<?php if( ! empty($email) ) echo $email; ?>">
-            <?php if($emailError != '') { ?>
-                                    <span class="error"><?=$emailError;?></span>
-                                <?php } ?>
-            <input type="password" placeholder="Password" name="password" value="<?php if( ! empty($password) ) echo $password; ?>">
-            <button class="registerbutton" name="submit">Sign Up</button>
+            <input type="text" placeholder="Username" id="firstName" name="username" value="<?php if( ! empty($username) ) echo $username; ?>">
+            <p id="nameMsg"></p>
+            <input type="email" placeholder="Email" id="email" name="email" value="<?php if( ! empty($email) ) echo $email; ?>">
+            <p id="emailMsg"></p>
+            <input type="password" placeholder="Password" id="password1" name="password" value="<?php if( ! empty($password) ) echo $password; ?>">
+            <p id="msg"></p>
+            <button class="registerbutton" onclick="validate(event)" name="submit">Sign Up</button>
         </form>
     </div>
 
@@ -145,13 +142,13 @@ if ( $error != 2 ) { ?>
 
 <?php }
 
-} else { ?>
-<?php get_header(); ?>
+?>
+
 <div class="m-5 p-5">
 <p>You are logged in. Click <a href="<?php bloginfo('wpurl'); ?>">here to go home</a></p>
 
 </div>
-<?php } ?>
+
 
 </div>
 </div>
