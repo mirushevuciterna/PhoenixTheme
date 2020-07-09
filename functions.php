@@ -568,3 +568,12 @@ add_action( 'wp_ajax_nopriv_my_action', 'my_action_callback' );
 
 //////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
+
+
+function automatically_log_me_in( $user_id ) {
+    wp_set_current_user( $user_id );
+    wp_set_auth_cookie( $user_id );
+    wp_redirect( home_url( '/wp-admin/' ) );
+    exit(); 
+}
+add_action( 'user_register', 'automatically_log_me_in' );
