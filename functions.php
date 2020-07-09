@@ -9,25 +9,33 @@ function phoenix_script_enqueue(){
     wp_enqueue_style( 'bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' );
     wp_enqueue_style('customstyle', get_stylesheet_directory_uri().'/css/main.css');
     wp_enqueue_style('style', get_stylesheet_directory_uri().'/modules/assets/css/portfolio.css');
-    wp_enqueue_style('signupstyle', get_stylesheet_directory_uri().'/css/signup.css');
-    wp_enqueue_style('donation-video', get_stylesheet_directory_uri().'/modules/assets/css/donation-video.css');
     wp_enqueue_style('owlcarouselmincss', get_stylesheet_directory_uri().'/css/owl.carousel.min.css');
     wp_enqueue_style('owlthemedefaultmincss', get_stylesheet_directory_uri().'/css/owl.theme.default.min.css');
     wp_enqueue_script( 'jquery');
     wp_enqueue_script('boortstrapjs', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '1.0.0', true);
     wp_enqueue_style( 'pratafont', '//fonts.googleapis.com/css2?family=Prata&display=swap' );
     wp_enqueue_style( 'Montserrat', '//fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap' );
-    wp_enqueue_style( 'w3animright', '//www.w3schools.com/w3css/4/w3.css');
-    wp_enqueue_style('causes-componentstyle', get_stylesheet_directory_uri().'/modules/assets/css/causes-component.css');
-    wp_enqueue_style('question-componentstyle', get_stylesheet_directory_uri().'/modules/assets/css/question-component.css');
-    wp_enqueue_style('volunteers-componentstyle', get_stylesheet_directory_uri().'/modules/assets/css/volunteers-component.css');
-    wp_enqueue_style('logos-component', get_stylesheet_directory_uri().'/modules/assets/css/logos-component.css');
-    wp_enqueue_style('get-involved', get_stylesheet_directory_uri().'/modules/assets/css/get-involved.css');
-    wp_enqueue_style('active-events', get_stylesheet_directory_uri().'/modules/assets/css/active-events.css');
+    wp_enqueue_style( 'w3animright', '//www.w3schools.com/w3css/4/w3.css'); 
     wp_enqueue_style('difference-component', get_stylesheet_directory_uri().'/modules/assets/css/difference-component.css');
-    wp_enqueue_style('donate-component', get_stylesheet_directory_uri().'/modules/assets/css/donate-component.css');
-    wp_enqueue_style('contact', get_stylesheet_directory_uri().'/modules/assets/css/contact.css');
-    wp_enqueue_style('comment', get_stylesheet_directory_uri().'/modules/assets/css/comment.css');
+    if(basename($_SERVER['REQUEST_URI']) == 'contact'){
+        wp_enqueue_style('contact', get_stylesheet_directory_uri().'/modules/assets/css/contact.css');
+    }
+    if(is_front_page()) {
+        wp_enqueue_style('causes-componentstyle', get_stylesheet_directory_uri().'/modules/assets/css/causes-component.css');
+        wp_enqueue_style('donation-video', get_stylesheet_directory_uri().'/modules/assets/css/donation-video.css');
+        wp_enqueue_style('question-componentstyle', get_stylesheet_directory_uri().'/modules/assets/css/question-component.css');
+        wp_enqueue_style('volunteers-componentstyle', get_stylesheet_directory_uri().'/modules/assets/css/volunteers-component.css');
+        wp_enqueue_style('logos-component', get_stylesheet_directory_uri().'/modules/assets/css/logos-component.css');
+        wp_enqueue_style('get-involved', get_stylesheet_directory_uri().'/modules/assets/css/get-involved.css');
+        wp_enqueue_style('active-events', get_stylesheet_directory_uri().'/modules/assets/css/active-events.css');
+        wp_enqueue_style('donate-component', get_stylesheet_directory_uri().'/modules/assets/css/donate-component.css');
+    }   
+    if(is_single()){
+        wp_enqueue_style('comment', get_stylesheet_directory_uri().'/modules/assets/css/comment.css');
+    }
+    if(basename($_SERVER['REQUEST_URI']) == 'register'){
+        wp_enqueue_style('signupstyle', get_stylesheet_directory_uri().'/css/signup.css');
+    } 
 }
 
 add_action('wp_enqueue_scripts', 'phoenix_script_enqueue');
@@ -37,40 +45,48 @@ function wpb_adding_scripts() {
     wp_enqueue_script('jquery2minjs');
     wp_register_script('owlcarouselminjs', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'),'1.1', true);
     wp_enqueue_script('owlcarouselminjs');
-    wp_register_script('signupscript', get_template_directory_uri() . '/js/signup.js', array('jquery'),'1.1', true);
-    wp_enqueue_script('signupscript');
-    wp_register_script('causes-componentjs', get_template_directory_uri() . '/modules/assets/js/causes-component.js', array('jquery'),'1.1', true);
-    wp_enqueue_script('causes-componentjs');
-    wp_register_script('question-componentjs', get_template_directory_uri() . '/modules/assets/js/question-component.js', array('jquery'),'1.1', true);
-    wp_enqueue_script('question-componentjs');
-    wp_register_script('volunteers-componentjs', get_template_directory_uri() . '/modules/assets/js/volunteers-component.js', array('jquery'),'1.1', true);
-    wp_enqueue_script('volunteers-componentjs');  
-    wp_register_script('active-eventsjs', get_template_directory_uri() . '/modules/assets/js/active-events.js', array('jquery'),'1.1', true);
-    wp_enqueue_script('active-eventsjs'); 
-    wp_register_script('donation-videojs', get_template_directory_uri() . '/modules/assets/js/donation-video.js', array('jquery'),'1.1', true);
-    wp_enqueue_script('donation-videojs');
-    wp_register_script('logos-componentjs', get_template_directory_uri() . '/modules/assets/js/logos-component.js', array('jquery'),'1.1', true);
-    wp_enqueue_script('logos-componentjs');
+    if(basename($_SERVER['REQUEST_URI']) == 'register'){
+        wp_register_script('signupscript', get_template_directory_uri() . '/js/signup.js', array('jquery'),'1.1', true);
+        wp_enqueue_script('signupscript');
+    }
+    if(is_front_page()) {
+        wp_register_script('difference-componentjs', get_template_directory_uri() . '/modules/assets/js/difference-component.js', array('jquery'), '1.1', true);
+        wp_enqueue_script('difference-componentjs');
+        wp_register_script('causes-componentjs', get_template_directory_uri() . '/modules/assets/js/causes-component.js', array('jquery'),'1.1', true);
+        wp_enqueue_script('causes-componentjs');
+        wp_register_script('question-componentjs', get_template_directory_uri() . '/modules/assets/js/question-component.js', array('jquery'),'1.1', true);
+        wp_enqueue_script('question-componentjs');
+        wp_register_script('volunteers-componentjs', get_template_directory_uri() . '/modules/assets/js/volunteers-component.js', array('jquery'),'1.1', true);
+        wp_enqueue_script('volunteers-componentjs');  
+        wp_register_script('active-eventsjs', get_template_directory_uri() . '/modules/assets/js/active-events.js', array('jquery'),'1.1', true);
+        wp_enqueue_script('active-eventsjs'); 
+        wp_register_script('donation-videojs', get_template_directory_uri() . '/modules/assets/js/donation-video.js', array('jquery'),'1.1', true);
+        wp_enqueue_script('donation-videojs');
+        wp_register_script('logos-componentjs', get_template_directory_uri() . '/modules/assets/js/logos-component.js', array('jquery'),'1.1', true);
+        wp_enqueue_script('logos-componentjs');
+    }
     wp_register_script('fade-in-featurejs', get_template_directory_uri() . '/modules/assets/js/fade-in-feature.js', array('jquery'), '1.1', true);
     wp_enqueue_script('fade-in-featurejs');
     wp_register_script('jqBootstrapValidation', get_template_directory_uri() . '/modules/assets/js/jqBootstrapValidation.js', array('jquery'), '1.1', true);
     wp_enqueue_script('jqBootstrapValidation');
-    wp_register_script('difference-componentjs', get_template_directory_uri() . '/modules/assets/js/difference-component.js', array('jquery'), '1.1', true);
-    wp_enqueue_script('difference-componentjs');
-    wp_register_script('contact-usjs', get_template_directory_uri() . '/modules/assets/js/contact-us.js', array('jquery'), '1.1', true);
-    wp_enqueue_script('contact-usjs');
-    wp_register_script('commentjs', get_template_directory_uri() . '/modules/assets/js/comment.js', array('jquery'), '1.1', true);
-    wp_enqueue_script('commentjs');
+    if(basename($_SERVER['REQUEST_URI']) == 'contact'){
+        wp_register_script('contact-usjs', get_template_directory_uri() . '/modules/assets/js/contact-us.js', array('jquery'), '1.1', true);
+        wp_enqueue_script('contact-usjs');
+    }
+    if(is_single()){
+        wp_register_script('commentjs', get_template_directory_uri() . '/modules/assets/js/comment.js', array('jquery'), '1.1', true);
+        wp_enqueue_script('commentjs');
+    }
 
-    global $post;
+    // global $post;
 	// if ( ! empty( $post ) && is_page( $post ) ) {
 	// 	wp_register_script('localizescript', get_template_directory_uri() . '/modules/assets/js/localize.js', array('jquery'),'1.1', true);
     //     wp_enqueue_script('localizescript');
-		wp_localize_script( 'contact-usjs', 'vars', array(
-			// 'childCount' => count( get_children( $post->ID ) ),
-            'messageSent' => __('Thanks, your email was sent successfully.', 'pippin')
-            // 'dd' => dd(get_children( $post->ID ))
-		) );
+		// wp_localize_script( 'contact-usjs', 'vars', array(
+		// 	// 'childCount' => count( get_children( $post->ID ) ),
+        //     'messageSent' => __('Thanks, your email was sent successfully.', 'pippin')
+        //     // 'dd' => dd(get_children( $post->ID ))
+		// ) );
 	// }
 } 
 
@@ -466,6 +482,92 @@ function auto_redirect_external_after_logout(){
 wp_redirect( "http://localhost/wordpress_site/register/" );
 exit();
 }
+
+
+
+/////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+function post_like_table_create() {
+
+    global $wpdb;
+    $table_name = $wpdb->prefix. "post_like_table";
+    global $charset_collate;
+    $charset_collate = $wpdb->get_charset_collate();
+    global $db_version;
+
+    if( $wpdb->get_var("SHOW TABLES LIKE '" . $table_name . "'") != $table_name)
+    { $create_sql = "CREATE TABLE " . $table_name . " (
+    id INT(11) NOT NULL auto_increment,
+    postid INT(11) NOT NULL ,
+
+    userid VARCHAR(40) NOT NULL ,
+
+    PRIMARY KEY (id))$charset_collate;";
+    require_once(ABSPATH . "wp-admin/includes/upgrade.php");
+    dbDelta( $create_sql );
+    }
+
+    //register the new table with the wpdb object
+    if (!isset($wpdb->post_like_table))
+    {
+    $wpdb->post_like_table = $table_name;
+    //add the shortcut so you can use $wpdb->stats
+    $wpdb->tables[] = str_replace($wpdb->prefix, '', $table_name);
+    }
+
+}
+add_action( 'init', 'post_like_table_create');
+
+    // Add the JS
+function theme_name_scripts() {
+    wp_enqueue_script( 'script-name', get_template_directory_uri() . '/modules/assets/js/post-like.js', array('jquery'), '1.0.0', true );
+    wp_localize_script( 'script-name', 'MyAjax', array(
+    // URL to wp-admin/admin-ajax.php to process the request
+    'ajaxurl' => admin_url( 'admin-ajax.php' ),
+    // generate a nonce with a unique ID "myajax-post-comment-nonce"
+    // so that you can check it later when an AJAX request is sent
+    'security' => wp_create_nonce( 'my-special-string' )
+    ));
+}
+add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
+// The function that handles the AJAX request
+
+function my_action_callback() {
+    check_ajax_referer( 'my-special-string', 'security' );
+    $postid = intval( $_POST['postid'] );
+    $user = get_current_user_id();
+    $like=0;
+    $dislike=0;
+    $like_count=0;
+    //check if post id and userid present
+    global $wpdb;
+    $row = $wpdb->get_results( "SELECT id FROM $wpdb->post_like_table WHERE postid = '$postid' AND userid = '$user' AND userid != 0");
+    if ( is_user_logged_in() ) {
+    if(empty($row)){
+    //insert row
+    $wpdb->insert( $wpdb->post_like_table, array( 'postid' => $postid, 'userid' => $user ), array( '%d', '%d' ) );
+    //echo $wpdb->insert_id;
+    $like=1;
+    }
+    }
+    if(!empty($row)){
+    //delete row
+    $wpdb->delete( $wpdb->post_like_table, array( 'postid' => $postid, 'userid'=> $user ), array( '%d','%s' ) );
+    $dislike=1;
+    }
+
+    //calculate like count from db.
+    $totalrow = $wpdb->get_results( "SELECT id FROM $wpdb->post_like_table WHERE postid = '$postid'");
+    $total_like=$wpdb->num_rows;
+    $data=array( 'postid'=>$postid,'likecount'=>$total_like,'userid'=>$user,'like'=>$like,'dislike'=>$dislike);
+    echo json_encode($data);
+    die(); // this is required to return a proper result
+}
+add_action( 'wp_ajax_my_action', 'my_action_callback' );
+add_action( 'wp_ajax_nopriv_my_action', 'my_action_callback' );
+
+//////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 
 
 function automatically_log_me_in( $user_id ) {
