@@ -27,6 +27,7 @@ function phoenix_script_enqueue(){
     wp_enqueue_style('difference-component', get_stylesheet_directory_uri().'/modules/assets/css/difference-component.css');
     wp_enqueue_style('donate-component', get_stylesheet_directory_uri().'/modules/assets/css/donate-component.css');
     wp_enqueue_style('contact', get_stylesheet_directory_uri().'/modules/assets/css/contact.css');
+    wp_enqueue_style('comment', get_stylesheet_directory_uri().'/modules/assets/css/comment.css');
 }
 
 add_action('wp_enqueue_scripts', 'phoenix_script_enqueue');
@@ -58,6 +59,8 @@ function wpb_adding_scripts() {
     wp_enqueue_script('difference-componentjs');
     wp_register_script('contact-usjs', get_template_directory_uri() . '/modules/assets/js/contact-us.js', array('jquery'), '1.1', true);
     wp_enqueue_script('contact-usjs');
+    wp_register_script('commentjs', get_template_directory_uri() . '/modules/assets/js/comment.js', array('jquery'), '1.1', true);
+    wp_enqueue_script('commentjs');
 
     global $post;
 	// if ( ! empty( $post ) && is_page( $post ) ) {
@@ -464,3 +467,11 @@ wp_redirect( "http://localhost/wordpress_site/register/" );
 exit();
 }
 
+
+function automatically_log_me_in( $user_id ) {
+    wp_set_current_user( $user_id );
+    wp_set_auth_cookie( $user_id );
+    wp_redirect( home_url( '/wp-admin/' ) );
+    exit(); 
+}
+add_action( 'user_register', 'automatically_log_me_in' );
