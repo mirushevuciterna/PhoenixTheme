@@ -20,7 +20,7 @@ function matchPasswords() {
 	let firstPassword = document.getElementById("password1").value;
 	let secondPassword = document.getElementById("password2").value;
 	let text;
-	if (firstPassword.length <= 6) {
+	if (firstPassword.length < 6) {
 		text = "Password must contain at least 6 characters!";
 		document.getElementById("msg").innerHTML = text;
 		valid = false;
@@ -104,7 +104,7 @@ function validateLogin(event) {
 		document.getElementById("demo").innerHTML = "";
 		return true;
 	}
-	if (y.length <= 6) {
+	if (y.length < 6) {
 		error = "Password must contain at least 6 characters!"
 		document.getElementById("demo1").innerHTML = error;
 		valid = false;
