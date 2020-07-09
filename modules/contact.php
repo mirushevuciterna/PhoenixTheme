@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Contact-Test
+Template Name: Contact
 */
 ?>
 
@@ -49,7 +49,7 @@ if(isset($_POST['submit'])) {
 		wp_mail($emailTo, $subject, $body, $headers);
 		$emailSent = true;
         $_SESSION['emailSent'] = true;
-        header('Location: /contact/');
+        wp_redirect(home_url() . "/contact");
         exit;
 	}
 

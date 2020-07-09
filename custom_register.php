@@ -75,7 +75,7 @@ $error = 2; // We will check for this variable before showing the sign up form.
 
 }
 
-if ( $error != 2 ) { ?>
+ if ( $error != 2 ) { ?>
 
         <?php  ?>
         <h2 class="registerh2">Sign up or log in to receive the latest news </h2>
@@ -137,13 +137,13 @@ if ( $error != 2 ) { ?>
 
         <?php 
 
-} ?>
+ } ?>
 
         <?php 
 
-} else { ?>
+// } else { ?>
 
-        <p>You are logged in. Click <a href="<?php bloginfo('wpurl'); ?>">here to go home</a></p>
+        <!-- <p>You are logged in. Click <a href="<?php bloginfo('wpurl'); ?>">here to go home</a></p> -->
 
         <?php } ?>
 
