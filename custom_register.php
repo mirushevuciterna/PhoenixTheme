@@ -11,9 +11,9 @@ if ( !defined('ABSPATH')) exit;
 
 <div class="container">
 
-<div class="row register-page-container p-3  mt-2 d-flex justify-content-center w-75 mx-auto">
+    <div class="row register-page-container p-3  mt-2 d-flex justify-content-center w-75 mx-auto">
 
-<?php
+        <?php
 global $wpdb, $user_ID; 
 
 //Check whether the user is already logged in 
@@ -56,7 +56,6 @@ $error = 1;
 $email = esc_sql($_REQUEST['email']);
 if ( !preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/", $email) ) { 
 
-
 $error = 1;
 }
 
@@ -68,11 +67,14 @@ $error = 1;
 
 if ( $error == 0 ) {
 
+// $random_password = wp_generate_password( 12, false ); 
 $status = wp_create_user( $username, $password, $email ); 
 
 if ( is_wp_error($status) ) {
 
 } else {
+wp_redirect('/');
+exit;    
 
 $from = get_option('admin_email'); 
 $headers = 'From: '.$from . "\r\n"; 
@@ -114,33 +116,42 @@ $error = 2; // We will check for this variable before showing the sign up form.
         </form>
     </div>
 
+            <div class="form-container sign-in-container">
+                <form method="post" name="loginform" id="loginform" action="<?php echo site_url( '/wp-login.php' ); ?>">
+                    <h1 class="registertitle">Sign in</h1>
 
-    <div class="overlay-container">
-        <div class="overlay">
-            <div class="overlay-panel overlay-left">
-                <h1 class="registertitle" style="font-size: 40px;">Welcome Back!</h1>
-                <p>To keep connected with us please login with your personal info</p>
-                <button class="registerbutton"  id="signIn">Sign In</button>
+                    <input id="user_login" type="text" size="20" name="log">
+                    <input id="user_pass" type="password" name="pwd">
+                    <button id="wp-submit" type="submit" value="Login" name="wp-submit" class="registerbutton">Sign
+                        In</button>
+                </form>
             </div>
-            <div class="overlay-panel overlay-right">
-                <h1 class="registertitle" style="font-size: 40px;">Hello, Friend!</h1>
-                <p>Enter your personal details and start journey with us</p>
-                <button  class="registerbutton"  id="signUp">Sign Up</button>
+
+
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1 class="registertitle" style="font-size: 40px;">Welcome Back!</h1>
+                        <p>To keep connected with us please login with your personal info</p>
+                        <button class="registerbutton" id="signIn">Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1 class="registertitle" style="font-size: 40px;">Hello, Friend!</h1>
+                        <p>Enter your personal details and start journey with us</p>
+                        <button class="registerbutton" id="signUp">Sign Up</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="col-md-5 manual-register-form">
+        <div class="col-md-5 manual-register-form">
 
 
 
-</div>
+        </div>
 
-<?php 
+        <?php 
 
-} ?>
-
-<?php }
+ } ?>
 
 ?>
 
@@ -150,11 +161,13 @@ $error = 2; // We will check for this variable before showing the sign up form.
 </div>
 
 
-</div>
+// } else { ?>
+
+        <!-- <p>You are logged in. Click <a href="<?php bloginfo('wpurl'); ?>">here to go home</a></p> -->
+
+        <?php } ?>
+
+    </div>
 </div>
 <?php get_footer(); 
 ?>
-     
-
-
-
