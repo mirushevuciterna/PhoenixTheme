@@ -12,73 +12,16 @@ signInButton.addEventListener('click', () => {
 });
 
 
-(function ($) {
-    "use strict";
 
-    
-    /*==================================================================
-    [ Validate ]*/
-    var name = $('.validate-input-register [name="username"]');
-    var email = $('.validate-input-register [name="email"]');
-    var password = $('.validate-input-register [name="password"]');
-
-
-    $('.validate-form-register').on('submit',function(){
-        var check = true;
-
-        if($(name).val().trim() == ''){
-            showValidate(name);
-            check=false;
-        }
-
-
-
-        if($(email).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
-            showValidate(email);
-            check=false;
-        }
-
-        if($(password).val().trim() == ''){
-            showValidate(message);
-            check=false;
-        }
-        if (check == true) {
-            alert(vars.messageSent);
-        }
-        return check;
-    });
-
-
-    $('.validate-form-register .input2').each(function(){
-        $(this).focus(function(){
-           hideValidate(this);
-       });
-    });
-
-    function showValidate(input) {
-        var thisAlert = $(input).parent();
-
-        $(thisAlert).addClass('alert-validate');
-    }
-
-    function hideValidate(input) {
-        var thisAlert = $(input).parent();
-
-        $(thisAlert).removeClass('alert-validate');
-    }
-    
-    
-
-})(jQuery);
-
+//FORM VALIDATION//
 
 function matchPasswords() {
-	var valid = true;
-	var firstPassword = document.getElementById("password1").value;
-	var secondPassword = document.getElementById("password2").value;
-	var text;
-	if (firstPassword < 8) {
-		text = "Password must contain at least 8 characters!";
+	let valid = true;
+	let firstPassword = document.getElementById("password1").value;
+	let secondPassword = document.getElementById("password2").value;
+	let text;
+	if (firstPassword.length <= 6) {
+		text = "Password must contain at least 6 characters!";
 		document.getElementById("msg").innerHTML = text;
 		valid = false;
 	} else if (firstPassword != secondPassword) {
@@ -87,15 +30,21 @@ function matchPasswords() {
 		valid = false;
 	} else {
 		document.getElementById("msg").innerText = '';
-	}
-	return valid;
+		return valid;
+	} 
+	
 }
 
 function validateEmail() {
-	var enteredEmail = document.getElementById("email").value;
-	var atPosition = enteredEmail.indexOf("@");
-	var dotPosition = enteredEmail.indexOf(".");
-	var text;
+	let enteredEmail = document.getElementById("email").value;
+	let atPosition = enteredEmail.indexOf("@");
+	let dotPosition = enteredEmail.indexOf(".");
+	let text;
+	if (enteredEmail == null || enteredEmail == "") {
+		text = "This field can't be blank!";
+		document.getElementById("email").innerHTML = text;
+		valid = false;
+	}
 	if (atPosition < 1 || dotPosition < atPosition + 2 || dotPosition + 2 >= enteredEmail.length) {
 		text = "Please enter a valid e-mail address!";
 		document.getElementById("emailMsg").innerHTML = text;
@@ -107,34 +56,71 @@ function validateEmail() {
 }
 
 function nameValidation() {
-	var valid = true;
-	var txt, errori;
-	var x = document.getElementById("firstName").value;
+	let valid = true;
+	let txt;
+	let x = document.getElementById("username").value;
 	if (x == null || x == "") {
 		txt = "This field can't be blank!";
 		document.getElementById("nameMsg").innerHTML = txt;
 		valid = false;
 	} else {
 		document.getElementById("nameMsg").innerHTML = '';
+		return true;
 	}
 	
-	if (y == null || y == "") {
-		errori = "This field can't be blank!";
-		document.getElementById("surnameMsg").innerHTML = errori;
-		valid = false;
-	} else {
-		document.getElementById("surnameMsg").innerHTML = '';
-	}
-	return valid;
 }
 
-function validate(event) {
+function validate(event) {	
 	var password = matchPasswords();
 	var email = validateEmail();
 	var name = nameValidation();
 	if(!(password && email && name)) {
+
 		event.preventDefault();
+		let elements = document.getElementsByClassName('error-msg');
+		for (let i = 0; i < elements.length; i++) {
+			elements[i].style.color = 'red';
+		}
+		
 	}
+	return true;
+}
+
+
+
+// LOGIN VALIDATION
+function validateLogin(event) {
+
+	let valid = true;
+	let text, error;
+	let x = document.getElementById("user_login").value;
+	let y = document.getElementById("user_pass").value;
+	
+	if (x == null || x == "") {
+		text = "This field can't be blank!";
+		document.getElementById("demo").innerHTML = text;
+		valid = false;
+	} else {
+		document.getElementById("demo").innerHTML = "";
+		return true;
+	}
+	if (y.length <= 6) {
+		error = "Password must contain at least 6 characters!"
+		document.getElementById("demo1").innerHTML = error;
+		valid = false;
+	} else {
+		document.getElementById("demo1").innerHTML = "";
+		return true;
+	}
+
+	if (!validateLogin) {
+	event.preventDefault();
+	let elements = document.getElementsByClassName('error-login');
+		for (let i = 0; i < elements.length; i++) {
+			elements[i].style.color = 'red';
+		}
+	}
+	return true;
 }
 
 
