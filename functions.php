@@ -467,3 +467,11 @@ wp_redirect( "http://localhost/testsite/wordpress/register/" );
 exit();
 }
 
+
+function automatically_log_me_in( $user_id ) {
+    wp_set_current_user( $user_id );
+    wp_set_auth_cookie( $user_id );
+    wp_redirect( home_url( '/wp-admin/' ) );
+    exit(); 
+}
+add_action( 'user_register', 'automatically_log_me_in' );

@@ -2,7 +2,6 @@
 /*
 ** Template Name: Custom Register Page
 */
-get_header(); 
 // Exit if accessed directly
 if ( !defined('ABSPATH')) exit;
 ?>
@@ -16,7 +15,6 @@ global $wpdb, $user_ID;
 
 //Check whether the user is already logged in 
 if (!$user_ID) {
-
 // Default page shows register form. 
 // To show Login form set query variable action=login
 $action = (isset($_GET['action']) ) ? $_GET['action'] : 0;
@@ -36,19 +34,6 @@ echo '<div class="col-12 register-error"><strong>ERROR:</strong> You are logged 
 }
 ?>
 
-<div class="col-md-5">
-
-<?php 
-$args = array(
-    'redirect' => home_url().'/register/', 
-    );
-
-
-wp_login_form($args); ?>
-
-<p class="text-center"><a class="mr-2" href="<?php echo wp_registration_url(); ?>">Register Now</a>
-
-</div>
 
 <?php
 
@@ -96,7 +81,6 @@ $message = "Registration successful.\nYour login details\nUsername: $username\nP
 
 // Email password and other details to the user
 wp_mail( $email, $subject, $message, $headers ); 
-echo "Please check your email for login details. "; 
 
 $error = 2; // We will check for this variable before showing the sign up form. 
 }
@@ -104,9 +88,9 @@ $error = 2; // We will check for this variable before showing the sign up form.
 
 }
 
-if ( $error != 2 ) { ?> 
 
-<?php  ?>
+if ( $error != 2 ) { ?> 
+<?php get_header(); ?>
 <h2 class="registerh2" >Sign up or log in to receive the latest news </h2>
 <div class="container-register" id="container">
     <div class="form-container sign-up-container">
@@ -162,8 +146,10 @@ if ( $error != 2 ) { ?>
 <?php }
 
 } else { ?>
+<?php get_header(); ?>
 <div class="m-5 p-5">
 <p>You are logged in. Click <a href="<?php bloginfo('wpurl'); ?>">here to go home</a></p>
+
 </div>
 <?php } ?>
 
