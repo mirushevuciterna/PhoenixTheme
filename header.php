@@ -28,10 +28,11 @@
             'walker' => new WP_Bootstrap_Navwalker(),
             'menu_class' => 'navbar-nav m-auto '
             ) ); ?>
+            <div class="butonitest  m-sm-0 d-flex justify-content-center align-items-center ">
+            <a href="<?php echo (home_url().'/register')?>"> <button id="butoniNav" type="button" class="m-0 mr-lg-5 mb-2 mb-lg-0 btn btn-primary ">Join us</button></a>
+            </div>
             </div>
 
-            <div class="butonitest d-none d-lg-inline">
-                <button id="butoniNav" type="button" class="btn btn-primary">Get Involved </button>
-            </div>
+            
 
         </nav>
