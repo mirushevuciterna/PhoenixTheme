@@ -195,7 +195,7 @@ a .fa {
 .entry-meta > span{
     padding-right: 15px;
 }
-.entry-meta > span > span{
+.entry-meta > span > i {
     color: #FF704D;
 }
 .posts h2 a:hover{

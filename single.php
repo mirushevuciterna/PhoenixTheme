@@ -4,32 +4,7 @@
 <div class="container-fluid">
     <div id="wrapper-blog-post">
         <?php while(have_posts(  )) : the_post(  ); ?>
-
-        <div class="mt-5 col-12 col-md-7">
-            <div id="breadcrumb"><?php get_breadcrumb(); ?></div>
-            <h1 class=""><?php the_title(); ?></h1>
-            <div class="entry-meta py-3">
-                <span class="published"><span class="fa fa-clock-o"></span> <?php the_time('j F, Y'); ?></span>
-                <span class="author"><span class="fa fa-keyboard-o"></span> <?php echo get_the_author(); ?></span>
-                <span class="blog-label"><span class="fa fa-folder-open"></span> <?php 
-                    $categories = [];
-                    foreach (get_the_category() as $category){
-                        $categories[] = $category->name;
-                    }                                
-                    ?>
-                    <?php echo implode(', ', $categories); ?>
-                </span>
-                <span class="comment-count"><span class="fa fa-comment"></span> <?php echo get_comments_number() ?>
-                    comments</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-7">
-                <img src="<?php echo get_the_post_thumbnail_url (); ?>" class="px-0 col-12">
-                <div class="post-content py-3">
-                    <?php the_content(); ?>
-                </div>
-                <?php         
+<?php         
 global $wpdb;
 $l=0;
 $postid=get_the_id();
@@ -41,6 +16,40 @@ $l=1;
 $totalrow1 = $wpdb->get_results( "SELECT id FROM $wpdb->post_like_table WHERE postid = '$postid'");
 $total_like1 = $wpdb->num_rows;
 ?>
+        <div class="mt-5 col-12 col-md-7">
+            <div id="breadcrumb"><?php get_breadcrumb(); ?></div>
+            <h1 class=""><?php the_title(); ?></h1>
+            <div class="entry-meta py-3">
+                <span class="published"><i class="fa fa-clock-o"></i> <?php the_time('j F, Y'); ?></span>
+                <span class="author"><i class="fa fa-keyboard-o"></i> <?php echo get_the_author(); ?></span>
+                <span class="blog-label"><i class="fa fa-folder-open"></i> <?php 
+                    $categories = [];
+                    foreach (get_the_category() as $category){
+                        $categories[] = $category->name;
+                    }                                
+                    ?>
+                    <?php echo implode(', ', $categories); ?>
+                </span>
+                <span class="comment-count">
+                    <i class="fa fa-comment"></i> 
+                    <?php echo get_comments_number() ?> comments
+                </span>
+                <span class="likes-count">
+                    <i class="fa fa-thumbs-up"></i> 
+                    <span id="like-number" ><?php echo $total_like1; ?>
+                        <?php echo ($total_like1==1) ? 'like' : 'likes' ?>
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-7">
+                <img src="<?php echo get_the_post_thumbnail_url (); ?>" class="px-0 col-12">
+                <div class="post-content py-3">
+                    <?php the_content(); ?>
+                </div>
+
+
                 <div class="post_like">
                     <a class="pp_like <?php if($l==1) {echo "liked"; } ?>" href="#"
                         data-id="<?php echo get_the_id(); ?>">
@@ -49,28 +58,24 @@ $total_like1 = $wpdb->num_rows;
             
                     </a>
                     <span><?php echo $total_like1; ?> <?php echo ($total_like1==1) ? 'like' : 'likes' ?></span>
-                    <div class="lds-facebook">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
                 </div>
 
-
                 <div class="text-primary my-5"><?php the_tags() ?></div>
-                <?php if (comments_open()){
-                comments_template();
-                if (have_comments()) : ?>
-                <ol class="post-comments">
+                
+                <?php if (comments_open()): 
+                    comments_template();
+                    if (have_comments()) : ?>
+                        <ol class="post-comments">
                     <?php
-            wp_list_comments(array(
-                'style'       => 'ol',
-                'short_ping'  => true,
-            )); ?>
-
-                </ol>
-                <?php endif;
-            }?>
+                    wp_list_comments(array(
+                        'style'       => 'ol',
+                        'short_ping'  => true,
+                    )); 
+                    ?>
+                        </ol>
+                    <?php endif;
+                    endif;
+                    ?>
             </div>
 
             <div class="col-12 col-md-4 ml-0 ml-md-5">

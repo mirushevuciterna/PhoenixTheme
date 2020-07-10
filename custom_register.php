@@ -1,9 +1,9 @@
 <?php
 /*
-** Template Name: Custom Register Page
+ Template Name: Custom Register Page
 */
+
 // Exit if accessed directly
- 
 if ( !defined('ABSPATH')) exit;
 ?>
 
@@ -13,71 +13,58 @@ if ( !defined('ABSPATH')) exit;
 
     <div class="row register-page-container p-3  mt-2 d-flex justify-content-center w-75 mx-auto">
 
-        <?php
+<?php
+
 global $wpdb, $user_ID; 
 
 //Check whether the user is already logged in 
 if (!$user_ID) {
-// Default page shows register form. 
 
- // Register Page ?>
+    if ( $_POST ) {
 
-<?php
-if ( $_POST ) {
+        $error = 0;
 
-$error = 0;
+        $username = esc_sql($_REQUEST['username']); 
+        if ( empty($username) ) {
+            $error = 1;
+        }
 
-$username = esc_sql($_REQUEST['username']); 
-if ( empty($username) ) {
+        $email = esc_sql($_REQUEST['email']);
+        if ( !preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/", $email) ) { 
+            $error = 1;
+        }
 
-$error = 1;
-}
+        $password = esc_sql($_REQUEST['password']); 
+        if ( empty($password) || strlen($password) < 6) {
+            $error = 1;
+        }
 
-$email = esc_sql($_REQUEST['email']);
-if ( !preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/", $email) ) { 
+        $confirm_password = esc_sql($_REQUEST['confirm_password']); 
+        if ( empty($confirm_password) || $password != $confirm_password) {
+            $error = 1;
+        }
 
-$error = 1;
-}
+        if ( $error == 0 ) {
 
-$password = esc_sql($_REQUEST['password']); 
-if ( empty($password) || strlen($password) < 6) {
+            $status = wp_create_user( $username, $password, $email ); 
 
-$error = 1;
-}
+            if ( is_wp_error($status) ) {
+            echo '<div class="col-12 d-flex justify-content-center align-items-center font-weight-bold text-danger">This user already exists.</div>'; 
+            } else {
+            wp_redirect('/');
+            exit;    
 
-$confirm_password = esc_sql($_REQUEST['confirm_password']); 
-if ( empty($confirm_password) || $password != $confirm_password) {
-
-$error = 1;
-}
-
-if ( $error == 0 ) {
-
-$status = wp_create_user( $username, $password, $email ); 
-
-if ( is_wp_error($status) ) {
-echo '<div class="col-12 d-flex justify-content-center align-items-center font-weight-bold text-danger">This user already exists.</div>'; 
-} else {
-wp_redirect('/');
-exit;    
-
-$from = get_option('admin_email'); 
-$headers = 'From: '.$from . "\r\n"; 
-$subject = "Registration successful"; 
-$message = "Registration successful.\nYour login details\nUsername: $username\nPassword: $password"; 
-// Email password and other details to the user
-wp_mail( $email, $subject, $message, $headers ); 
-
-$error = 2; // We will check for this variable before showing the sign up form. 
-}
-}
-
-}
-
+            $from = get_option('admin_email'); 
+            $headers = 'From: '.$from . "\r\n"; 
+            $subject = "Registration successful"; 
+            $message = "Registration successful.\nYour login details\nUsername: $username\nPassword: $password"; 
+            // Email password and other details to the user
+            wp_mail( $email, $subject, $message, $headers ); 
+            }
+        }
+    }
 get_header();
 ?> 
-
-
 
 <?php } else { ?>
         <?php get_header(); ?>
@@ -112,7 +99,6 @@ get_header();
                     </form>
                 </div>
 
-
                 <div class="overlay-container">
                     <div class="overlay">
                         <div class="overlay-panel overlay-left">
@@ -127,14 +113,10 @@ get_header();
                         </div>
                     </div>
                 </div>
-
+                
             </div>
-
-<div class="col-md-5 manual-register-form"></div>
-
-
-
-</div>
-</div>
+            <div class="col-md-5 manual-register-form"></div>
+        </div>
+    </div>
 </div>
 <?php get_footer(); ?>
