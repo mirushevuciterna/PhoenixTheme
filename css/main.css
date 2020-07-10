@@ -272,3 +272,6 @@ a .fa {
 .page-numbers:hover {
     color: #FF704D;
 }
+.post_like a:hover{
+    text-decoration: none;
+}
