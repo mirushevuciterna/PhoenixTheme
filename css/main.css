@@ -200,6 +200,7 @@ a .fa {
 }
 .posts h2 a:hover{
     color: #FF704D;
+    text-decoration: none;
 }
 .post-link{
     font-weight: bold;
