@@ -1,6 +1,6 @@
 <?php
 
-// Case: Donate
+// Case: valuable
 if( get_row_layout() == 'valuable' ):
 
 ?>
