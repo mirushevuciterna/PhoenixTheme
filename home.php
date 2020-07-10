@@ -1,16 +1,24 @@
-<?php get_header() ?>
+
+<?php get_header(); ?>
 
 <div class="wrapper-blog my-0 p-5 col-12 col-md-10 col-lg-8 mx-auto">
 
 <?php  
+
 if( have_posts() ): 
     while ( have_posts() ): the_post(); ?>
+<?php 
+global $wpdb;
+$postid=get_the_id();
+$totalrow1 = $wpdb->get_results( "SELECT id FROM $wpdb->post_like_table WHERE postid = '$postid'");
+$total_like1 = $wpdb->num_rows;
+?>
     <div class="posts py-5">
         <h2><a href="<?php echo the_permalink();?>"><?php the_title(); ?></a></h2>
         <div class="entry-meta py-3">
-            <span class="published"><span class="fa fa-clock-o"></span> <?php the_time('j F, Y'); ?></span>
-            <span class="author"><span class="fa fa-keyboard-o"></span> <?php echo get_the_author(); ?></span> 
-            <span class="blog-label"><span class="fa fa-folder-open"></span> <?php 
+            <span class="published"><i class="fa fa-clock-o"></i> <?php the_time('j F, Y'); ?></span>
+            <span class="author"><i class="fa fa-keyboard-o"></i> <?php echo ucfirst(get_the_author()); ?></span> 
+            <span class="blog-label"><i class="fa fa-folder-open"></i> <?php 
                 $categories = [];
                 foreach (get_the_category() as $category){
                     $categories[] = $category->name;
@@ -18,7 +26,16 @@ if( have_posts() ):
                 ?>                        
                 <?php echo implode(', ', $categories); ?> 
             </span> 
-            <span class="comment-count"><span class="fa fa-comment"></span> <?php echo get_comments_number() ?> comments</span>
+            <span class="comment-count">
+                <i class="fa fa-comment"></i> 
+                <?php echo get_comments_number()?> <?php echo (get_comments_number()==1) ? 'comment' : 'comments' ?>
+            </span>
+            <span class="likes-count">
+                <i class="fa fa-thumbs-up"></i> 
+                <span id="like-number" ><?php echo $total_like1; ?>
+                    <?php echo ($total_like1==1) ? 'like' : 'likes' ?>
+                </span>
+            </span>
         </div>
         <img src="<?php echo get_the_post_thumbnail_url (); ?>" class="px-0 col-12">
         <div class="post-content py-3">
