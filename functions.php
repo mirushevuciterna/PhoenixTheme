@@ -29,6 +29,8 @@ function phoenix_script_enqueue(){
         wp_enqueue_style('get-involved', get_stylesheet_directory_uri().'/modules/assets/css/get-involved.css');
         wp_enqueue_style('active-events', get_stylesheet_directory_uri().'/modules/assets/css/active-events.css');
         wp_enqueue_style('donate-component', get_stylesheet_directory_uri().'/modules/assets/css/donate-component.css');
+        wp_enqueue_style('valuable-component', get_stylesheet_directory_uri().'/modules/assets/css/valuable-component.css');
+
     }   
     if(is_single()){
         wp_enqueue_style('comment', get_stylesheet_directory_uri().'/modules/assets/css/comment.css');
@@ -63,7 +65,10 @@ function wpb_adding_scripts() {
         wp_register_script('donation-videojs', get_template_directory_uri() . '/modules/assets/js/donation-video.js', array('jquery'),'1.1', true);
         wp_enqueue_script('donation-videojs');
         wp_register_script('logos-componentjs', get_template_directory_uri() . '/modules/assets/js/logos-component.js', array('jquery'),'1.1', true);
-        wp_enqueue_script('logos-componentjs');
+        wp_enqueue_script('logos-componentjs');        
+        wp_register_script('valuable-componentjs', get_template_directory_uri() . '/modules/assets/js/valuable-component.js', array('jquery'),'1.1', true);
+        wp_enqueue_script('valuable-componentjs');
+
     }
     wp_register_script('fade-in-featurejs', get_template_directory_uri() . '/modules/assets/js/fade-in-feature.js', array('jquery'), '1.1', true);
     wp_enqueue_script('fade-in-featurejs');
