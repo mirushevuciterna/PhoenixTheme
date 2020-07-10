@@ -17,7 +17,7 @@ $total_like1 = $wpdb->num_rows;
         <h2><a href="<?php echo the_permalink();?>"><?php the_title(); ?></a></h2>
         <div class="entry-meta py-3">
             <span class="published"><i class="fa fa-clock-o"></i> <?php the_time('j F, Y'); ?></span>
-            <span class="author"><i class="fa fa-keyboard-o"></i> <?php echo get_the_author(); ?></span> 
+            <span class="author"><i class="fa fa-keyboard-o"></i> <?php echo ucfirst(get_the_author()); ?></span> 
             <span class="blog-label"><i class="fa fa-folder-open"></i> <?php 
                 $categories = [];
                 foreach (get_the_category() as $category){
