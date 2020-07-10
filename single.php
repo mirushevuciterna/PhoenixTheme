@@ -1,54 +1,4 @@
-<!-- <style>
-a.pp_like i {
-font-size: 18px;
-color: #007acc;
-}
-a.pp_like {
-text-decoration: none;
-box-shadow: none;
-}
-a.pp_like.liked i {
-color: red;
-}
-.lds-facebook {
-display: inline-block;
-position: relative;
-width: 64px;
-height: 38px;
-display:none;
-margin-top: -20px;
-}
-.lds-facebook div {
-display: inline-block;
-position: absolute;
-left: 6px;
-width: 13px;
-background: #007acc;
-animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
-}
-.lds-facebook div:nth-child(1) {
-left: 0px;
-animation-delay: -0.24s;
-}
-.lds-facebook div:nth-child(2) {
-left: 22px;
-animation-delay: -0.12s;
-}
-.lds-facebook div:nth-child(3) {
-left: 45px;
-animation-delay: 0;
-}
-@keyframes lds-facebook {
-0% {
-top: 6px;
-height: 51px;
-}
-50%, 100% {
-top: 19px;
-height: 26px;
-}
-}
-</style> -->
+
 <?php get_header(); ?>
 
 <div class="container-fluid">
@@ -93,8 +43,12 @@ $total_like1 = $wpdb->num_rows;
 ?>
                 <div class="post_like">
                     <a class="pp_like <?php if($l==1) {echo "liked"; } ?>" href="#"
-                        data-id="<?php echo get_the_id(); ?>"><i class="fa fa-thumbs-up"></i>
-                        <span><?php echo $total_like1; ?> like</span></a>
+                        data-id="<?php echo get_the_id(); ?>">
+                        
+                        <i id="thumb" class="fa fa-thumbs-<?php echo ($l==1) ? 'down' : 'up' ?>"></i>
+            
+                    </a>
+                    <span><?php echo $total_like1; ?> <?php echo ($total_like1==1) ? 'like' : 'likes' ?></span>
                     <div class="lds-facebook">
                         <div></div>
                         <div></div>
