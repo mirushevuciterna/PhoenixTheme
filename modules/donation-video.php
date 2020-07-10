@@ -33,7 +33,7 @@ $videoIndex = 1;
 
         <?php } else { ?>
 
-            <div class="donationVideoFeature">
+            <div class="donationVideoFeature"> 
                 <div class="donationVideoText d-flex flex-column justify-content-center align-items-center p-5 hideMe order-last order-md-first">
                     <div class="donationcontent px-5">
                         <h3 class="donation-title"><?php the_sub_field('titulli_video');?></h3>
