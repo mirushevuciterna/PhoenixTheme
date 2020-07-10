@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <?php get_header(); ?>
 
 <div class="container-fluid">
@@ -32,7 +32,7 @@ $total_like1 = $wpdb->num_rows;
                 </span>
                 <span class="comment-count">
                     <i class="fa fa-comment"></i> 
-                    <?php echo get_comments_number() ?> comments
+                    <?php echo get_comments_number() ?> <?php echo (get_comments_number()==1) ? 'comment' : 'comments' ?>
                 </span>
                 <span class="likes-count">
                     <i class="fa fa-thumbs-up"></i> 
