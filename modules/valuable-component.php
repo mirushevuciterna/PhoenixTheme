@@ -15,9 +15,9 @@ if( get_row_layout() == 'valuable' ):
                 </div>
 <?php 
 global $wpdb;
-$causes = $wpdb->get_results("SELECT * FROM wp_postmeta where meta_key like '%_flexible_1_carousel%' and meta_key like '%card_title%' and post_id = 745;");
+$causes = $wpdb->get_results("SELECT * FROM wp_postmeta where meta_key like '%_flexible_1_carousel%' and meta_key like '%card_title%' and post_id = 19;");
 $causes_count = $wpdb->num_rows;
-$volunteers = $wpdb->get_results("SELECT * FROM wp_postmeta where meta_key like 'flexible_6_volunteer_settings%' and meta_key like '%volunteer_name' and post_id = 745");
+$volunteers = $wpdb->get_results("SELECT * FROM wp_postmeta where meta_key like 'flexible_6_volunteer_settings%' and meta_key like '%volunteer_name' and post_id = 19");
 $volunteers_count = $wpdb->num_rows;
 ?>
                 <div class="valuablecount row">
