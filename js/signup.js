@@ -1,3 +1,13 @@
+$('.login-click').click(function() {
+  $('.sign-in-container').addClass("d-block");
+  $('.sign-up-container').addClass("d-none");
+  $('.sign-up-container').removeClass("d-block");
+});
+$('.register-click').click(function() {
+  $('.sign-in-container').addClass("d-none");
+  $('.sign-up-container').addClass("d-block");
+  $('.sign-in-container').removeClass("d-block");
+});
 
 const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
@@ -124,6 +134,5 @@ jQuery(document).ready(function($) {
         });
         e.preventDefault();
 	});
-	
 
 });

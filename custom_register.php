@@ -76,7 +76,8 @@ get_header();
             <div class="container-register" id="container">
                 <div class="form-container sign-up-container order-last">
                     <form action="" method="post" onsubmit="validate(event)">
-                        <h1>Create Account</h1>
+                        <h1 class="font-weight-bold">Create Account</h1>
+                        <p class="d-md-none">Already have account? <a href="#" class="login-click text-info">Click to login</a></p>
                         <input type="text" placeholder="Username" id="username" name="username" value="<?php if( ! empty($username) ) echo $username; ?>">
                         <p id="nameMsg" class="error-msg m-0 p-0"></p>
                         <input type="email" placeholder="Email" id="email" name="email" value="<?php if( ! empty($email) ) echo $email; ?>">
@@ -88,7 +89,7 @@ get_header();
                     </form>
                 </div>
 
-                <div class="form-container sign-in-container order-first" >
+                <div class="form-container sign-in-container order-first d-none d-md-block" >
                     <form method="post" id="login" action="login"  >
                         <h1 class="registertitle">Sign in</h1>
                         <?php if ($user_ID): ?>
@@ -99,6 +100,7 @@ get_header();
                         <input class="<?php if($user_ID){echo "disable";}?>" id="password" type="password" name="password" placeholder="Password">
                         <button type="submit" value="Login" name="submit" class="<?php if($user_ID){echo "disable";}?> submit_button registerbutton" >Sign In</button>
                         <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
+                        <a href="#" class="d-md-none text-info register-click">Go back to register</a>
                     </form>
                 </div>
 
