@@ -29,11 +29,11 @@
             'menu_class' => 'navbar-nav m-auto '
             ) ); ?>
             <?php if(!$user_ID): ?>
-                <div class="butonitest  m-sm-0 d-flex justify-content-center align-items-center ">
+                <div class="butonitest m-sm-0 d-flex justify-content-center align-items-center ">
                     <a href="<?php echo (home_url().'/register')?>"> <button id="butoniNav" type="button" class="m-0 mr-lg-5 mb-2 mb-lg-0 btn btn-primary ">Join us</button></a>
                 </div>
             <?php else: ?>
-                <div class="butonitest  m-sm-0 d-flex justify-content-center align-items-center ">
+                <div class="butonitest m-sm-0 d-flex justify-content-center align-items-center ">
                     <a href="<?php echo (home_url().'/wp-login.php?action=logout')?>"> <button id="butoniNav" type="button" class="m-0 mr-lg-5 mb-2 mb-lg-0 btn btn-primary ">Logout</button></a>
                 </div>
             <?php endif; ?>

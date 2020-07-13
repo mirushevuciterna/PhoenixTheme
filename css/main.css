@@ -148,11 +148,17 @@ a .fa {
         border-top: 1px solid rgba(132, 132, 132, .17);
         border-bottom: 1px solid rgba(132, 132, 132, .17);
     }
+    
+
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 992px) {
     #butoniNav {
-        width: 90% !important;
+        width: 100% !important;
+    }
+    .butonitest a{
+        width: 90% ;
+
     }
 }
 .back-to-top.active {

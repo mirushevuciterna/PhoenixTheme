@@ -103,6 +103,7 @@
 }
 
 @media only screen and (min-width: 760px) {
+	
 	.container-register {
 		background-color: #fff;
 		border-radius: 10px;
@@ -112,7 +113,17 @@
 		width: 768px;
 		max-width: 100%;
 		min-height: 480px;
+	
+		
 	}
+	.registercontainer {
+	
+		margin: 0 auto !important;
+	}
+	
+
+
+
 	.overlay-container {
 		position: absolute;
 		top: 0;
@@ -235,3 +246,13 @@
 .social-container {
 	margin: 20px 0;
 }
+.register-page-container{
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+	.registercontainer {
+		margin: 0 ;
+		padding: 0 !important;
+	}
+	
+
