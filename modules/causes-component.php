@@ -1,5 +1,4 @@
 <?php
-
 // Case: Causes we support layout.
 if( get_row_layout() == 'causes' ):
 ?>
@@ -16,6 +15,7 @@ if( get_row_layout() == 'causes' ):
         <div class="containercontent1">
             <div class="owl-caro owl-carousel owl-theme">
                 <?php if( have_rows('carousel_card') ):
+                        $count = 0;
                         while ( have_rows('carousel_card') ) : the_row(); ?>
                         <div class="item foto1">
                             <div class="card p-3 cardthyrje">
@@ -31,6 +31,9 @@ if( get_row_layout() == 'causes' ):
                                 </div>
                             </div>
                         </div>
+                        <?php $count++; 
+                         $_SESSION['causes_count'] = $count;
+                        ?>
                 <?php endwhile;
 
                     else :

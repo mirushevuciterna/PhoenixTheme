@@ -18,6 +18,7 @@ if( get_row_layout() == 'volunteers' ):
             <div class="owl-caroVOL owl-carousel owl-theme">
                 <?php
                 if( have_rows('volunteer_settings') ):
+                $count = 0;
                 while ( have_rows('volunteer_settings') ) : the_row(); ?>
                 <div class="item foto1VOL">
                     <div class="card p-3 cardthyrjeVOL">
@@ -44,7 +45,10 @@ if( get_row_layout() == 'volunteers' ):
                         </div>
                     </div>
                 </div>
-
+                <?php 
+                    $count++;
+                    $_SESSION['volunteers_count'] = $count;
+                ?>
                 <?php endwhile;
 
                 else :
