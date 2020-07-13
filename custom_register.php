@@ -71,7 +71,7 @@ get_header();
         <?php $loggedintext = '<p class="text-danger mt-3 mb-0">You are logged in. Click <a class="text-info" href='. home_url(); 
         $loggedintext .= '>here</a> to go home</p>';?>        
         <?php } ?>
-            <h2 class="d-none d-md-block registerh2 mt-4 mb-3" >Sign up or log in to subscribe </h2>
+            <h2 class=" registerh2 mt-4 mb-3" >Sign up or log in to subscribe </h2>
 
             <div class="container-register" id="container">
                 <div class="form-container sign-up-container">
