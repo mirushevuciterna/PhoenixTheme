@@ -1,3 +1,5 @@
+
+<?php //dd(get_field('carousel_card')); ?>
 <?php get_header(); ?>
 
 <?php 
