@@ -484,7 +484,7 @@ add_action('widgets_init', 'phoenix_widget_setup');
 
 add_action('wp_logout','auto_redirect_external_after_logout');
 function auto_redirect_external_after_logout(){
-wp_redirect( "http://localhost/testsite/wordpress/register/" );
+wp_redirect(home_url().'/register');
 exit();
 }
 

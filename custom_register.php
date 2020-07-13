@@ -74,7 +74,7 @@ get_header();
             <h2 class=" registerh2 mt-4 mb-3" >Sign up or log in to subscribe </h2>
 
             <div class="container-register" id="container">
-                <div class="form-container sign-up-container">
+                <div class="form-container sign-up-container order-last">
                     <form action="" method="post" onsubmit="validate(event)">
                         <h1>Create Account</h1>
                         <input type="text" placeholder="Username" id="username" name="username" value="<?php if( ! empty($username) ) echo $username; ?>">
@@ -88,7 +88,7 @@ get_header();
                     </form>
                 </div>
 
-                <div class="form-container sign-in-container" >
+                <div class="form-container sign-in-container order-first" >
                     <form method="post" id="login" action="login"  >
                         <h1 class="registertitle">Sign in</h1>
                         <?php if ($user_ID): ?>
