@@ -79,26 +79,24 @@
 }
 
 .sign-up-container {
-	float: left;
 	width: 100%;
 	opacity: 1;
 	height: 50%;
 }
 
 .sign-up-container form {
-	padding-top: 130%;
+	padding-top: 10%;
 	height: 70%;
 }
 
 .sign-in-container {
 	height: 50%;
-	float: left;
 	width: 100%;
 	z-index: 2;
 }
 
 .sign-in-container form {
-	padding-top: 200px;
+	/* padding-top: 200px; */
 	height: 30%;
 }
 
@@ -117,8 +115,8 @@
 		
 	}
 	.registercontainer {
-	
-		margin: 0 auto !important;
+		
+		margin: 0 auto 30px !important;
 	}
 	
 	.overlay-container {
@@ -157,17 +155,17 @@
 		transition: all 0.6s ease-in-out;
 	}
 	.form-container #login{
-		padding-top: 0 !important;
+		padding-top: 0px !important;
 	}
 }
 
 .form-container {
-	position: absolute;
+	/* position: absolute; */
 	margin-top: 0;
 	height: 100%;
 }
 .form-container #login{
-	padding-top: 100px;
+	padding-top: 40px;
 }
 
 
