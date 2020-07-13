@@ -11,7 +11,7 @@ if ( !defined('ABSPATH')) exit;
 
 <div class="container">
 
-    <div class="row register-page-container p-3  mt-2 d-flex justify-content-center w-75 mx-auto">
+    <div class="row register-page-container p-3  mt-2 d-flex justify-content-center  mx-auto">
 
 <?php
 

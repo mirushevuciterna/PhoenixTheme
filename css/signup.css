@@ -200,4 +200,9 @@
 }
 
 
-
+@media only screen and (min-width: 992px) {
+    .sign-up-container {
+		width: 90vw;
+		float: inline-end;
+	}
+}

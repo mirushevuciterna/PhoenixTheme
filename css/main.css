@@ -152,7 +152,7 @@ a .fa {
 
 @media only screen and (max-width: 1023px) {
     #butoniNav {
-        width: 90%;
+        width: 90% !important;
     }
 }
 .back-to-top.active {
