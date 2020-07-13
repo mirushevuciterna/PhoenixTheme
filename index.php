@@ -12,6 +12,8 @@ if( have_rows('flexible') ): ?>
             <?php get_template_part('modules/donation-video'); ?>
         <?php elseif( get_row_layout() == 'donate' ): ?>
             <?php get_template_part('modules/donate-component'); ?>
+        <?php elseif( get_row_layout() == 'valuable' ): ?>
+            <?php get_template_part('modules/valuable-component'); ?>
         <?php elseif( get_row_layout() == 'active_events' ): ?>
             <?php get_template_part('modules/active-events-component'); ?>
         <?php elseif( get_row_layout() == 'volunteers' ): ?>

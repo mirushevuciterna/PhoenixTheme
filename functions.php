@@ -29,6 +29,8 @@ function phoenix_script_enqueue(){
         wp_enqueue_style('get-involved', get_stylesheet_directory_uri().'/modules/assets/css/get-involved.css');
         wp_enqueue_style('active-events', get_stylesheet_directory_uri().'/modules/assets/css/active-events.css');
         wp_enqueue_style('donate-component', get_stylesheet_directory_uri().'/modules/assets/css/donate-component.css');
+        wp_enqueue_style('valuable-component', get_stylesheet_directory_uri().'/modules/assets/css/valuable-component.css');
+
     }   
     if(is_single()){
         wp_enqueue_style('comment', get_stylesheet_directory_uri().'/modules/assets/css/comment.css');
@@ -63,7 +65,10 @@ function wpb_adding_scripts() {
         wp_register_script('donation-videojs', get_template_directory_uri() . '/modules/assets/js/donation-video.js', array('jquery'),'1.1', true);
         wp_enqueue_script('donation-videojs');
         wp_register_script('logos-componentjs', get_template_directory_uri() . '/modules/assets/js/logos-component.js', array('jquery'),'1.1', true);
-        wp_enqueue_script('logos-componentjs');
+        wp_enqueue_script('logos-componentjs');        
+        wp_register_script('valuable-componentjs', get_template_directory_uri() . '/modules/assets/js/valuable-component.js', array('jquery'),'1.1', true);
+        wp_enqueue_script('valuable-componentjs');
+
     }
     wp_register_script('fade-in-featurejs', get_template_directory_uri() . '/modules/assets/js/fade-in-feature.js', array('jquery'), '1.1', true);
     wp_enqueue_script('fade-in-featurejs');
@@ -573,7 +578,51 @@ add_action( 'wp_ajax_nopriv_my_action', 'my_action_callback' );
 function automatically_log_me_in( $user_id ) {
     wp_set_current_user( $user_id );
     wp_set_auth_cookie( $user_id );
-    wp_redirect( home_url( '/wp-admin/' ) );
+    wp_redirect( home_url( '/wp-admin' ) );
     exit(); 
 }
 add_action( 'user_register', 'automatically_log_me_in' );
+
+
+
+function ajax_login_init(){
+
+    wp_register_script('ajax-login-script', get_template_directory_uri() . '/ajax-login-script.js', array('jquery') ); 
+    wp_enqueue_script('ajax-login-script');
+
+    wp_localize_script( 'ajax-login-script', 'ajax_login_object', array( 
+        'ajaxurl' => admin_url( 'admin-ajax.php' ),
+        'redirecturl' => home_url(),
+        'loadingmessage' => __('Sending user info, please wait...')
+    ));
+
+    // Enable the user with no privileges to run ajax_login() in AJAX
+    add_action( 'wp_ajax_nopriv_ajaxlogin', 'ajax_login' );
+}
+
+// Execute the action only if the user isn't logged in
+if (!is_user_logged_in()) {
+    add_action('init', 'ajax_login_init');
+}
+
+
+function ajax_login(){
+
+    // First check the nonce, if it fails the function will break
+    check_ajax_referer( 'ajax-login-nonce', 'security' );
+
+    // Nonce is checked, get the POST data and sign user on
+    $info = array();
+    $info['user_login'] = $_POST['username'];
+    $info['user_password'] = $_POST['password'];
+    $info['remember'] = true;
+
+    $user_signon = wp_signon( $info, false );
+    if ( is_wp_error($user_signon) ){
+        echo json_encode(array('loggedin'=>false, 'message'=>__('Wrong username or password.')));
+    } else {
+        echo json_encode(array('loggedin'=>true, 'message'=>__('Login successful, redirecting...')));
+    }
+
+    die();
+}
