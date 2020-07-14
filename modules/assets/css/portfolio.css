@@ -1,9 +1,13 @@
 /* HEADER + BASIC INFO */
+
+#basic-info-section {
+    width: 90%;
+    margin: 0 auto;
+}
 .title-section{
     font-family: proxima-nova;
     padding-bottom: 100px;
     padding-top: 100px;
-    max-width: 1210px;
 }
 .title-section h1{
     color: #322d53;
@@ -59,7 +63,7 @@
 }
 @media (min-width: 768px){
     .categories{
-       margin-left: 50px;
+       margin-left: 8%;
     }
 }
 /* HEADER + BASIC INFO */
@@ -73,15 +77,12 @@
     margin-right: 0 !important;
 }
 .post-content-1 .row, .post-content-2 .row{
-    margin: 0 -50px;
+    margin: 0 -15px;
 }
 .post-content-1 .img, .post-content-2 .img{
         padding-top: 275px !important;
         padding-bottom: 200px !important;
-        /* background-image: url(https://www.ekko-wp.com/static/wp-content/uploads/sites/3/2019/04/charity2.jpg) !important; */
         background-position-x: 50%;
-        background-position-y: 50%;
-        background-repeat: no-repeat !important;
         background-size: cover !important;
 }
 .post-content-1 h2, .post-content-2 h2, .get-in-touch h2 {
@@ -111,15 +112,10 @@
 .get-in-touch {
     padding: 100px 0;
 }
-.get-in-touch #get-started {
-    min-width: 30%;
-}
 .related-projects {
     background-color: #f5f5f5;
-    margin-left: -50px !important;
-    margin-right: -50px !important;
+    margin: 0 -15px !important;
     margin-bottom: 0px !important;
-    /* width: 100%; */
 }
 .related-projects h3{
     color: #322d53;
@@ -131,7 +127,6 @@
 }
 .related-projects .card-portfolio {
     border-radius: 7px;
-    border: none;
     box-shadow: 0 25px 98px 0 rgba(0,0,0,0.1);
     background-color: #fff;
     padding-bottom: 0px;
@@ -175,7 +170,7 @@
     text-decoration: none;
     color: #ff704d;
 }
-.card-portfolio .fa-folder-open{
+.card-portfolio .fa-folder-open, .fa-check{
     color: #ff704d;
 }
 .card-portfolio .blog-label{
@@ -183,17 +178,20 @@
     font-size: 14px;
 }
 @media (min-width: 767px){
-/* .card-portfolio {
-    width: 33%;
-} */
-.post-content-1 h2, .post-content-2 h2, .get-in-touch h2 {
-    font-size: 36px;
+    .post-content-1 h2, .post-content-2 h2, .get-in-touch h2 {
+        font-size: 36px;
+    }
 }
-}
-@media (min-width: 1025px){
+
+@media (min-width: 1024px){
     .get-in-touch #get-started {
     width: 30%;
 }
+}
+@media (max-width: 1024px){
+    #basic-info-section {
+        width: 100%;
+    }
 }
 /* POST CONTENT */
 

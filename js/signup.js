@@ -1,10 +1,12 @@
 $('.login-click').click(function() {
+	event.preventDefault();
   $('.sign-in-container').addClass("d-block");
   $('.sign-up-container').addClass("d-none");
   $('.sign-up-container').removeClass("d-block");
   event.preventDefault();
 });
 $('.register-click').click(function() {
+	event.preventDefault();
   $('.sign-in-container').addClass("d-none");
   $('.sign-up-container').addClass("d-block");
   $('.sign-in-container').removeClass("d-block");

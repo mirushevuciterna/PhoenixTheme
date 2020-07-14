@@ -16,8 +16,21 @@ $total_like1 = $wpdb->num_rows;
     <div class="posts py-5">
         <h2><a href="<?php echo the_permalink();?>"><?php the_title(); ?></a></h2>
         <div class="entry-meta py-3">
+<?php
+$fname = get_the_author_meta('first_name');
+$lname = get_the_author_meta('last_name');
+$full_name = '';
+
+if( empty($fname)){
+    $full_name = $lname;
+} elseif( empty( $lname )){
+    $full_name = $fname;
+} else {
+    $full_name = "{$fname} {$lname}";
+}
+?>
             <span class="published"><i class="fa fa-clock-o"></i> <?php the_time('j F, Y'); ?></span>
-            <span class="author"><i class="fa fa-keyboard-o"></i> <?php echo ucfirst(get_the_author()); ?></span> 
+            <span class="author"><i class="fa fa-keyboard-o"></i> <?php echo $full_name; ?></span> 
             <span class="blog-label"><i class="fa fa-folder-open"></i> <?php 
                 $categories = [];
                 foreach (get_the_category() as $category){
