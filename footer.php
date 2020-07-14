@@ -1,5 +1,5 @@
 
-        <footer class="footer mt-auto p-5">
+        <footer class="footer mt-auto p-5 w-100">
             <div class="row">
                 <div class="d-lg-flex col-sm-12 ">
                     <div class="footer-navbar">

@@ -3,15 +3,17 @@
 <?php //dd(get_field_objects($post->id)); ?>
 <?php //dd(get_the_category($post->id)); ?>
 
-<div class="container-fluid">
-    <div>
+<div class="container-fluid w-100">
+    <div id="basic-info-section">
         <?php while(have_posts(  )) : the_post(  ); ?>
         
-        <div class="mt-5 border-bottom title-section text-center">
+        <div class="mt-5 border-bottom title-section text-center w-100">
             <h1 class="section-heading"><?php the_title(); ?></h1>
             <div id="breadcrumb"><?php get_breadcrumb(); ?></div>
         </div>
-        <div class="row basic-info">
+
+        <div class="row basic-info w-100">
+
             <div class="col col-12 col-md-3">
                 <div class="text-left hideMe">
                     <h6>Client</h6>
@@ -48,9 +50,10 @@
                 </div>
                 <?php } ?>
             </div>
+
         </div>
         
-
+    </div>
         
         <?php if( have_rows('portfolio_section') ):
         $i = 1;
@@ -58,7 +61,7 @@
 
         if (get_sub_field('position') == 'left_image') { ?>
         <div class="post-content-1 w-100">
-                <div class="row">
+            <div class="row">
                 <?php $image = get_sub_field('image');
                 if( $image ) { ?>
                 <div class="img col-12 col-lg-6 order-last order-md-first" style="background-image:url('<?= $image ?>')"></div>
@@ -101,7 +104,7 @@
                     Let your creativity loose and start building your website now.
                 </h6>
                 <a href="#">
-                    <button class="donate-button text-center" id="get-started">
+                    <button id="butoniNav" class="m-0 mr-lg-5 mb-2 mb-lg-0 btn btn-primary">
                         Get started
                     </button>
                 </a>
@@ -112,7 +115,7 @@
         <div class="related-projects">
             <h3 class="px-5 hideMe">Related Projects</h3>      
 
-            <div class="related-content px-5 row">   
+            <div class="row related-content px-5">   
             <?php 
             $args = array(
                 'post_type'=>'portfolio', 
@@ -154,7 +157,7 @@
             </div>
         </div>
 
-    </div>
+    
 </div>
 
 <?php get_footer(); ?>
