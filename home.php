@@ -28,6 +28,9 @@ if( empty($fname)){
 } else {
     $full_name = "{$fname} {$lname}";
 }
+if( empty($fname) && empty($lname) ){
+    $full_name = get_the_author();
+}
 ?>
             <span class="published"><i class="fa fa-clock-o"></i> <?php the_time('j F, Y'); ?></span>
             <span class="author"><i class="fa fa-keyboard-o"></i> <?php echo $full_name; ?></span> 
