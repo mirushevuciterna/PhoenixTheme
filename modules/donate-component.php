@@ -5,7 +5,7 @@ if( get_row_layout() == 'donate' ):
 
 ?>
 
-<div class="p-5 donate-section">
+<div class="p-5 donate-section text-center text-md-left">
     <div class="pg_row text-center hideMe">
         <h6>
             <span>Learn More</span> about Ekko's unique features.</h6>

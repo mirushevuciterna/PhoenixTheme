@@ -86,7 +86,7 @@ function nameValidation() {
 
 function validate(event) {	
 	var password = matchPasswords();
-	var email = validateEmail();
+	var email = validateEmail(email);
 	var name = nameValidation();
 	if(!(password && email && name)) {
 

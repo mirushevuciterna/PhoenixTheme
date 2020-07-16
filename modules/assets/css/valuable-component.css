@@ -51,9 +51,27 @@
     }
     .valuabletitle h1{
         font-size: 2rem;
+        padding: 0 15px;
+    }
+    .valuablecount h3{
+        min-height: 7vh;
     }
     .valuablecount {
         display: flex;
         flex-direction: row;
+    }
+    .valuablephoto {
+        height: 100vh;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .valuablecontent > div{
+        padding: 0 !important;
+    }
+    .valuabletitle {
+        min-height: 30vh !important;
+    }
+    .valuablecount {
+        min-height: 20vh !important;
     }
 }

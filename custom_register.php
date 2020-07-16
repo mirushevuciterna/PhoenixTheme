@@ -8,7 +8,6 @@ if ( !defined('ABSPATH')) exit;
 ?>
 
 
-
 <div class="container registercontainer">
 
     <div class="row register-page-container p-3  mt-2 d-flex justify-content-center  mx-auto">
@@ -124,4 +123,5 @@ get_header();
         </div>
     </div>
 </div>
+
 <?php get_footer(); ?>

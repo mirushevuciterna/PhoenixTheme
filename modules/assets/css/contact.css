@@ -24,6 +24,7 @@
 .butminoradds{
     height: 50px;
     font-size: 15px !important;
+    margin-right: 0 !important;
 }
 .butminoradds:focus,
 .butminoradds:active {
@@ -65,7 +66,7 @@
         margin-top: 30px;
     }
     .contactsett {
-       margin-bottom: 170px !important;
+       margin-bottom: 265px !important;
     }
 }
 

@@ -112,14 +112,11 @@
 
 @media only screen and (max-width: 766px) {
     .pricing-card {
-        width: 25rem;
+        width: 100% !important;
     }
 }
 
 @media only screen and (min-width: 320px) {
-    .pricing-card {
-        width: 90%;
-    }
     .card-row {
         font-size: 12px;
     }

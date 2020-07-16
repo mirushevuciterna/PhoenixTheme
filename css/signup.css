@@ -30,6 +30,7 @@
 }
 
 .registerbutton {
+	margin-top: 16px;
 	border-radius: 20px;
 	border: 1px solid #322D53;
 	background-color: #322D53;
@@ -62,8 +63,9 @@
 }
 
 .form-container input {
-	background-color: #eee;
+	background-color: #fcedd8;
 	border: none;
+	border-radius: 10px;
 	padding: 12px 15px;
 	margin: 8px 0;
 	width: 100%;
@@ -71,7 +73,8 @@
 
 .container-register {
 	display: block;
-	min-height: 668px;
+	min-height: 400px;
+	margin-bottom: 30px;
 }
 
 .overlay-container {
@@ -107,7 +110,9 @@
 .form-container #login{
 	padding-top: 40px;
 }
-
+.container-register h1 {
+		color: #FF4B2B;
+	}
 
 .container-register.right-panel-active .sign-in-container {
 	transform: translateX(100%);
@@ -211,9 +216,10 @@
 		overflow: hidden;
 		width: 768px;
 		max-width: 100%;
-		min-height: 480px;
-	
-		
+		min-height: 480px;		
+	}
+	.container-register h1 {
+		color: #000;
 	}
 	.registercontainer {	
 		margin: 0 auto 30px !important;

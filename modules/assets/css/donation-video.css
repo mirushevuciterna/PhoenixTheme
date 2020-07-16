@@ -5,25 +5,16 @@
     width: 100%;
     margin-bottom: 0;
     text-align: center;
-    /* background: url("../images/charity10.webp") fixed; */
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .video-container .playDiv {
-    margin: auto;
     height: 70px;
     width: 70px;
     border: 1px solid gray;
     border-radius: 100%;
-    margin-top: 38%;
     background-color: #322d53;
-}
-
-@media only screen and (min-width: 760px) {
-    .video-container .playDiv {
-        margin: 0;
-    }
 }
 
 .video-container .playDiv:hover {
@@ -61,12 +52,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-bottom: 1px solid gray;
     background-color: #F4F2F0;
-
 }
 
 @media only screen and (min-width: 760px) {
+    .video-container .playDiv {
+        margin: 0;
+    }
     .donationVideoFeature {
         display: flex;
         flex-direction: row;

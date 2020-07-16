@@ -24,10 +24,9 @@
 #charity-content:hover{
     animation: bounce2 0.5s ease-in;
     -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
-    animation-fill-mode: forwards;    
-
-    
+    animation-fill-mode: forwards;        
 }
+
 @keyframes bounce2{
     
     50% {
@@ -39,15 +38,9 @@
     }
 }
 
-
-
-.p-5 a {
+#active-events-section a {
     text-decoration: none;
     color: #322d53;
-}
-
-.p-6 {
-    padding: 0 60px !important;
 }
 
 .charity-text-image:hover {
