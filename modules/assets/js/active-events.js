@@ -49,27 +49,15 @@ $('ul.nav li.dropdown').hover(function() {
 
 $('.charity-text-image').hover(
     function() {
-    $(this).addClass("hovered");
-    $('.hovered > .charity-content').addClass("testing");
+        $(this).addClass("hovered");
+        $('.hovered > .charity-content').addClass("testing");
     });
 
 
-
-
 $('.charity-text-image').mouseleave(
-function() {
-$(this).removeClass("hovered")
-$('.charity-content').removeClass("testing");
+    function() {
+        $(this).removeClass("hovered")
+        $('.charity-content').removeClass("testing");
 });
 
-
-
-
-
-// function activeEventsleave(eventindex) {
-//     $('.charity-text-image').mouseleave(
-//         function() {
-//         $('.charity-content').remmoveClass("testing");
-//         });
-// }
 
