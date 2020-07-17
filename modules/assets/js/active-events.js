@@ -47,24 +47,24 @@ $('ul.nav li.dropdown').hover(function() {
   $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
 });
 
-// var simple = '<?php echo $activeIndex; ?>';
-// $('.charity-text-image-'+'<?php echo $activeIndex; ?>').hover(
-// function() {
-// $('.charity-content-'+ '<?php echo $activeIndex; ?>').addClass("testing");
-// });
-// $('.charity-text-image').mouseleave(
-// function() {
-// $('.charity-content').removeClass("testing");
-// });
-// console.log(simple);
+$('.charity-text-image').hover(
+    function() {
+    $(this).addClass("hovered");
+    $('.hovered > .charity-content').addClass("testing");
+    });
 
 
-function activeEventshover(eventindex) {
-    $('.charity-text-image-'+eventindex).hover(
-        function() {
-        $('.charity-content-'+eventindex).addClass("testing");
-        });
-}
+
+
+$('.charity-text-image').mouseleave(
+function() {
+$(this).removeClass("hovered")
+$('.charity-content').removeClass("testing");
+});
+
+
+
+
 
 // function activeEventsleave(eventindex) {
 //     $('.charity-text-image').mouseleave(
