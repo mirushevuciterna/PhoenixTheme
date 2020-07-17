@@ -43,9 +43,9 @@
     color: #322d53;
 }
 
-.charity-text-image:hover {
+.hovered {
     color: #ff704d;
-    cursor: pointer;
+    cursor: pointer;  
 }
 
 #charity-content h4 {
