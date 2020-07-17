@@ -5,8 +5,8 @@ $('.owl-caro-active-events').owlCarousel({
     margin: 10,
     item: 6,
     singleItem: true,
-    autoplay: true,
-    autoplayTimeout: 5000,
+    // autoplay: true,
+    // autoplayTimeout: 5000,
     loop: true,
     nav: false,
     // navText : ['<img class="buto" src="https://image.flaticon.com/icons/svg/481/481117.svg" aria-hidden="true"></img>','<img class="buto" src="https://image.flaticon.com/icons/svg/481/481115.svg" aria-hidden="true"></i>'],
@@ -46,3 +46,30 @@ $('ul.nav li.dropdown').hover(function() {
 }, function() {
   $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
 });
+
+// var simple = '<?php echo $activeIndex; ?>';
+// $('.charity-text-image-'+'<?php echo $activeIndex; ?>').hover(
+// function() {
+// $('.charity-content-'+ '<?php echo $activeIndex; ?>').addClass("testing");
+// });
+// $('.charity-text-image').mouseleave(
+// function() {
+// $('.charity-content').removeClass("testing");
+// });
+// console.log(simple);
+
+
+function activeEventshover(eventindex) {
+    $('.charity-text-image-'+eventindex).hover(
+        function() {
+        $('.charity-content-'+eventindex).addClass("testing");
+        });
+}
+
+// function activeEventsleave(eventindex) {
+//     $('.charity-text-image').mouseleave(
+//         function() {
+//         $('.charity-content').remmoveClass("testing");
+//         });
+// }
+

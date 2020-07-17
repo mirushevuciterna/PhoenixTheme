@@ -21,7 +21,7 @@
     margin-left: 25px;
     background-color: white;
 }
-#charity-content:hover{
+.testing{
     animation: bounce2 0.5s ease-in;
     -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
     animation-fill-mode: forwards;        

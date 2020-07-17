@@ -14,20 +14,22 @@ query_posts( $args ); ?>
     </div>
     <!-- <div class="p-6"> -->
     <?php if( have_posts() ): ?>
-        
+
             <div class="p-2 d-flex flex-column justify-content-between owl-caro-active-events owl-carousel owl-theme" id="active-events-section">
+            <?php $activeIndex = 1; ?>
                 <?php while(have_posts(  )) : the_post(  ); ?>
                 <a href="<?php echo get_permalink(); ?>">
-                    <div class="d-flex mr-auto flex-column charity-text-image hideMe">
+                    <div class="d-flex mr-auto flex-column charity-text-image- hideMe" onmouseenter="activeEventshover(<?php echo $activeIndex; ?>)">
                         <div class="p-2 charity-image">
                             <?php echo the_post_thumbnail('large') ?>
                         </div>
-                        <div class="charity-content p-2" id="charity-content">
+                        <div class="charity-content- p-2" id="charity-content">
                             <h4><?php the_title(); ?></h4>
                             <p><?php the_excerpt(); ?></p>
                         </div>
                     </div>
                 </a>
+                <?php $activeIndex++;?>
                 <?php endwhile;  ?>
             </div>
         
@@ -46,4 +48,5 @@ query_posts( $args ); ?>
         </div>
     </div>
 </div>
+
 
