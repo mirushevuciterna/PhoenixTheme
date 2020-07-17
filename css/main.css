@@ -152,34 +152,6 @@ a .fa {
     margin-bottom: 16px;
 }
 
-@media only screen and (min-width: 992px) {
-    .border-footer {
-        border-top: 1px solid rgba(132, 132, 132, .17);
-        border-bottom: 1px solid rgba(132, 132, 132, .17);
-    }
-    
-
-}
-
-@media only screen and (max-width: 992px) {
-    #butoniNav {
-        width: 100% !important;
-    }
-    .butonitest a{
-        width: 90% ;
-
-    }
-    .nav-link {
-        display: flex;
-        justify-content: left;
-        align-items: left;
-        height: 60px;
-        padding: 0;
-    }
-    .navbar-brand {
-        margin: 0 10px;
-    }
-}
 .back-to-top.active {
     right: 25px;
     border-radius: 25px;
@@ -305,4 +277,34 @@ a .fa {
 }
 .post_like a:hover{
     text-decoration: none;
+}
+@media only screen and (min-width: 992px) {
+    .border-footer {
+        border-top: 1px solid rgba(132, 132, 132, .17);
+        border-bottom: 1px solid rgba(132, 132, 132, .17);
+    }
+    
+
+}
+
+@media only screen and (max-width: 992px) {
+    #butoniNav {
+        width: 100% !important;
+    }
+    .butonitest a{
+        width: 90% ;
+    }
+    .nav-link {
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        height: 60px;
+        padding: 0;
+    }
+    .navbar-brand {
+        margin: 0 10px;
+    }
+    .posts .entry-meta {
+        text-align: left;
+    }
 }
