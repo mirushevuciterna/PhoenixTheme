@@ -42,7 +42,7 @@ query_posts( $args ); ?>
             Pharetra sit amet aliquam id diam maecenas ultricies.<br> Lorem ipsum dolor sit amet.</p>
         </div>
         <div class="p-2 donate-buttoni hideMe">
-            <button type="button" class="btn btn-lg donateBTN">Donate Now</button>
+            <button type="button" class="btn btn-lg donateBTN" onclick="window.location.href='/contact'">Donate Now</button>
         </div>
     </div>
 </div>
