@@ -534,6 +534,7 @@ function theme_name_scripts() {
     'security' => wp_create_nonce( 'my-special-string' )
     ));
 }
+// if(basename($_SERVER['REQUEST_URI']) == 'blog' || is_single())
 add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
 // The function that handles the AJAX request
 

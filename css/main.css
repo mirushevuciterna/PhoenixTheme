@@ -304,7 +304,14 @@ a .fa {
     .navbar-brand {
         margin: 0 10px;
     }
+    .posts {
+        padding-top: 0 !important;
+    }
     .posts .entry-meta {
+        text-align: left;
+    }
+    .posts h2 {
+        margin: 0;
         text-align: left;
     }
 }
