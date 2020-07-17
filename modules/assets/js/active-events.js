@@ -5,8 +5,8 @@ $('.owl-caro-active-events').owlCarousel({
     margin: 10,
     item: 6,
     singleItem: true,
-    autoplay: true,
-    autoplayTimeout: 5000,
+    // autoplay: true,
+    // autoplayTimeout: 5000,
     loop: true,
     nav: false,
     // navText : ['<img class="buto" src="https://image.flaticon.com/icons/svg/481/481117.svg" aria-hidden="true"></img>','<img class="buto" src="https://image.flaticon.com/icons/svg/481/481115.svg" aria-hidden="true"></i>'],
@@ -45,4 +45,14 @@ $('ul.nav li.dropdown').hover(function() {
   $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
 }, function() {
   $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+});
+
+
+$('.charity-text-image').hover(
+function() {
+$('.charity-content').addClass("testing");
+});
+$('.charity-text-image').mouseleave(
+function() {
+$('.charity-content').removeClass("testing");
 });

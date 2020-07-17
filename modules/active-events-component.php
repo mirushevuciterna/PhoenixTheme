@@ -22,7 +22,7 @@ query_posts( $args ); ?>
                         <div class="p-2 charity-image">
                             <?php echo the_post_thumbnail('large') ?>
                         </div>
-                        <div class="charity-content p-2" id="charity-content">
+                        <div class="charity-content testing p-2" id="charity-content">
                             <h4><?php the_title(); ?></h4>
                             <p><?php the_excerpt(); ?></p>
                         </div>
