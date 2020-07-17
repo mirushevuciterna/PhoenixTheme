@@ -33,9 +33,9 @@ if( empty($fname)){
     $full_name = "{$fname} {$lname}";
 }
 ?>
-                <span class="published"><i class="fa fa-clock-o"></i> <?php the_time('j F, Y'); ?></span>
-                <span class="author"><i class="fa fa-keyboard-o"></i> <?php echo $full_name; ?></span>
-                <span class="blog-label"><i class="fa fa-folder-open"></i> <?php 
+                <span class="published d-inline-block"><i class="fa fa-clock-o"></i> <?php the_time('j F, Y'); ?></span>
+                <span class="author d-inline-block"><i class="fa fa-keyboard-o"></i> <?php echo $full_name; ?></span>
+                <span class="blog-label d-inline-block"><i class="fa fa-folder-open"></i> <?php 
                     $categories = [];
                     foreach (get_the_category() as $category){
                         $categories[] = $category->name;
@@ -43,11 +43,11 @@ if( empty($fname)){
                     ?>
                     <?php echo implode(', ', $categories); ?>
                 </span>
-                <span class="comment-count">
+                <span class="comment-count d-inline-block">
                     <i class="fa fa-comment"></i> 
                     <?php echo get_comments_number() ?> <?php echo (get_comments_number()==1) ? 'comment' : 'comments' ?>
                 </span>
-                <span class="likes-count">
+                <span class="likes-count d-inline-block">
                     <i class="fa fa-thumbs-up"></i> 
                     <span id="like-number" ><?php echo $total_like1; ?>
                         <?php echo ($total_like1==1) ? 'like' : 'likes' ?>
