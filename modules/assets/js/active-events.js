@@ -47,20 +47,18 @@ $('ul.nav li.dropdown').hover(function() {
   $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
 });
 
+
 $('.charity-text-image').hover(
     function() {
     $(this).addClass("hovered");
     $('.hovered > .charity-content').addClass("testing");
     });
 
-
-
-
 $('.charity-text-image').mouseleave(
-function() {
-$(this).removeClass("hovered")
-$('.charity-content').removeClass("testing");
-});
+    function() {
+    $(this).removeClass("hovered")
+    $('.charity-content').removeClass("testing");
+    });
 
 
 
