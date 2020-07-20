@@ -41,6 +41,8 @@ function phoenix_script_enqueue(){
 add_action('wp_enqueue_scripts', 'phoenix_script_enqueue');
 
 function wpb_adding_scripts() {
+    wp_register_script('mainjs', get_template_directory_uri() . '/js/main.js', array('jquery'),'1.1', true);
+    wp_enqueue_script('mainjs');
     wp_register_script('jquery2minjs', get_template_directory_uri() . '/js/jquery.2.min.js', array('jquery'),'1.1', true);
     wp_enqueue_script('jquery2minjs');
     wp_register_script('owlcarouselminjs', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'),'1.1', true);
