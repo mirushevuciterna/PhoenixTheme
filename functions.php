@@ -626,14 +626,15 @@ function ajax_login(){
 
     die();
 }
-/**
- * Hook to remove og:tags for sepcific post type
- */
-add_action( 'rank_math/head', function() {
-    //replace post_type_name with the name of the post type
-if(is_singular('portfolio')){
 
-remove_all_actions( 'rank_math/opengraph/facebook' );
-remove_all_actions( 'rank_math/opengraph/twitter' );
-}
-});
+
+
+/**
+ * Filter decision if post type is excluded from the XML sitemap.
+ *
+ * @param bool   $exclude Default false.
+ * @param string $type    Post type name.
+ */
+add_filter( 'rank_math/sitemap/exclude_post_type', function( $exclude, $type="portfolio" ){
+	return $exclude;
+}, 10, 2 );
