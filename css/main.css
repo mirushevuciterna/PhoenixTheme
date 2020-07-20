@@ -278,13 +278,26 @@ a .fa {
 .post_like a:hover{
     text-decoration: none;
 }
+
+/* 404 PAGE */
+#primary404 {
+    min-height: 80vh;
+    background-color: #FF704D;
+    color: #fff;
+    font-weight: 600;
+}
+#primary404 h1{
+    font-size: 72px;
+    font-weight: 600;
+}
+
+/* 404 PAGE */
+
 @media only screen and (min-width: 992px) {
     .border-footer {
         border-top: 1px solid rgba(132, 132, 132, .17);
         border-bottom: 1px solid rgba(132, 132, 132, .17);
     }
-    
-
 }
 
 @media only screen and (max-width: 992px) {
