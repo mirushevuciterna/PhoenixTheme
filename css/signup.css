@@ -30,7 +30,6 @@
 }
 
 .registerbutton {
-	margin-top: 16px;
 	border-radius: 20px;
 	border: 1px solid #322D53;
 	background-color: #322D53;
@@ -61,6 +60,7 @@
 	padding: 0 50px;
 	height: 50%;
 	text-align: center;
+	margin-top: 0 !important;
 }
 
 .form-container input {
