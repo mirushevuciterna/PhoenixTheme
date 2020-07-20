@@ -99,7 +99,6 @@ if( empty($fname)){
         <?php endwhile;  ?>
 
 
-
         <div class="related-projects">
             <h3 class="px-5">Related Posts</h3>
 
