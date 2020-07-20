@@ -90,7 +90,7 @@ get_header();
 
                 <div class="form-container sign-in-container order-first d-none d-md-block" >
                     <form method="post" id="login" action="login"  >
-                        <h1 class="registertitle">Sign in</h1>
+                        <h1 class="font-weight-bold">Sign in</h1>
                         <?php if ($user_ID): ?>
                         <?php echo $loggedintext; ?>
                         <?php endif; ?>
