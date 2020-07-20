@@ -628,23 +628,3 @@ function ajax_login(){
 
     die();
 }
-
-// // AUTOMATICALLY ADD ALT TAGS TO IMAGES
-// add_filter('the_content', 'add_alt_tags', 99999);
-// function add_alt_tags($content)
-// {
-//         global $post;
-//         preg_match_all('/<img (.*?)\/>/', $content, $images);
-//         if(!is_null($images))
-//         {
-//                 foreach($images[1] as $index => $value)
-//                 {
-//                         if(!preg_match('/alt=/', $value))
-//                         {
-//                                 $new_img = str_replace('<img', '<img alt="'.$post->post_title.'"', $images[0][$index]);
-//                                 $content = str_replace($images[0][$index], $new_img, $content);
-//                         }
-//                 }
-//         }
-//         return $content;
-// }
