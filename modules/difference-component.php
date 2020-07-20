@@ -13,7 +13,7 @@ if( get_row_layout() == 'difference' ):
                     <div id="word" >Donate to make a difference</div>
                 </div>
                 <div class="w3-animate-zoom row makeadifference2">
-                <button  type="button" class=" butonidiff align-self-start btn btn-lg btn-block btn-primary" >READ MORE</button>
+                <button  type="button" class=" butonidiff align-self-start btn btn-lg btn-block btn-primary" onclick="window.location.href='/blog'">READ MORE</button>
                 </div>
             </div>  
 
@@ -49,7 +49,7 @@ if( get_row_layout() == 'difference' ):
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">75%</div>
                     </div>
-                    <button  type="button"  class="butonidiff2 btn align-self-end btn btn-lg btn-block mt-4">CONTRIBUTE NOW</button>
+                    <button type="button" class="butonidiff2 btn align-self-end btn btn-lg btn-block mt-4" onclick="window.location.href='/contact'">CONTRIBUTE NOW</button>
                 </div>
             </div>
 

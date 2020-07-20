@@ -78,7 +78,7 @@ if( get_row_layout() == 'donate' ):
                         </div>
                     </div>
 
-                    <button class="donate-button text-center  hideMe">
+                    <button class="donate-button text-center hideMe" onclick="window.location.href='/contact'">
                         Donate now
                     </button>
                 </div>

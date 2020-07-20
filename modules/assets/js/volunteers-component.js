@@ -7,6 +7,7 @@ $('.owl-caroVOL').owlCarousel({
     item:6,
     singleItem: true,
     autoplay: true,
+    autoplayHoverPause: true,
     autoplayTimeout: 5000,
     loop: true,
     nav: true,

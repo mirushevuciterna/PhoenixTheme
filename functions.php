@@ -5,13 +5,11 @@ function register_navwalker(){
 add_action( 'after_setup_theme', 'register_navwalker' );
 
 function phoenix_script_enqueue(){
-   
-    wp_enqueue_style( 'bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' );
+    wp_enqueue_style('bootstrap', get_stylesheet_directory_uri().'/css/bootstrap.min.css');
     wp_enqueue_style('customstyle', get_stylesheet_directory_uri().'/css/main.css');
     wp_enqueue_style('style', get_stylesheet_directory_uri().'/modules/assets/css/portfolio.css');
     wp_enqueue_style('owlcarouselmincss', get_stylesheet_directory_uri().'/css/owl.carousel.min.css');
     wp_enqueue_style('owlthemedefaultmincss', get_stylesheet_directory_uri().'/css/owl.theme.default.min.css');
-    wp_enqueue_script( 'jquery');
     wp_enqueue_script('boortstrapjs', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '1.0.0', true);
     wp_enqueue_style( 'pratafont', '//fonts.googleapis.com/css2?family=Prata&display=swap' );
     wp_enqueue_style( 'Montserrat', '//fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap' );
@@ -482,11 +480,11 @@ function phoenix_widget_setup() {
 add_action('widgets_init', 'phoenix_widget_setup');
 
 
-add_action('wp_logout','auto_redirect_external_after_logout');
 function auto_redirect_external_after_logout(){
-wp_redirect(home_url().'/register');
-exit();
+    wp_redirect(home_url().'/register');
+    exit();
 }
+add_action('wp_logout','auto_redirect_external_after_logout');
 
 
 
@@ -525,16 +523,17 @@ add_action( 'init', 'post_like_table_create');
 
     // Add the JS
 function theme_name_scripts() {
-    wp_enqueue_script( 'script-name', get_template_directory_uri() . '/modules/assets/js/post-like.js', array('jquery'), '1.0.0', true );
-    wp_localize_script( 'script-name', 'MyAjax', array(
-    // URL to wp-admin/admin-ajax.php to process the request
-    'ajaxurl' => admin_url( 'admin-ajax.php' ),
-    // generate a nonce with a unique ID "myajax-post-comment-nonce"
-    // so that you can check it later when an AJAX request is sent
-    'security' => wp_create_nonce( 'my-special-string' )
-    ));
+    if(is_single() || basename($_SERVER['REQUEST_URI']) == 'blog'){
+        wp_enqueue_script( 'script-name', get_template_directory_uri() . '/modules/assets/js/post-like.js', array('jquery'), '1.0.0', true );
+        wp_localize_script( 'script-name', 'MyAjax', array(
+        // URL to wp-admin/admin-ajax.php to process the request
+        'ajaxurl' => admin_url( 'admin-ajax.php' ),
+        // generate a nonce with a unique ID "myajax-post-comment-nonce"
+        // so that you can check it later when an AJAX request is sent
+        'security' => wp_create_nonce( 'my-special-string' )
+        ));
+    }
 }
-// if(basename($_SERVER['REQUEST_URI']) == 'blog' || is_single())
 add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
 // The function that handles the AJAX request
 

@@ -27,7 +27,9 @@ if( get_row_layout() == 'causes' ):
                                         <p class="hideMe"><?php the_sub_field('card_text'); ?></p>
                                     </small>
                                     <button type="button" id="butoniCard"
-                                        class="mt-auto hideMe btn btn-md btn-primary"><?php the_sub_field('card_button');?></button>
+                                        class="mt-auto hideMe btn btn-md btn-primary" onclick="window.location.href='/blog'">
+                                        <?php the_sub_field('card_button');?>
+                                    </button>
                                 </div>
                             </div>
                         </div>
