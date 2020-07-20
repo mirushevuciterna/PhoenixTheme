@@ -7,6 +7,7 @@
 	text-align: center;
 	font-size: 2rem;
 	margin-bottom: 10px;
+	height: 10vh;
 }
 
 .overlay-panel p {
@@ -71,12 +72,14 @@
 	margin: 8px 0;
 	width: 100%;
 }
+.register-page-container{
+	height: 90vh;
+}
 
 .container-register {
 	display: block;
-	min-height: 400px;
-	margin-bottom: 30px;
-	padding-top: 10vh;
+	min-height: 60vh;
+	padding-top: 20px;
 }
 
 .overlay-container {

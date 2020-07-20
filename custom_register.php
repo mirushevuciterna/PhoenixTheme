@@ -10,7 +10,7 @@ if ( !defined('ABSPATH')) exit;
 
 <div class="container registercontainer">
 
-    <div class="row register-page-container p-3  mt-2 d-flex justify-content-center  mx-auto">
+    <div class="row register-page-container p-3 mt-2 d-flex justify-content-center  mx-auto">
 
 <?php
 
@@ -72,7 +72,7 @@ get_header();
         <?php } ?>
             <h2 class=" registerh2 mt-4 mb-3" >Sign up or log in to subscribe </h2>
 
-            <div class="container-register mt-3 mt-md-0" id="container">
+            <div class="container-register mt-4 pt-5 pt-md-0 mt-md-0" id="container">
                 <div class="form-container sign-up-container order-last">
                     <form action="" method="post" onsubmit="validate(event)">
                         <h1 class="font-weight-bold">Create Account</h1>
