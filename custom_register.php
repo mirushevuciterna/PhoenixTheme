@@ -10,7 +10,7 @@ if ( !defined('ABSPATH')) exit;
 
 <div class="container registercontainer">
 
-    <div class="row register-page-container p-3  mt-2 d-flex justify-content-center  mx-auto">
+    <div class="row register-page-container p-3 mt-2 d-flex justify-content-center  mx-auto">
 
 <?php
 
@@ -72,7 +72,7 @@ get_header();
         <?php } ?>
             <h2 class=" registerh2 mt-4 mb-3" >Sign up or log in to subscribe </h2>
 
-            <div class="container-register" id="container">
+            <div class="container-register mt-4 pt-5 pt-md-0 mt-md-0" id="container">
                 <div class="form-container sign-up-container order-last">
                     <form action="" method="post" onsubmit="validate(event)">
                         <h1 class="font-weight-bold">Create Account</h1>
@@ -84,7 +84,9 @@ get_header();
                         <input type="password" placeholder="Password" id="password1" name="password" value="<?php if( ! empty($password) ) echo $password; ?>">
                         <p id="msg" class="error-msg m-0"></p>
                         <input type="password" placeholder="Confirm Password" id="password2" name="confirm_password" value="<?php if( ! empty($confirm_password) ) echo $confirm_password; ?>">
-                        <button class="registerbutton d-flex justify-content-center align-items-center" name="submit">Sign Up</button>
+                        <div class="m-2 ">
+                            <button class="registerbutton d-flex justify-content-center align-items-center" name="submit">Sign Up</button>
+                        </div>
                     </form>
                 </div>
 
@@ -97,8 +99,10 @@ get_header();
                         <p class="status text-danger mt-3"></p>
                         <input class="mt-0 <?php if($user_ID){echo "disable";}?>"  id="username" type="text" name="username" placeholder="Username or email" size="20" name="log">
                         <input class="<?php if($user_ID){echo "disable";}?>" id="password" type="password" name="password" placeholder="Password">
-                        <button type="submit" value="Login" name="submit" class="<?php if($user_ID){echo "disable";}?> submit_button registerbutton d-flex justify-content-center align-items-center" >Sign In</button>
-                        <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
+                        <div class="m-2 ">
+                            <button type="submit" value="Login" name="submit" class="<?php if($user_ID){echo "disable";}?> submit_button registerbutton d-flex justify-content-center align-items-center" >Sign In</button>
+                            <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
+                        </div>
                         <a href="" class="d-md-none text-info register-click">Go back to register</a>
                     </form>
                 </div>
