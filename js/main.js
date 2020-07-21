@@ -7,13 +7,13 @@ if ($(window).width() > 1000) {
 }
 $('.nav-link').removeAttr('title');
 
-let images = document.querySelectorAll('img');
-images.forEach(el => {   
-    const alt = el.getAttribute('alt');
-    const src = el.getAttribute('src').split("/").pop();
-    if (!alt){
-        el.setAttribute('alt', src);
-    }  
-});
+// let images = document.querySelectorAll('img');
+// images.forEach(el => {   
+//     const alt = el.getAttribute('alt');
+//     const src = el.getAttribute('src').split("/").pop();
+//     if (!alt){
+//         el.setAttribute('alt', src);
+//     }  
+// });
 
 });
