@@ -76,8 +76,10 @@
     margin-left: 0 !important;
     margin-right: 0 !important;
 }
-.post-content-1 .row, .post-content-2 .row{
-    margin: 0 -15px;
+
+.post-content-1 .row, .post-content-2 .row {
+    margin: 0;
+  
 }
 .post-content-1 .img, .post-content-2 .img{
         padding-top: 275px !important;
@@ -114,7 +116,7 @@
 }
 .related-projects {
     background-color: #f5f5f5;
-    margin: 0 -15px !important;
+    margin: 0 !important;
     margin-bottom: 0px !important;
 }
 .related-projects h3{
@@ -135,8 +137,8 @@
     min-height: 466px;
     /* transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
 }
-.portfolio-template-default .row{
-    margin:0;
+.portfolio-section .row {
+    margin: 0;
 }
 .card-portfolio:hover{
     animation: bounce 0.5s ease-in;

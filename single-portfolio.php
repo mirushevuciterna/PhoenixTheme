@@ -3,7 +3,7 @@
 <?php //dd(get_field_objects($post->id)); ?>
 <?php //dd(get_the_category($post->id)); ?>
 
-<div class="container-fluid w-100">
+<div class="portfolio-section">
     <div id="basic-info-section">
         <?php while(have_posts(  )) : the_post(  ); ?>
         
