@@ -290,13 +290,39 @@ a .fa {
     font-size: 72px;
     font-weight: 600;
 }
-
 /* 404 PAGE */
+
+/* AUTHOR PAGE */
+
+.author-profile {
+    margin-bottom: 20px;
+}
+.hr {
+    border-bottom: 1px solid #ff704d;
+    height: 1px;
+}
+.avatar {
+    border-radius: 50%;
+}
+.author-profile-card .bio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* AUTHOR PAGE */
 
 @media only screen and (min-width: 992px) {
     .border-footer {
         border-top: 1px solid rgba(132, 132, 132, .17);
         border-bottom: 1px solid rgba(132, 132, 132, .17);
+    }
+    .bio {
+        margin-left: 0 !important;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .bio {
+        margin-left: 1.5rem !important;
     }
 }
 
