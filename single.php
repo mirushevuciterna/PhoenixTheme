@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 
 <div class="container-fluid">
-    <div id="wrapper-blog-post">
+    <div itemscope itemtype="http://schema.org/Article" id="wrapper-blog-post">
         <?php while(have_posts(  )) : the_post(  ); ?>
 <?php         
 global $wpdb;
