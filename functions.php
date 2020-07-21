@@ -640,3 +640,30 @@ function ajax_login(){
 add_filter( 'rank_math/sitemap/exclude_post_type', function( $exclude, $type="portfolio" ){
 	return $exclude;
 }, 10, 2 );
+
+
+/**
+ * Collect data to output in JSON-LD.
+ *
+ * @param array  $unsigned An array of data to output in json-ld.
+ * @param JsonLD $unsigned JsonLD instance.
+ */
+
+add_filter( 'rank_math/json_ld', function( $data, $jsonld ) {
+    if(get_post_type() == 'blog') {
+        $twitter = get_the_author_meta( 'twitter', $post->post_author );
+        $facebook = get_the_author_meta( 'facebook', $post->post_author );
+        $data['Person'] = [
+            "@context" => "http://schema.org",
+            "@type" => "Person",
+            "author" => [
+                "@type" => "Person",
+                "name" => "<?php echo get_username(); ?>",
+                "sameAs" => ["<?php echo 'https://twitter.com/ . $twitter .'; ?>",
+                "<?php echo '. $facebook .'; ?>"]
+            ]
+            ];
+        return $data;
+    }
+	return [];
+}, 10, 2);

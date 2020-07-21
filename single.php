@@ -1,4 +1,19 @@
 <?php session_start(); ?>
+<!-- <script>
+        {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "author": {
+            "@type": "Person",
+            "name": "donika",
+            "sameAs": ["http://www.facebook.com/pashtriga",
+            "http://www.twitter.com/pashtriga"]
+        }
+    }
+</script> -->
+
+
+
 <?php get_header(); ?>
 
 <div class="container-fluid">
