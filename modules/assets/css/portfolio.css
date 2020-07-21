@@ -135,6 +135,9 @@
     min-height: 466px;
     /* transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
 }
+.portfolio-template-default .row{
+    margin:0;
+}
 .card-portfolio:hover{
     animation: bounce 0.5s ease-in;
     -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
@@ -193,5 +196,7 @@
         width: 100%;
     }
 }
+
+
 /* POST CONTENT */
 
