@@ -646,7 +646,7 @@ add_filter( 'rank_math/sitemap/posts_to_exclude', function( $posts_to_exclude ){
     $posts_ids = []; // Add the post ids you want to exclude seperated by coma.
     $posts = get_posts();
     foreach ($posts as $post) {
-        if($post->post_content != "") {
+        if($post->post_content == "") {
             $posts_ids [] = $post->ID;
         }
     }
