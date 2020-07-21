@@ -640,3 +640,15 @@ function ajax_login(){
 add_filter( 'rank_math/sitemap/exclude_post_type', function( $exclude, $type="portfolio" ){
 	return $exclude;
 }, 10, 2 );
+
+
+add_filter( 'rank_math/sitemap/posts_to_exclude', function( $posts_to_exclude ){
+    $posts_ids = []; // Add the post ids you want to exclude seperated by coma.
+    $posts = get_posts();
+    foreach ($posts as $post) {
+        if($post->post_content != "") {
+            $posts_ids [] = $post->ID;
+        }
+    }
+    return array_merge( $posts_to_exclude,$posts_ids );
+});

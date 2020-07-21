@@ -34,7 +34,7 @@ if( empty($fname)){
 }
 ?>
                 <span class="published d-inline-block"><i class="fa fa-clock-o"></i> <?php the_time('j F, Y'); ?></span>
-                <span class="author d-inline-block"><i class="fa fa-keyboard-o"></i> <?php echo $full_name; ?></span>
+                <span class="author d-inline-block"><i class="fa fa-keyboard-o"></i> <?php the_author_posts_link(); ?></span>
                 <span class="blog-label d-inline-block"><i class="fa fa-folder-open"></i> <?php 
                     $categories = [];
                     foreach (get_the_category() as $category){
