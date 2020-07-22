@@ -70,5 +70,16 @@
         <a href="#top" class="back-to-top active"><i class="fa fa-angle-up"></i></a>
         <?php wp_footer() ?>
 
+<script>
+    let images = document.querySelectorAll('img');
+    images.forEach(el => {   
+        const alt = el.getAttribute('alt');
+        const src = el.getAttribute('data-src').split("/").pop();
+        const image_name = src.split('.').shift();
+        if (!alt){
+            el.setAttribute('alt', image_name);
+        }  
+    });
+</script>
     </body>
 </html>
