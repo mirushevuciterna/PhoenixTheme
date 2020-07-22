@@ -629,6 +629,10 @@ function ajax_login(){
     die();
 }
 
+function my_filter_where($where = ''){
+    return $where .= "AND trim(coalesce(post_content, '')) <>''";
+}
+add_filter('posts_where', 'my_filter_where');
 
 
 /**
