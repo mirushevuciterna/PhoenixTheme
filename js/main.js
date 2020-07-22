@@ -7,14 +7,5 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     $('.nav-link').removeAttr('title');
 
-    let images = document.querySelectorAll('img');
-    images.forEach(el => {   
-        const alt = el.getAttribute('alt');
-        const src = el.getAttribute('data-src').split("/").pop();
-        const image_name = src.split('.').shift();
-        if (!alt){
-            el.setAttribute('alt', image_name);
-        }  
-    });
 
 });
