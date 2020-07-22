@@ -674,7 +674,7 @@ add_filter( 'rank_math/json_ld', function( $data, $jsonld ) {
             "@type" => "Person",
             "author" => [
                 "@type" => "Person",
-                "name" => get_userdata( $user_id )->display_name,
+                "name" => get_the_author_meta('display_name', $author_id),
                 "sameAs" => ['https://twitter.com/' . $twitter, $facebook]
             ]
             ];
