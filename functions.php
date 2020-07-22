@@ -666,7 +666,7 @@ add_filter( 'rank_math/sitemap/posts_to_exclude', function( $posts_to_exclude ){
  */
 
 add_filter( 'rank_math/json_ld', function( $data, $jsonld ) {
-    if(get_post_type() == 'blog') {
+    if(is_home()) {
         $twitter = get_the_author_meta( 'twitter', $post->post_author );
         $facebook = get_the_author_meta( 'facebook', $post->post_author );
         $data['Person'] = [
