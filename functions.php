@@ -632,8 +632,9 @@ function ajax_login(){
 function my_filter_where($where = ''){
     return $where .= "AND trim(coalesce(post_content, '')) <>''";
 }
-add_filter('posts_where', 'my_filter_where');
-
+if(basename($_SERVER['REQUEST_URI']) == 'blog') {
+    add_filter('posts_where', 'my_filter_where');
+}
 
 /**
  * Filter decision if post type is excluded from the XML sitemap.
@@ -664,21 +665,35 @@ add_filter( 'rank_math/sitemap/posts_to_exclude', function( $posts_to_exclude ){
  * @param JsonLD $unsigned JsonLD instance.
  */
 
-add_filter( 'rank_math/json_ld', function( $data, $jsonld ) {
-    if(get_post_type() == 'blog') {
+// add_filter( 'rank_math/json_ld', function( $data, $jsonld ) {
+//     if(is_home() || is_single()) {
+//         $twitter = get_the_author_meta( 'twitter', $post->post_author );
+//         $facebook = get_the_author_meta( 'facebook', $post->post_author );
+//         $data['BlogPosting'] = [
+//             "@context" => "http://schema.org/",
+//             "@type" => "BlogPosting",
+//             "author" => [
+//                 "@type" => "Person",
+//                 "name" => get_the_author_meta('display_name', $author_id),
+//                 "sameAs" => ['https://twitter.com/' . $twitter, $facebook]
+//             ]
+//         ];
+//         return $data;
+//     }
+//     return [];
+// }, 10, 2);
+
+add_filter( 'rank_math/snippet/rich_snippet_article_entity', function( $entity ) {
+    if(is_home() || is_single()) {
         $twitter = get_the_author_meta( 'twitter', $post->post_author );
         $facebook = get_the_author_meta( 'facebook', $post->post_author );
-        $data['Person'] = [
-            "@context" => "http://schema.org",
-            "@type" => "Person",
-            "author" => [
-                "@type" => "Person",
-                "name" => "<?php echo get_username(); ?>",
-                "sameAs" => ["<?php echo 'https://twitter.com/ . $twitter .'; ?>",
-                "<?php echo '. $facebook .'; ?>"]
-            ]
-            ];
-        return $data;
+        $entity['author'] = [
+            '@type' => 'Person',
+            'name'  => get_the_author_meta('display_name', $author_id),
+            'sameAs' => ['https://twitter.com/' . $twitter, $facebook]
+        ];
+
+        return $entity;
     }
-	return [];
-}, 10, 2);
+    return [];
+});
