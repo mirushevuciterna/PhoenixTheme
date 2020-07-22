@@ -35,13 +35,14 @@ query_posts( $args ); ?>
     <?php endif; ?>
     <?php wp_reset_query(); ?>
     <!-- </div> -->
-    <div class="p-5 d-flex flex-sm-row flex-column justify-content-beetween">
-        <div class="mr-auto inpire-quote p-2 hideMe">
+    <div class="p-5 mx-5 d-flex flex-sm-row flex-column justify-content-beetween">
+        <div class="mr-auto inpire-quote p-2 hideMe col-lg-8 text-left">
             <h2>Give and change the world</h2>
-            <p>Tristique senectus et netus et malesuada fames ac turpis.<br>
-            Pharetra sit amet aliquam id diam maecenas ultricies.<br> Lorem ipsum dolor sit amet.</p>
+            <p>Tristique senectus et netus et malesuada fames ac turpis.
+            Pharetra sit amet aliquam id diam maecenas ultricies. Lorem ipsum dolor sit amet.
+            Pharetra sit amet aliquam id diam maecenas ultricies lorem ipsum dolor sit amet.</p>
         </div>
-        <div class="p-2 donate-buttoni hideMe">
+        <div class="p-2 donate-buttoni d-flex align-items-center hideMe">
             <button type="button" class="btn btn-lg donateBTN" onclick="window.location.href='/contact'">Donate Now</button>
         </div>
     </div>
