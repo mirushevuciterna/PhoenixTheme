@@ -684,13 +684,16 @@ add_filter( 'rank_math/sitemap/posts_to_exclude', function( $posts_to_exclude ){
 // }, 10, 2);
 
 add_filter( 'rank_math/snippet/rich_snippet_article_entity', function( $entity ) {
-    $twitter = get_the_author_meta( 'twitter', $post->post_author );
-    $facebook = get_the_author_meta( 'facebook', $post->post_author );
-    $entity['author'] = [
-        '@type' => 'Person',
-        'name'  => get_the_author_meta('display_name', $author_id),
-        'sameAs' => ['https://twitter.com/' . $twitter, $facebook]
-    ];
+    if(is_home() || is_single()) {
+        $twitter = get_the_author_meta( 'twitter', $post->post_author );
+        $facebook = get_the_author_meta( 'facebook', $post->post_author );
+        $entity['author'] = [
+            '@type' => 'Person',
+            'name'  => get_the_author_meta('display_name', $author_id),
+            'sameAs' => ['https://twitter.com/' . $twitter, $facebook]
+        ];
 
-    return $entity;
+        return $entity;
+    }
+    return [];
 });
