@@ -6,7 +6,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 ?>
 <div class="p-5">    
 <div class="author-profile">
-    <h2 class="mb-4"><?php echo $curauth->nickname; ?></h2>
+    <h2 class="mb-4"><?php echo $curauth->display_name; ?></h2>
     <div class="author-profile-card row">
         <span class="col col-12 col-md-2 col-lg-1 mr-3 avatar"><?php echo get_avatar( $curauth->user_email , '90'); ?></span>
         <div class="bio mt-4 mt-md-0">

@@ -311,6 +311,37 @@ a .fa {
 }
 /* AUTHOR PAGE */
 
+/* AUTHORS TEMPLATE */
+.authors-wrapper {
+    min-height: 60vh;
+}
+.authors-wrapper h3 {
+    padding-bottom: 16px;
+    border-bottom: 2px solid #FF704D;
+}
+.authors-wrapper div {
+    padding-left: 12px;
+}
+.authors-wrapper .table td, .table th {
+    border-top: none;
+}
+.authors-wrapper .table td {
+   margin: auto 0;
+}
+.authors-name{
+    
+}
+
+.authors-wrapper .row h5 a:hover{
+    text-decoration: none;
+    color: #FF704D;
+}
+.authors-wrapper .row h5 a{
+    color: #322D53;
+    font-weight: 500;
+}
+/* AUTHORS TEMPLATE */
+
 @media only screen and (min-width: 992px) {
     .border-footer {
         border-top: 1px solid rgba(132, 132, 132, .17);
