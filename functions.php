@@ -669,15 +669,15 @@ add_filter( 'rank_math/json_ld', function( $data, $jsonld ) {
     if(is_home() || is_single()) {
         $twitter = get_the_author_meta( 'twitter', $post->post_author );
         $facebook = get_the_author_meta( 'facebook', $post->post_author );
-        $data['Person'] = [
+        $data['BlogPosting'] = [
             "@context" => "http://schema.org/",
-            "@type" => "Person",
+            "@type" => "BlogPosting",
             "author" => [
                 "@type" => "Person",
                 "name" => get_the_author_meta('display_name', $author_id),
                 "sameAs" => ['https://twitter.com/' . $twitter, $facebook]
             ]
-            ];
+        ];
         return $data;
     }
     return [];
