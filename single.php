@@ -1,23 +1,8 @@
 <?php session_start(); ?>
-<!-- <script>
-        {
-        "@context": "http://schema.org",
-        "@type": "Person",
-        "author": {
-            "@type": "Person",
-            "name": "donika",
-            "sameAs": ["http://www.facebook.com/pashtriga",
-            "http://www.twitter.com/pashtriga"]
-        }
-    }
-</script> -->
-
-
-
 <?php get_header(); ?>
 
 <div class="container-fluid">
-    <div itemscope itemtype="http://schema.org/Article" id="wrapper-blog-post">
+    <div id="wrapper-blog-post">
         <?php while(have_posts(  )) : the_post(  ); ?>
 <?php         
 global $wpdb;
