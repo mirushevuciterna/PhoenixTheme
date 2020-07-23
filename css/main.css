@@ -328,9 +328,6 @@ a .fa {
 .authors-wrapper .table td {
    margin: auto 0;
 }
-.authors-name{
-    
-}
 
 .authors-wrapper .row h5 a:hover{
     text-decoration: none;
@@ -341,6 +338,14 @@ a .fa {
     font-weight: 500;
 }
 /* AUTHORS TEMPLATE */
+@media only screen and (max-width: 767px) {
+    .table th {
+        vertical-align: top !important;
+    }
+    .authors-head{
+        padding-bottom: 44px !important;
+    }
+}
 
 @media only screen and (min-width: 992px) {
     .border-footer {
