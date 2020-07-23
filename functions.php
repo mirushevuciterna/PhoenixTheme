@@ -629,12 +629,14 @@ function ajax_login(){
     die();
 }
 
+
 function my_filter_where($where = ''){
-    return $where .= "AND trim(coalesce(post_content, '')) <>''";
+    if(is_home()) {
+        return $where .= "AND trim(coalesce(post_content, '')) <>''";
+    } 
+    return $where;
 }
-if(basename($_SERVER['REQUEST_URI']) == 'blog') {
-    add_filter('posts_where', 'my_filter_where');
-}
+add_filter('posts_where', 'my_filter_where');
 
 /**
  * Filter decision if post type is excluded from the XML sitemap.
