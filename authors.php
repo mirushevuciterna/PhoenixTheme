@@ -23,7 +23,7 @@ Template Name: Display All Authors
                             <td>
                                 <div class="row flex-nowrap d-flex flex-row authors-name">
                                     <div class="col-4 col-md-2 avatariauthor"><?php echo get_avatar($user->user_email, 50 ) ?></div>
-                                    <h5 class="col-8 col-md-10 d-flex align-items-center ml-2 ml-md-0"><a href="<?php echo get_author_posts_url(false, $user->user_nicename); ?>"><?php echo $user->display_name; ?></h5>
+                                    <h5 class="col-8 col-md-10 d-flex align-items-center ml-2 ml-md-0"><a href="<?php echo get_author_posts_url(false, $user->user_nicename); ?>"><?php echo $user->display_name; ?></a></h5>
                                 </div>
                             </td>
                             <td> 

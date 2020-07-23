@@ -17,6 +17,10 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
     <div class="hr mt-4 col-12 col-md-7 col-lg-6"></div>
 </div>
 
+<div class="show-all">
+    <a href="<?php echo(home_url() . '/authors') ?>" class="authors-link"><i class="fa fa-users users-icon mr-3"></i><span class="all-authors">Show all Authors</span></a>
+</div>
+
 <h2 class="mt-5">Posts by <?php echo $curauth->nickname; ?>:</h2>
  
  
