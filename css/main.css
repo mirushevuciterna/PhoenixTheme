@@ -390,14 +390,19 @@ a .fa {
 .users-icon {
     margin-right: 10px !important;
 }
+.times-ago {
+    margin: 10px 0 0;
+    display: flex;
+    align-items: center;
+}
 
 /* AUTHORS TEMPLATE */
 @media only screen and (max-width: 767px) {
     .table th {
         vertical-align: top !important;
     }
-    .authors-head{
-        padding-bottom: 44px !important;
+    .authors-head, .nr-posts-head {
+        min-height: 74px !important;
     }
 }
 

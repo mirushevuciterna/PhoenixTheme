@@ -8,7 +8,7 @@ if( have_posts() ): while ( have_posts() ): the_post(); ?>
         <a href="<?php echo the_permalink()?>"
             class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-block d-md-flex w-100 justify-content-between ">
-                <small class="d-block"><?php echo meks_time_ago() ?></small>
+                <small class="times-ago"><?php echo meks_time_ago() ?></small>
                 <h5 class="mb-1 order-last order-md-first"><?php the_title() ?></h5>        
             </div>
             <div class="col-12 col-md-6 pl-0">

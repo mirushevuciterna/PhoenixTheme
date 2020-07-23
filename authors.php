@@ -13,7 +13,7 @@ Template Name: Display All Authors
                 <thead>
                     <tr>
                     <th scope="col"><h3 class="my-3 authors-head">Authors</h3></th>
-                    <th scope="col"><h3 class="my-3">Number of posts</h3></th>
+                    <th scope="col"><h3 class="my-3 nr-posts-head">Number of posts</h3></th>
                     </tr>
                 </thead>
                 <tbody>
