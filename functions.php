@@ -634,6 +634,7 @@ function my_filter_where($where = ''){
     if(is_home()) {
         return $where .= "AND trim(coalesce(post_content, '')) <>''";
     } 
+    return $where;
 }
 add_filter('posts_where', 'my_filter_where');
 
