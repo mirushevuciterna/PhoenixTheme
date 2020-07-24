@@ -93,7 +93,9 @@ function initialize() {
     });
 
 }
+google.maps.event.addDomListener(window, 'load', initialize);
 
+////////////
 $('.location-btn').hover(function() {
     $('.fa-map-marker').toggleClass('icon-location');
 });
