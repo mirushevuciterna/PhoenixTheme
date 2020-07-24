@@ -58,6 +58,7 @@ if(isset($_POST['submit'])) {
 <?php get_header(); ?>
 
 <div class="row contactsett">
+
     <div class="contactleftside col-md-4 d-flex align-items-center justify-content-center">
         <div class="allcontactitems">
             <div class="contactitems">
@@ -65,8 +66,8 @@ if(isset($_POST['submit'])) {
                 <p class="d-flex justify-content-center">phoenixtheme@gmail.com</p>
                 <i class="fa fa-phone d-flex justify-content-center my-2" ></i>
                 <p class="d-flex justify-content-center">+38349000000</p>
-                <i class="fa fa-map-marker d-flex justify-content-center my-2" ></i>
-                <p class="d-flex justify-content-center">Prishtine</p>
+                <i class="fa fa-map-marker d-flex justify-content-center my-2"></i>
+                <button type="button" class="d-flex justify-content-center text-white location-btn" data-toggle="modal" data-target="#myModal">Prishtine</button>
             </div>
         </div>
     </div>
@@ -124,6 +125,28 @@ if(isset($_POST['submit'])) {
                   
                     </div><!-- .entry-content -->
                 </div><!-- .post -->
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        
+        <!-- Modal Header -->
+        <div class="modal-header">
+            <h4 class="modal-title">Prishtine</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="map">
+                <div id="map_prishtina" style="width: 100%; height: 450px"></div>  
+            </div>
+        </div>
+        
+        </div>
+    </div>
+</div><!-- The Modal -->
 
                 <?php endwhile; endif; ?>
             </div><!-- #content -->

@@ -9,7 +9,7 @@
     <script src="https://use.fontawesome.com/6cadc76375.js"></script>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> <?php if (is_page(21)) { echo 'onload="initialize()" onunload="GUnload()"'; } ?>>
 
         <!-- <?php wp_nav_menu(array('theme_location'=>'primarymenu')); ?> -->
 

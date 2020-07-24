@@ -7,8 +7,8 @@ function playDonationVideo(videoId) {
     modal.style.display = "block";
 }
 
-    let closeBtn = document.getElementsByClassName("close")[0];
-    closeBtn.addEventListener("click", function (event) {
-        document.getElementById("videoModal").style.display = "none";
-        document.getElementById('donationModalContent').innerHTML = '';
-    });
+let closeBtn = document.getElementsByClassName("close")[0];
+closeBtn.addEventListener("click", function (event) {
+    document.getElementById("videoModal").style.display = "none";
+    document.getElementById('donationModalContent').innerHTML = '';
+});
