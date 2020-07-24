@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
     $('.nav-link').removeAttr('title');
-    
+
     let images = document.querySelectorAll('img');
     images.forEach(el => {   
         const alt = el.getAttribute('alt');
@@ -16,5 +16,15 @@ document.addEventListener("DOMContentLoaded", function() {
             el.setAttribute('alt', image_name);
         }  
     });
+
+    function initialize() {
+    var mapOptions = {
+      center: { lat: -34.397, lng: 150.644},
+      zoom: 8
+    };
+    var map = new google.maps.Map(document.getElementById('map-canvas'),
+        mapOptions);
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
 
 });

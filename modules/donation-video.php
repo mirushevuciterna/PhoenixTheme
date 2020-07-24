@@ -46,7 +46,7 @@ $videoIndex = 1;
                 if( $image ) { ?>
                 <div class="video-container d-flex justify-content-center align-items-center" style="background-image:url('<?= $image ?>')">
                 <?php  } ?>
-                    <div onclick="playDonationVideo(<?php echo $videoIndex; ?>)" class="playDiv hideMe" id="myBtn1111">
+                    <div onclick="playDonationVideo(<?php echo $videoIndex; ?>)" class="playDiv hideMe">
                         <i class="fa fa-play"></i>
                         <div id="donation-video-<?php echo $videoIndex; ?>" style="display: none">
                             <?php the_sub_field('video');?>
