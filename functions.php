@@ -11,9 +11,9 @@ function phoenix_script_enqueue(){
     wp_enqueue_style('owlcarouselmincss', get_stylesheet_directory_uri().'/css/owl.carousel.min.css');
     wp_enqueue_style('owlthemedefaultmincss', get_stylesheet_directory_uri().'/css/owl.theme.default.min.css');
     wp_enqueue_script('boortstrapjs', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '1.0.0', true);
-    wp_enqueue_style( 'pratafont', '//fonts.googleapis.com/css2?family=Prata&display=swap' );
-    wp_enqueue_style( 'Montserrat', '//fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap' );
-    wp_enqueue_style( 'w3animright', '//www.w3schools.com/w3css/4/w3.css'); 
+    wp_enqueue_style( 'pratafont', 'https://fonts.googleapis.com/css2?family=Prata&display=swap' );
+    wp_enqueue_style( 'Montserrat', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap' );
+    wp_enqueue_style( 'w3animright', 'https://www.w3schools.com/w3css/4/w3.css'); 
     wp_enqueue_style('difference-component', get_stylesheet_directory_uri().'/modules/assets/css/difference-component.css');
     if(basename($_SERVER['REQUEST_URI']) == 'contact'){
         wp_enqueue_style('contact', get_stylesheet_directory_uri().'/modules/assets/css/contact.css');
