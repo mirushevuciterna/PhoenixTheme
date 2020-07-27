@@ -67,7 +67,7 @@
 
         </footer>
 
-        <a href="#top" class="back-to-top active"><i class="fa fa-angle-up"></i></a>
+        <a href="#top" class="back-to-top active" id="back-to-top"><i class="fa fa-angle-up"></i></a>
         <?php wp_footer() ?>
         <!-- <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script> -->
         <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script> -->

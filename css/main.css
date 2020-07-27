@@ -172,7 +172,8 @@ a .fa {
     text-align: center;
     line-height: 51px;
     /* transition: all 250ms ease-in-out; */
-    box-shadow: 0 0 27px 0 rgba(0, 0, 0, .045);
+    box-shadow: 0 0 27px #3131313f;
+    visibility: hidden;
 }
 
 .back-to-top:hover {
