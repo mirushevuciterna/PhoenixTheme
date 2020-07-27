@@ -701,3 +701,15 @@ add_filter( 'rank_math/snippet/rich_snippet_article_entity', function( $entity )
     }
     return [];
 });
+
+add_filter( 'rank_math/snippet/rich_snippet_article_entity', function( $entity ) {
+    if(is_home() || is_single()) {
+        $entity['publisher'] = [
+            '@type' => 'Organization',
+            'name'  => 'Phoenix',
+        ];
+
+        return $entity;
+    }
+    return [];
+});
