@@ -702,14 +702,18 @@ add_filter( 'rank_math/snippet/rich_snippet_article_entity', function( $entity )
     return [];
 });
 
-// add_filter( 'rank_math/snippet/rich_snippet_article_entity', function( $entity ) {
-//     if(is_home() || is_single()) {
-//         $entity['publisher'] = [
-//             '@type' => 'Organization',
-//             'name'  => 'Phoenix',
-//         ];
+add_filter( 'rank_math/snippet/rich_snippet_article_entity', function( $entity ) {
+    if(is_home() || is_single()) {
+        $entity['publisher'] = [
+            '@type' => 'Organization',
+            'name'  => 'Phoenix',
+            'logo' => [
+                '@type' => 'ImageObject',
+                'URL' => 'https://www.google.com/search?q=cat+pic&client=opera&hs=GNX&tbm=isch&source=iu&ictx=1&fir=I0jdWhnK9jQQ7M%252CzzeqIp7U3jok-M%252C_&vet=1&usg=AI4_-kQ619-h5swQIYu2jG1C9u_JUvDN_A&sa=X&ved=2ahUKEwi3-NmInO7qAhWM3eAKHeUiC60Q9QEwAnoECAUQMw&biw=1326&bih=627#imgrc=I0jdWhnK9jQQ7M'
+            ]
+        ];
 
-//         return $entity;
-//     }
-//     return [];
-// });
+        return $entity;
+    }
+    return [];
+});
