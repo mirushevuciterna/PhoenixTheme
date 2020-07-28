@@ -1,9 +1,18 @@
 /* ALL POSTS*/
 
-.list-group-item h5{
+.list-group-item h2{
     color: #ff704d;
     font-weight: 600;
-    font-size: 20px;
+}
+
+.archive-row {
+    margin: 0 10px;
+    padding: 0;
+}
+.archive-content h4{
+    color: #ff704d;
+    font-weight: 500;
+
 }
 /* ALL POSTS*/
 
