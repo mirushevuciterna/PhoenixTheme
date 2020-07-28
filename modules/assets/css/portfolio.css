@@ -12,7 +12,9 @@
 .archive-content h4{
     color: #ff704d;
     font-weight: 500;
-
+}
+.archive-content p{
+    text-align: justify !important;
 }
 /* ALL POSTS*/
 

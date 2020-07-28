@@ -17,12 +17,11 @@ if( have_posts() ): while ( have_posts() ): the_post(); ?>
                         <?php //the_post_thumbnail() ?>
                         <img src="<?php echo get_the_post_thumbnail_url (); ?>" class="col-12">
                     </div>
-                    <div class="col-md-6 px-5 list-group d-flex flex-column justify-content-center">
+                    <div class="col-md-6 px-3 px-md-5 my-2 list-group d-flex flex-column justify-content-center">
                         <div class="hideMe archive-content">
                             <h4>Basic Info</h4>
-                            <p class="mb-1"><?php the_content() ?></p>
+                            <p class="mb-1 "><?php the_content() ?></p>
                             <a class="post-link" href="<?php echo the_permalink(); ?>">Read more</a>
-
                         </div>
                         
                     </div>
