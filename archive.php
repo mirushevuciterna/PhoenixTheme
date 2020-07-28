@@ -9,7 +9,7 @@ if( have_posts() ): while ( have_posts() ): the_post(); ?>
 
                 <div class="d-block d-md-flex w-100 justify-content-between my-2">
                     <small class="times-ago"><?php echo meks_time_ago() ?></small>
-                    <h2 class="mb-1 order-last order-md-first"><?php the_title() ?></h2>        
+                    <h3 class="mb-1 order-last order-md-first"><?php the_title() ?></h3>        
                 </div>
 
                 <div class="row">
