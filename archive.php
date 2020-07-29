@@ -32,8 +32,17 @@ if( have_posts() ): while ( have_posts() ): the_post(); ?>
 </div>
 
     <?php endwhile;
-endif;
-?>
+else: ?>
+    <article id="post-not-found">
+        <header>
+            <h1>No Posts Found</h1>
+        </header>
+        <section>
+            <p>Sorry, but no resource was found on this site.</p>
+        </section>
+    </article>
+<?php endif; ?>
+
 <div class="text-center"><?php post_pagination(); ?></div>
 
 <?php get_footer(); ?>
