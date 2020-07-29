@@ -67,6 +67,7 @@ else: ?>
         </header>
         <section>
             <p>Sorry, but no resource was found on this site.</p>
+            <a href="javascript:history.go(-1)"  onMouseOver="self.status=document.referrer;return true" class="btn btn-primary">Go Back</a>
         </section>
     </article>
 <?php endif; ?>
