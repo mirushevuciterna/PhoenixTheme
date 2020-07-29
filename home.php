@@ -60,8 +60,17 @@ if( empty($fname) && empty($lname) ){
         <a class="post-link" href="<?php echo the_permalink(); ?>">Read more</a>
     </div>
     <?php endwhile;
-endif;
-?>
+else: ?>
+    <article id="post-not-found">
+        <header>
+            <h1>No Posts Found</h1>
+        </header>
+        <section>
+            <p>Sorry, but no resource was found on this site.</p>
+        </section>
+    </article>
+<?php endif; ?>
+
 <div class="blog-numbers d-flex justify-content-center align-items-center">
 <?php post_pagination(); ?>
 </div>
