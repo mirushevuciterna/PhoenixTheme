@@ -552,17 +552,16 @@ function my_action_callback() {
     global $wpdb;
     $row = $wpdb->get_results( "SELECT id FROM $wpdb->post_like_table WHERE postid = '$postid' AND userid = '$user' AND userid != 0");
     if ( is_user_logged_in() ) {
-    if(empty($row)){
-    //insert row
-    $wpdb->insert( $wpdb->post_like_table, array( 'postid' => $postid, 'userid' => $user ), array( '%d', '%d' ) );
-    //echo $wpdb->insert_id;
-    $like=1;
-    }
-    }
-    if(!empty($row)){
-    //delete row
-    $wpdb->delete( $wpdb->post_like_table, array( 'postid' => $postid, 'userid'=> $user ), array( '%d','%s' ) );
-    $dislike=1;
+        if(empty($row)){
+        //insert row
+        $wpdb->insert( $wpdb->post_like_table, array( 'postid' => $postid, 'userid' => $user ), array( '%d', '%d' ) );
+        //echo $wpdb->insert_id;
+        $like=1;
+        } else {
+            //delete row
+            $wpdb->delete( $wpdb->post_like_table, array( 'postid' => $postid, 'userid'=> $user ), array( '%d','%s' ) );
+            $dislike=1;
+        }
     }
 
     //calculate like count from db.

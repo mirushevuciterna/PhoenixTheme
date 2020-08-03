@@ -62,7 +62,7 @@ if( empty($fname)){
                     <?php the_content(); ?>
                 </div>
 
-
+                <?php if ( is_user_logged_in() ): ?>
                 <div class="post_like">
                     <a class="pp_like <?php if($l==1) {echo "liked"; } ?>" href="#"
                         data-id="<?php echo get_the_id(); ?>">
@@ -72,7 +72,7 @@ if( empty($fname)){
                     </a>
                     <span><?php echo $total_like1; ?> <?php echo ($total_like1==1) ? 'like' : 'likes' ?></span>
                 </div>
-
+                <?php endif; ?>
                 <div class="text-primary my-5"><?php the_tags() ?></div>
                 
                 <?php if (comments_open()): 
